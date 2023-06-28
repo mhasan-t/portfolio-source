@@ -2,14 +2,15 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import "@/styles/header.scss";
 
 import TextAnimationFadeIn from "./TextAnimationFadeIn";
-// import TextLetterAnimationFadeIn from "./TextAnimationFadeIn";
+import { Lobster_Two } from "next/font/google";
+
+const lobsterTwo = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });
 
 export default function Header() {
 	return (
-		<div className="contentContainer bg-black text-white justify-center items-center h-[100vh] pt-40 pb-28 px-16">
+		<div className="bg-black text-white justify-center items-center h-[100vh] pt-40 pb-28 px-16">
 			<motion.div
 				initial={{ opacity: 0, scale: 0.5 }}
 				animate={{ opacity: 1, scale: 1 }}
@@ -21,7 +22,11 @@ export default function Header() {
 						I am
 					</span>
 					<TextAnimationFadeIn
-						parentDivClassName="text-center justify-center items-center text-7xl"
+						parentDivClassName={
+							"text-center justify-center items-center text-7xl" +
+							" " +
+							lobsterTwo.className
+						}
 						fromLeft={true}
 					>
 						Muhib Al Hasan
