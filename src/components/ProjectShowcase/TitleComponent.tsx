@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import {
 	Lobster_Two,
@@ -50,7 +48,7 @@ export default function TitleComponent() {
 				fonts[sectionTitleFontIndex].className
 			}
 		>
-			Showcase
+			Project Showcase
 		</div>
 	);
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import { Roboto, Dancing_Script } from "next/font/google";
 
+import { ShowcaseProps } from "@/types";
+import Brick from "../commons/Brick";
+
 const dancingFont = Dancing_Script({
 	weight: ["400", "700"],
 	subsets: ["latin"],
@@ -10,34 +13,27 @@ const secondaryFont = Roboto({
 	subsets: ["latin"],
 });
 
-interface ShowcaseProps {
-	title: string;
-	type: string;
-	description: string;
-	cover: string;
-	year: string;
-	links: Array<{
-		title: string;
-		url: string;
-		icon: string;
-	}>;
-	tech_stack: Array<string>;
-}
-
 export default function ShowcaseCard({
 	data,
 	className,
+	selectedShowCaseIndex,
+	setSelectedShowCaseIndex,
 }: {
 	data: ShowcaseProps;
 	className?: string;
+	selectedShowCaseIndex: number | null;
+	setSelectedShowCaseIndex: React.Dispatch<
+		React.SetStateAction<number | null>
+	>;
 }) {
 	return (
 		<div
 			className={
-				"bg-cyan-50 rounded-xl shadow-2xl w-full h-full p-5 max-w-2xl  " +
+				"bg-cyan-50 rounded-xl shadow-2xl w-full h-full p-5 max-w-2xl transition-all duration-700 " +
 				className
 			}
 		>
+			{/* HEADER */}
 			<div
 				className={
 					"text-center text-3xl font-bold  " + dancingFont.className
@@ -49,16 +45,18 @@ export default function ShowcaseCard({
 				{data.type} - {data.year}
 			</div>
 
+			{/* CONTENT */}
 			<div
 				className={
 					"mt-5 flex flex-col lg:flex-row gap-2 justify-center " +
 					secondaryFont.className
 				}
 			>
-				<div className="w-full mr-2 max-w-xl object-contain border-[1px] border-gray-300 rounded-xl shadow-lg">
+				{/* COVER */}
+				<div className="w-full mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg">
 					<img
-						className="object-contain"
-						src="http://localhost/amogus.png"
+						className="object-cover w-full h-full rounded-xl"
+						src={"/covers/" + data.cover}
 						alt={data.title + " image"}
 					/>
 				</div>
@@ -79,15 +77,11 @@ export default function ShowcaseCard({
 						<div className="lg:flex lg:flex-row lg:gap-2">
 							{data.tech_stack.map((tech) => {
 								return (
-									<div className="text-[#4a5568] p-2 border-[1px] rounded-md flex flex-row gap-1">
-										<img
-											src="http://localhost/github.png"
-											alt={tech + " logo"}
-											className="w-5 h-5"
-										/>
-
-										{tech}
-									</div>
+									<Brick
+										key={tech.title}
+										img_src={"/icons/" + tech.icon}
+										text={tech.title}
+									/>
 								);
 							})}
 						</div>
@@ -98,15 +92,11 @@ export default function ShowcaseCard({
 						<div className="lg:flex lg:flex-row lg:gap-2">
 							{data.links.map((link) => {
 								return (
-									<div className="text-[#4a5568] p-2 border-[1px] rounded-md flex flex-row gap-1">
-										<img
-											src="http://localhost/github.png"
-											alt={link.title + " logo"}
-											className="w-5 h-5"
-										/>
-
-										{link.title}
-									</div>
+									<Brick
+										key={link.title}
+										img_src={"/icons/" + link.icon}
+										text={link.title}
+									/>
 								);
 							})}
 						</div>

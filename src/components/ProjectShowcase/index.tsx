@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import {
 	Lobster_Two,
@@ -8,9 +6,11 @@ import {
 	Caveat,
 	Dancing_Script,
 } from "next/font/google";
+import { ShowcaseProps } from "@/types";
 
 import TitleComponent from "./TitleComponent";
 import ShowcaseCard from "./ShowcaseCard";
+import ShowcaseDetails from "./ShowcaseDetails";
 
 const lobsterFont = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });
 const amaticFont = Amatic_SC({ weight: ["400", "700"], subsets: ["latin"] });
@@ -26,20 +26,40 @@ const dancingScriptFont = Dancing_Script({
 
 export default function Showcase() {
 	const showCaseData = require("../../../ShowCaseData.json");
-	const [selectedShowCaseIndex, setSelectedShowCaseIndex] = useState(0);
+	const [selectedShowCaseIndex, setSelectedShowCaseIndex] = useState<
+		number | null
+	>(null);
 
 	return (
-		<div className="justify-center items-center bg-gradient-to-b from-black to-gray-900  relative w-[100vw] pt-40 pb-28 px-16 ">
+		<div className="justify-center items-center bg-gradient-to-b from-black to-gray-900 pt-40 pb-28 px-16 ">
 			<TitleComponent />
 
 			<div className="flex flex-col justify-center items-center gap-5 lg:grid lg:grid-cols-2 m-auto p-24 mt-10 ">
-				<ShowcaseCard data={showCaseData[selectedShowCaseIndex]} />
-				<ShowcaseCard
-					data={showCaseData[selectedShowCaseIndex]}
-					className=" z-10"
-				/>
-				<ShowcaseCard data={showCaseData[selectedShowCaseIndex]} />
+				{showCaseData.map((showcase: ShowcaseProps, index: number) => (
+					<div
+						onClick={() => {
+							setSelectedShowCaseIndex(index);
+						}}
+					>
+						<ShowcaseCard
+							data={showcase}
+							className={
+								selectedShowCaseIndex === index
+									? "opacity-0"
+									: ""
+							}
+							selectedShowCaseIndex={selectedShowCaseIndex}
+							setSelectedShowCaseIndex={setSelectedShowCaseIndex}
+						/>
+					</div>
+				))}
 			</div>
+			{selectedShowCaseIndex !== null && (
+				<ShowcaseDetails
+					data={showCaseData[selectedShowCaseIndex]}
+					setSelectedShowCaseIndex={setSelectedShowCaseIndex}
+				/>
+			)}
 		</div>
 	);
 }
