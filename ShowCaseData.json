@@ -5,6 +5,7 @@
 		"description": "A mobile app for the people of Bangladesh to report issues related to the country's water resource. It was funded by the government.",
 		"cover": "nodirokkha-app.png",
 		"year": "2023",
+		"images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
 		"links": [
 			{
 				"title": "Github",
@@ -30,6 +31,7 @@
 		"description": "A mobile app for the people of Bangladesh to report issues related to the country's water resource. It was funded by the government.",
 		"cover": "nodirokkha-app.png",
 		"year": "2023",
+		"images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
 		"links": [
 			{
 				"title": "Github",
@@ -55,6 +57,33 @@
 		"description": "A mobile app for the people of Bangladesh to report issues related to the country's water resource. It was funded by the government.",
 		"cover": "nodirokkha-app.png",
 		"year": "2023",
+		"images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
+		"links": [
+			{
+				"title": "Github",
+				"url": "",
+				"icon": "github.png"
+			},
+			{
+				"title": "Play Store",
+				"url": "",
+				"icon": "playstore.png"
+			}
+		],
+		"tech_stack": [
+			{
+				"title": "React Native",
+				"icon": "react.png"
+			}
+		]
+	},
+	{
+		"title": "Nodi Rokkha App",
+		"type": "Android App",
+		"description": "A mobile app for the people of Bangladesh to report issues related to the country's water resource. It was funded by the government.",
+		"cover": "nodirokkha-app.png",
+		"year": "2023",
+		"images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
 		"links": [
 			{
 				"title": "Github",

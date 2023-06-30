@@ -4,6 +4,7 @@ export interface ShowcaseProps {
 	description: string;
 	cover: string;
 	year: string;
+	images: Array<string>;
 	links: Array<{
 		title: string;
 		url: string;

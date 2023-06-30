@@ -36,30 +36,19 @@ export default function Showcase() {
 
 			<div className="flex flex-col justify-center items-center gap-5 lg:grid lg:grid-cols-2 m-auto p-24 mt-10 ">
 				{showCaseData.map((showcase: ShowcaseProps, index: number) => (
-					<div
-						onClick={() => {
-							setSelectedShowCaseIndex(index);
-						}}
-					>
-						<ShowcaseCard
-							data={showcase}
-							className={
-								selectedShowCaseIndex === index
-									? "opacity-0"
-									: ""
-							}
-							selectedShowCaseIndex={selectedShowCaseIndex}
-							setSelectedShowCaseIndex={setSelectedShowCaseIndex}
-						/>
-					</div>
+					<ShowcaseCard
+						key={index}
+						data={showcase}
+						setSelectedShowCaseIndex={setSelectedShowCaseIndex}
+					/>
 				))}
 			</div>
-			{selectedShowCaseIndex !== null && (
+			{/* {selectedShowCaseIndex !== null && (
 				<ShowcaseDetails
 					data={showCaseData[selectedShowCaseIndex]}
 					setSelectedShowCaseIndex={setSelectedShowCaseIndex}
 				/>
-			)}
+			)} */}
 		</div>
 	);
 }
