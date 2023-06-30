@@ -15,11 +15,13 @@ export default function ShowcaseLinks(props: {
 			<motion.div className="lg:flex lg:flex-row lg:gap-2">
 				{props.links.map((link) => {
 					return (
-						<Brick
-							key={link.title}
-							img_src={"/icons/" + link.icon}
-							text={link.title}
-						/>
+						<a href={link.url}>
+							<Brick
+								key={link.title}
+								img_src={"/icons/" + link.icon}
+								text={link.title}
+							/>
+						</a>
 					);
 				})}
 			</motion.div>

@@ -30,22 +30,20 @@ export default function ShowcaseCard({
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	return (
-		<AnimatePresence>
-			<motion.div exit={{ scale: 0 }}>
-				{!isOpen ? (
-					<ShowcaseCardClosed
-						data={data}
-						setSelectedShowCaseIndex={setSelectedShowCaseIndex}
-						setIsOpen={setIsOpen}
-					/>
-				) : (
-					<ShowcaseDetails
-						data={data}
-						setSelectedShowCaseIndex={setSelectedShowCaseIndex}
-						setIsOpen={setIsOpen}
-					/>
-				)}
-			</motion.div>
-		</AnimatePresence>
+		<motion.div exit={{ scale: 0 }}>
+			{!isOpen ? (
+				<ShowcaseCardClosed
+					data={data}
+					setSelectedShowCaseIndex={setSelectedShowCaseIndex}
+					setIsOpen={setIsOpen}
+				/>
+			) : (
+				<ShowcaseDetails
+					data={data}
+					setSelectedShowCaseIndex={setSelectedShowCaseIndex}
+					setIsOpen={setIsOpen}
+				/>
+			)}
+		</motion.div>
 	);
 }

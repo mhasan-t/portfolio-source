@@ -14,4 +14,8 @@ export interface ShowcaseProps {
 		title: string;
 		icon: string;
 	}>;
+	myRole: {
+		title: string;
+		description: string;
+	};
 }

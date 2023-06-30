@@ -7,16 +7,21 @@ const secondaryFont = Roboto({
 	subsets: ["latin"],
 });
 
-export default function ShowcaseDescription(props: { description: string }) {
+export default function ShowcaseRole(props: {
+	role: { title: string; description: string };
+}) {
 	return (
 		<motion.div>
 			<motion.div className="text-[#2d3748] font-[700]">
-				Description
+				My Role -{" "}
+				<span className="text-gray-500 font-normal text-sm">
+					{props.role.title}
+				</span>
 			</motion.div>
 			<motion.div
 				className={"text-[#4a5568] text-sm " + secondaryFont.className}
 			>
-				{props.description}
+				{props.role.description}
 			</motion.div>
 		</motion.div>
 	);

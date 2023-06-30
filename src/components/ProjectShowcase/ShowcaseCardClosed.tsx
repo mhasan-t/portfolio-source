@@ -8,15 +8,6 @@ import ShowcaseTechs from "./ShowcaseTechs";
 import ShowcaseDescription from "./ShowcaseDescription";
 import ShowcaseHeader from "./ShowcaseHeader";
 
-const dancingFont = Dancing_Script({
-	weight: ["400", "700"],
-	subsets: ["latin"],
-});
-const secondaryFont = Roboto({
-	weight: ["100", "300", "400", "500", "700", "900"],
-	subsets: ["latin"],
-});
-
 export default function ShowcaseCardClosed({
 	data,
 	setSelectedShowCaseIndex,
@@ -47,8 +38,7 @@ export default function ShowcaseCardClosed({
 			{/* CONTENT */}
 			<motion.div
 				className={
-					"mt-5 flex flex-col lg:flex-row gap-2 justify-center " +
-					secondaryFont.className
+					"mt-5 flex flex-col lg:flex-row gap-2 justify-center "
 				}
 			>
 				{/* COVER */}

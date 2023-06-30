@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ShowcaseProps } from "@/types";
 
 const showcaseIntoViewVariants = {
-	fromRight: {
+	slideInFromRight: {
 		initial: { x: 350, width: "16rem", opacity: 10 },
 		animate: {
 			x: 0,
@@ -12,11 +12,19 @@ const showcaseIntoViewVariants = {
 			transition: { duration: 0.5, type: "spring" },
 		},
 	},
-	fromLeft: {
+	slideInFromLeft: {
 		initial: { x: -350, width: "16rem", opacity: 10 },
 		animate: {
 			x: 0,
 			width: "max-content",
+			opacity: 100,
+			transition: { duration: 0.5, type: "spring" },
+		},
+	},
+	justAppearFromBottom: {
+		initial: { opacity: 0, y: 300 },
+		animate: {
+			y: 0,
 			opacity: 100,
 			transition: { duration: 0.5, type: "spring" },
 		},
@@ -44,18 +52,16 @@ export default function ({ data }: { data: ShowcaseProps }) {
 		);
 	}
 
-	useEffect(() => {
-		console.log("first");
-	});
-
 	return (
-		<motion.div className="flex flex-col lg:flex-row justify-center mt-5 gap-10">
+		<motion.div className="flex flex-col lg:flex-row justify-center gap-10">
+			{/* LEFT ONE */}
 			<motion.div
-				className="relative h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-10 hover:opacity-50 transition-all "
+				className="relative lg:h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-10 hover:opacity-50 transition-all "
 				onClick={goPrev}
+				key={selectedImageIndex - 1}
 			>
 				<motion.img
-					className="object-cover h-full w-64 rounded-xl  "
+					className="object-cover h-full w-64 rounded-xl hidden lg:block  "
 					src={
 						"/images/" +
 						data.images[
@@ -69,30 +75,42 @@ export default function ({ data }: { data: ShowcaseProps }) {
 				<img
 					src="prev.png"
 					alt=""
-					className="absolute top-[40%] left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
+					className="absolute hidden lg:block lg:top-[40%] lg:left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
 					// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
 				/>
 			</motion.div>
 
+			{/* MIDDLE */}
 			<div className="min-w-[40%] flex justify-center items-center">
 				<motion.div
-					className="w-fit h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg  "
+					className="w-fit h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg relative  "
 					initial={
 						fromRight == null
-							? {}
+							? showcaseIntoViewVariants.justAppearFromBottom
+									.initial
 							: fromRight
-							? showcaseIntoViewVariants.fromRight.initial
-							: showcaseIntoViewVariants.fromLeft.initial
+							? showcaseIntoViewVariants.slideInFromRight.initial
+							: showcaseIntoViewVariants.slideInFromLeft.initial
 					}
 					animate={
 						fromRight == null
-							? {}
+							? showcaseIntoViewVariants.justAppearFromBottom
+									.animate
 							: fromRight
-							? showcaseIntoViewVariants.fromRight.animate
-							: showcaseIntoViewVariants.fromLeft.animate
+							? showcaseIntoViewVariants.slideInFromRight.animate
+							: showcaseIntoViewVariants.slideInFromLeft.animate
 					}
 					key={selectedImageIndex}
 				>
+					{/* <div className="scale-100 lg:scale-0 transition-all absolute top-[5%] left-5 h-[90%] bg-slate-300 opacity-50 rounded-md flex justify-center items-center p-10 ">
+						<img
+							src="prev.png"
+							alt=""
+							className="w-14 h-14  cursor-pointer hover:scale-125 transition-all duration-300"
+							// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
+						/>
+					</div> */}
+
 					<motion.img
 						className="object-cover h-full rounded-xl"
 						src={"/images/" + data.images[selectedImageIndex]}
@@ -101,12 +119,13 @@ export default function ({ data }: { data: ShowcaseProps }) {
 				</motion.div>
 			</div>
 
+			{/* RIGHT ONE */}
 			<motion.div
-				className="relative h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-10 hover:opacity-50 transition-all  "
+				className="relative lg:h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-10 hover:opacity-50 transition-all "
 				onClick={goNext}
 			>
 				<motion.img
-					className="object-cover h-full w-64 rounded-xl "
+					className="object-cover h-full w-64 rounded-xl hidden lg:block "
 					src={
 						"/images/" +
 						data.images[
@@ -120,7 +139,7 @@ export default function ({ data }: { data: ShowcaseProps }) {
 				<img
 					src="next.png"
 					alt=""
-					className="absolute top-[40%] left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
+					className="absolute hidden lg:block top-[40%] left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
 					// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
 				/>
 			</motion.div>
