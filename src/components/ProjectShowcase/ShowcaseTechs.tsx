@@ -20,7 +20,7 @@ export default function ShowcaseTechs(props: {
 							key={tech.title}
 							img_src={"/icons/" + tech.icon}
 							text={tech.title}
-							classNames=" border-gray-300"
+							classNames=" border-2 border-[#2d3748] p-1"
 						/>
 					);
 				})}

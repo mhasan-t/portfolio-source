@@ -24,14 +24,14 @@ const dancingScriptFont = Dancing_Script({
 	subsets: ["latin"],
 });
 
+const showCaseData = require("../../../ShowCaseData.json");
 export default function Showcase() {
-	const showCaseData = require("../../../ShowCaseData.json");
 	const [selectedShowCaseIndex, setSelectedShowCaseIndex] = useState<
 		number | null
 	>(null);
 
 	return (
-		<div className="justify-center items-center bg-gradient-to-b bg-cyan-100 pt-40 pb-28 px-16 relative z-10 overflow-x-clip ">
+		<div className="justify-center items-center bg-gradient-to-b bg-cyan-200 pt-40 pb-16 px-16 relative z-10 overflow-x-clip ">
 			<div className="curvyOnTop"></div>
 			<TitleComponent />
 

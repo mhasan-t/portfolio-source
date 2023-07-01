@@ -1,0 +1,40 @@
+{
+	"Programming Languages": [
+		{ "icon": "cpp.png", "name": "C++" },
+		{ "icon": "java.png", "name": "Java" },
+		{ "icon": "js.png", "name": "JavaScript" },
+		{ "icon": "php.png", "name": "PHP" },
+		{ "icon": "python.png", "name": "Python" },
+		{ "icon": "ts.png", "name": "TypeScript" }
+	],
+	"Web Frameworks": [
+		{ "icon": "react.png", "name": "React" },
+		{ "icon": "vue.png", "name": "Vue" },
+		{ "icon": "nextjs.png", "name": "Next.js" },
+		{ "icon": "jquery.png", "name": "jQuery" }
+	],
+	"Backend Frameworks": [
+		{ "icon": "django.png", "name": "Django" },
+		{ "icon": "flask.png", "name": "Flask" },
+		{ "icon": "express.png", "name": "Express" },
+		{ "icon": "nodejs.png", "name": "Node.js" }
+	],
+	"Databases": [
+		{ "icon": "mysql.png", "name": "MySQL" },
+		{ "icon": "postgresql.png", "name": "PostgreSQL" },
+		{ "icon": "mongodb.png", "name": "MongoDB" },
+		{ "icon": "redis.png", "name": "Redis" }
+	],
+	"Native Mobile": [
+		{ "icon": "react.png", "name": "React Native" },
+		{ "icon": "android.png", "name": "Android Studio" }
+	],
+	"Others": [
+		{ "icon": "git.png", "name": "Git" },
+		{ "icon": "selenium.png", "name": "Selenium" },
+		{ "icon": "docker.png", "name": "Docker" },
+		{ "icon": "aws.png", "name": "AWS" },
+		{ "icon": "jest.png", "name": "Jest" },
+		{ "icon": "framer-motion.png", "name": "Framer Motion" }
+	]
+}

@@ -18,7 +18,7 @@ export default function Brick({
 	return (
 		<div
 			className={
-				"text-[#4a5568] text-xs font-[400] text p-2 border-[1px] rounded-md flex flex-row gap-1 " +
+				"text-[#4a5568] text-xs font-[400] text p-2 rounded-md flex flex-row gap-1 " +
 				classNames +
 				" " +
 				textFont.className

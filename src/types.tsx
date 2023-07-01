@@ -19,3 +19,30 @@ export interface ShowcaseProps {
 		description: string;
 	};
 }
+
+export interface SkillProps {
+	"Programming Languages": Array<{
+		name: string;
+		icon: string;
+	}>;
+	"Web Frameworks": Array<{
+		name: string;
+		icon: string;
+	}>;
+	"Backend Frameworks": Array<{
+		name: string;
+		icon: string;
+	}>;
+	Databases: Array<{
+		name: string;
+		icon: string;
+	}>;
+	"Native Mobile": Array<{
+		name: string;
+		icon: string;
+	}>;
+	Others: Array<{
+		name: string;
+		icon: string;
+	}>;
+}
