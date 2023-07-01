@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import TextAnimationFadeIn from "./TextAnimationFadeIn";
+import TextAnimationFadeIn from "@/components/commons/TextAnimationFadeIn";
 import { Lobster_Two } from "next/font/google";
 
 const lobsterTwo = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });

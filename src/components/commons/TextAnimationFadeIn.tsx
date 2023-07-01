@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import { useIsInViewport } from "../useIsInViewport";
 
 export default function TextAnimationFadeIn({
 	children,
-	parentDivClassName,
+	parentDivClassName = "",
 	fromLeft = false,
-	delay,
+	delay = 0,
 	letters = false,
 }: {
 	fromLeft?: boolean;
 	delay?: number;
 	letters?: boolean;
 	children: string;
-	parentDivClassName: string;
+	parentDivClassName?: string;
 }) {
 	const words = letters ? children.split("") : children.split(" ");
 	const delayBy = delay === undefined ? 0.04 : delay;
@@ -57,12 +58,16 @@ export default function TextAnimationFadeIn({
 		},
 	};
 
+	const ref = useRef(null);
+	const isInView = useIsInViewport(ref);
+
 	return (
 		<motion.div
+			ref={ref}
 			style={{ overflow: "hidden", display: "flex" }}
 			variants={container}
 			initial="hidden"
-			animate="visible"
+			animate={isInView ? "visible" : ""}
 			className={parentDivClassName}
 		>
 			{words.map((word: string, index: number) => (

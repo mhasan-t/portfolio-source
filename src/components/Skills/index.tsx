@@ -8,7 +8,7 @@ export default function index() {
 		<div>
 			<CurvyWaves />
 
-			<div className="flex flex-col justify-center items-center bg-[#C62368] pb-16 ">
+			<div className="flex flex-col justify-center items-center bg-[#C62368] pb-20 ">
 				<TitleComponent />
 				<SkillsContainer />
 			</div>

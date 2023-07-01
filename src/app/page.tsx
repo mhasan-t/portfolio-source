@@ -4,6 +4,7 @@ import StyledLogo from "@/components/Intro/StyledLogo";
 import Intro from "@/components/Intro";
 import ProjectShowcase from "@/components/ProjectShowcase";
 import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
 
 export default function Home() {
 	return (
@@ -12,6 +13,7 @@ export default function Home() {
 			<Intro />
 			<ProjectShowcase />
 			<Skills />
+			<Contact />
 		</div>
 	);
 }

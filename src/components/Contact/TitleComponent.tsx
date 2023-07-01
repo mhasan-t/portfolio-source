@@ -28,25 +28,12 @@ export default function TitleComponent() {
 		caveatFont,
 		dancingScriptFont,
 	];
-	// const [sectionTitleFontIndex, setSectionTitleFontIndex] = useState(0);
-
-	// useEffect(() => {
-	// 	// changeFont();
-	// 	const interval = setInterval(() => {
-	// 		setSectionTitleFontIndex(
-	// 			(sectionTitleFontIndex + 1) % fonts.length
-	// 		);
-	// 	}, 300);
-
-	// 	//Clearing the interval
-	// 	return () => clearInterval(interval);
-	// }, [sectionTitleFontIndex]);
 
 	return (
 		<motion.div
 			className={
-				" text-black font-bold text-center text-6xl justify-center items-center  " +
-				amaticFont.className
+				"font-bold text-center text-6xl justify-center items-center  " +
+				caveatFont.className
 			}
 			animate={{
 				x: [0, 10, 20, 0, -50, -30, 0],
@@ -58,7 +45,7 @@ export default function TitleComponent() {
 				repeatType: "loop",
 			}}
 		>
-			SKILLS
+			contact me
 		</motion.div>
 	);
 }
