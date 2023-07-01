@@ -1,14 +1,14 @@
 "use client";
 
-import StyledLogo from "@/components/Header/StyledLogo";
-import Header from "@/components/Header";
+import StyledLogo from "@/components/Intro/StyledLogo";
+import Intro from "@/components/Intro";
 import ProjectShowcase from "@/components/ProjectShowcase";
 
 export default function Home() {
 	return (
 		<div>
 			<StyledLogo />
-			<Header />
+			<Intro />
 			<ProjectShowcase />
 		</div>
 	);

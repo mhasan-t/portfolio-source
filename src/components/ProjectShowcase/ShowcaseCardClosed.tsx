@@ -30,7 +30,7 @@ export default function ShowcaseCardClosed({
 				// transition: { duration: 0.001, type: "tween" },
 			}}
 			whileTap={{ scale: 0.9 }}
-			className="bg-cyan-50 rounded-xl shadow-2xl w-full h-full p-5 max-w-2xl transition-all duration-700 "
+			className="bg-white rounded-xl shadow-2xl w-full h-full p-5 max-w-2xl  "
 		>
 			{/* HEADER */}
 			<ShowcaseHeader data={data} />

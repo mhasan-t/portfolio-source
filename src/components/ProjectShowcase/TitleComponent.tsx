@@ -44,7 +44,7 @@ export default function TitleComponent() {
 	return (
 		<div
 			className={
-				" text-white text-center text-5xl justify-center items-center  " +
+				" text-black text-center text-5xl justify-center items-center  " +
 				fonts[sectionTitleFontIndex].className
 			}
 		>

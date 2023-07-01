@@ -8,7 +8,7 @@ const lobsterTwo = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });
 
 export default function Header() {
 	return (
-		<div className="bg-black text-white justify-center items-center h-[100vh] pt-40 pb-28 px-16">
+		<div className="bg-black text-white justify-center items-center h-[100vh] pt-40 pb-28 px-16 z-[1]">
 			<motion.div
 				initial={{ opacity: 0, scale: 0.5 }}
 				animate={{ opacity: 1, scale: 1 }}

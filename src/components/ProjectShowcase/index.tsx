@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import {
 	Lobster_Two,
 	Amatic_SC,
@@ -10,7 +10,7 @@ import { ShowcaseProps } from "@/types";
 
 import TitleComponent from "./TitleComponent";
 import ShowcaseCard from "./ShowcaseCard";
-import ShowcaseDetails from "./ShowcaseDetails";
+import "@/styles/showcaseCurves.scss";
 
 const lobsterFont = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });
 const amaticFont = Amatic_SC({ weight: ["400", "700"], subsets: ["latin"] });
@@ -31,7 +31,8 @@ export default function Showcase() {
 	>(null);
 
 	return (
-		<div className="justify-center items-center bg-gradient-to-b from-black to-gray-900 pt-40 pb-28 px-16 ">
+		<div className="justify-center items-center bg-gradient-to-b bg-cyan-100 pt-40 pb-28 px-16 relative z-10 overflow-x-clip ">
+			<div className="curvyOnTop"></div>
 			<TitleComponent />
 
 			<div className="flex flex-col justify-center items-center gap-5 lg:grid lg:grid-cols-2 m-auto p-24 mt-10 ">

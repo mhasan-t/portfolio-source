@@ -9,14 +9,18 @@ const textFont = Fira_Sans({
 export default function Brick({
 	img_src,
 	text,
+	classNames,
 }: {
 	img_src: string;
 	text: string;
+	classNames?: string;
 }) {
 	return (
 		<div
 			className={
-				"text-[#4a5568] text-xs font-[300] text p-2 border-[1px] rounded-md flex flex-row gap-1 " +
+				"text-[#4a5568] text-xs font-[400] text p-2 border-[1px] rounded-md flex flex-row gap-1 " +
+				classNames +
+				" " +
 				textFont.className
 			}
 		>
