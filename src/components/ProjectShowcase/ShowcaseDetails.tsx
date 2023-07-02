@@ -32,10 +32,10 @@ export default function ShowcaseDetails({
 	setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
 	return (
-		<motion.div>
+		<motion.div className="flex justify-center items-center fixed top-0 left-0 w-screen h-screen">
 			{/* BACKGROUND */}
 			<motion.div
-				className="fixed top-0 left-0 w-screen h-screen bg-black opacity-70 z-0"
+				className="absolute w-screen h-screen bg-black opacity-70 z-0"
 				onClick={() => {
 					setIsOpen(false);
 				}}
@@ -44,7 +44,7 @@ export default function ShowcaseDetails({
 				initial={{ scale: 0 }}
 				animate={{ scale: 1 }}
 				exit={{ scale: 0 }}
-				className="fixed top-5 w-[95vw] h-[95vh] left-10 lg:w-[80vw] lg:left-36 bg-cyan-50 z-10 rounded-2xl p-10 shadow-2xl flex flex-col gap-5 overflow-y-scroll lg:overflow-y-hidden"
+				className="relative w-[95vw] h-[95vh] lg:w-[80vw]  bg-cyan-50 z-10 rounded-2xl p-10 shadow-2xl flex flex-col lg:gap-5 overflow-y-scroll lg:overflow-y-hidden"
 			>
 				{/* TOP */}
 				<div>

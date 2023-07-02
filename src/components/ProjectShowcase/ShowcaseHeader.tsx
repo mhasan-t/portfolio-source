@@ -17,7 +17,8 @@ export default function ShowcaseHeader(props: { data: ShowcaseProps }) {
 		<div>
 			<motion.div
 				className={
-					"text-center text-3xl font-bold  " + dancingFont.className
+					"text-center text-3xl font-bold text-black " +
+					dancingFont.className
 				}
 			>
 				{props.data.title}
