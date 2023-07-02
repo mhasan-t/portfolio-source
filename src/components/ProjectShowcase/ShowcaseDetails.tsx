@@ -63,7 +63,7 @@ export default function ShowcaseDetails({
 				</div>
 
 				<ImageCarousel data={data} />
-				<div className="grid grid-cols-3 gap-4">
+				<div className="flex flex-col gap-2 lg:grid lg:grid-cols-3 lg:gap-4">
 					<div className="flex flex-col gap-2  ">
 						<ShowcaseDescription description={data.description} />
 						<ShowcaseTechs tech_stack={data.tech_stack} />
