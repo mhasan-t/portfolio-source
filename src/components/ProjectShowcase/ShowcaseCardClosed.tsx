@@ -30,7 +30,7 @@ export default function ShowcaseCardClosed({
 				// transition: { duration: 0.001, type: "tween" },
 			}}
 			whileTap={{ scale: 0.9 }}
-			className="bg-white rounded-xl shadow-2xl w-full h-full p-5 max-w-2xl  "
+			className="bg-white rounded-xl shadow-2xl w-fit h-fit p-5 max-w-2xl  "
 		>
 			{/* HEADER */}
 			<ShowcaseHeader data={data} />
@@ -38,23 +38,25 @@ export default function ShowcaseCardClosed({
 			{/* CONTENT */}
 			<motion.div
 				className={
-					"mt-5 flex flex-col lg:flex-row gap-2 justify-center "
+					"mt-5 flex flex-col lg:flex-row gap-2 justify-center w-[30vw] h-[40vh]"
 				}
 			>
 				{/* COVER */}
-				<motion.div className="w-full mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg">
+				<motion.div className=" grow-0">
 					<motion.img
-						className="object-cover w-full h-full rounded-xl"
+						className="object-contain rounded-xl w-fit h-full border-[1px] border-gray-300 shadow-lg"
 						src={"/covers/" + data.cover}
 						alt={data.title + " image"}
 					/>
 				</motion.div>
 
 				{/* DETAILS */}
-				<motion.div className="text-[14px] font-[500] flex flex-col gap-2 ">
+				<motion.div className="basis-3/6 grow-1 text-[14px] font-[500] flex flex-col gap-2 ">
 					<ShowcaseDescription description={data.description} />
 					<ShowcaseTechs tech_stack={data.tech_stack} />
-					<ShowcaseLinks links={data.links} />
+					{data.links.length != 0 && (
+						<ShowcaseLinks links={data.links} />
+					)}
 				</motion.div>
 			</motion.div>
 		</motion.div>

@@ -1,40 +1,40 @@
 {
 	"Programming Languages": [
-		{ "icon": "cpp.png", "name": "C++" },
-		{ "icon": "java.png", "name": "Java" },
-		{ "icon": "js.png", "name": "JavaScript" },
-		{ "icon": "php.png", "name": "PHP" },
-		{ "icon": "python.png", "name": "Python" },
-		{ "icon": "ts.png", "name": "TypeScript" }
+		{ "icon": "cpp.png", "name": "C++", "level": 0 },
+		{ "icon": "java.png", "name": "Java", "level": 1 },
+		{ "icon": "js.png", "name": "JavaScript", "level": 3 },
+		{ "icon": "php.png", "name": "PHP", "level": 2 },
+		{ "icon": "python.png", "name": "Python", "level": 3 },
+		{ "icon": "ts.png", "name": "TypeScript", "level": 3 }
 	],
 	"Web Frameworks": [
-		{ "icon": "react.png", "name": "React" },
-		{ "icon": "vue.png", "name": "Vue" },
-		{ "icon": "nextjs.png", "name": "Next.js" },
-		{ "icon": "jquery.png", "name": "jQuery" }
+		{ "icon": "react.png", "name": "React", "level": 3 },
+		{ "icon": "vue.png", "name": "Vue", "level": 2 },
+		{ "icon": "nextjs.png", "name": "Next.js", "level": 2 },
+		{ "icon": "jquery.png", "name": "jQuery", "level": 2 }
 	],
 	"Backend Frameworks": [
-		{ "icon": "django.png", "name": "Django" },
-		{ "icon": "flask.png", "name": "Flask" },
-		{ "icon": "express.png", "name": "Express" },
-		{ "icon": "nodejs.png", "name": "Node.js" }
+		{ "icon": "django.png", "name": "Django", "level": 3 },
+		{ "icon": "flask.png", "name": "Flask", "level": 2 },
+		{ "icon": "express.png", "name": "Express", "level": 3 },
+		{ "icon": "nodejs.png", "name": "Node.js", "level": 3 }
 	],
 	"Databases": [
-		{ "icon": "mysql.png", "name": "MySQL" },
-		{ "icon": "postgresql.png", "name": "PostgreSQL" },
-		{ "icon": "mongodb.png", "name": "MongoDB" },
-		{ "icon": "redis.png", "name": "Redis" }
+		{ "icon": "mysql.png", "name": "MySQL", "level": 3 },
+		{ "icon": "postgresql.png", "name": "PostgreSQL", "level": 2 },
+		{ "icon": "mongodb.png", "name": "MongoDB", "level": 1 },
+		{ "icon": "redis.png", "name": "Redis", "level": 0 }
 	],
 	"Native Mobile": [
-		{ "icon": "react.png", "name": "React Native" },
-		{ "icon": "android.png", "name": "Android Studio" }
+		{ "icon": "react.png", "name": "React Native", "level": 3 },
+		{ "icon": "android.png", "name": "Android Studio", "level": 0 }
 	],
 	"Others": [
-		{ "icon": "git.png", "name": "Git" },
-		{ "icon": "selenium.png", "name": "Selenium" },
-		{ "icon": "docker.png", "name": "Docker" },
-		{ "icon": "aws.png", "name": "AWS" },
-		{ "icon": "jest.png", "name": "Jest" },
-		{ "icon": "framer-motion.png", "name": "Framer Motion" }
+		{ "icon": "git.png", "name": "Git", "level": 3 },
+		{ "icon": "selenium.png", "name": "Selenium", "level": 3 },
+		{ "icon": "docker.png", "name": "Docker", "level": 1 },
+		{ "icon": "aws.png", "name": "AWS", "level": 1 },
+		{ "icon": "jest.png", "name": "Jest", "level": 2 },
+		{ "icon": "framer-motion.png", "name": "Framer Motion", "level": 1 }
 	]
 }

@@ -9,6 +9,7 @@ import ShowcaseTechs from "./ShowcaseTechs";
 import ShowcaseLinks from "./ShowcaseLinks";
 import ShowcaseDescription from "./ShowcaseDescription";
 import ShowcaseRole from "./ShowcaseRole";
+import ShowcaseFeatures from "./ShowcaseFeatures";
 
 const dancingFont = Dancing_Script({
 	weight: ["400", "700"],
@@ -36,7 +37,6 @@ export default function ShowcaseDetails({
 			<motion.div
 				className="fixed top-0 left-0 w-screen h-screen bg-black opacity-70 z-0"
 				onClick={() => {
-					console.log("first");
 					setIsOpen(false);
 				}}
 			></motion.div>
@@ -44,7 +44,7 @@ export default function ShowcaseDetails({
 				initial={{ scale: 0 }}
 				animate={{ scale: 1 }}
 				exit={{ scale: 0 }}
-				className="fixed top-10 w-[95vw] h-[90vh] left-10 lg:w-[80vw] lg:left-36 bg-cyan-50 z-10 rounded-2xl p-10 shadow-2xl flex flex-col gap-5 overflow-y-scroll lg:overflow-y-hidden"
+				className="fixed top-5 w-[95vw] h-[95vh] left-10 lg:w-[80vw] lg:left-36 bg-cyan-50 z-10 rounded-2xl p-10 shadow-2xl flex flex-col gap-5 overflow-y-scroll lg:overflow-y-hidden"
 			>
 				{/* TOP */}
 				<div>
@@ -63,14 +63,19 @@ export default function ShowcaseDetails({
 				</div>
 
 				<ImageCarousel data={data} />
-				<div className="grid grid-cols-2 gap-10">
-					<div className="flex flex-col gap-10 justify-between ">
+				<div className="grid grid-cols-3 gap-4">
+					<div className="flex flex-col gap-2  ">
 						<ShowcaseDescription description={data.description} />
 						<ShowcaseTechs tech_stack={data.tech_stack} />
 					</div>
-					<div className="flex flex-col gap-10 justify-between">
+					<div className="flex flex-col gap-2 justify-between">
 						<ShowcaseRole role={data.myRole} />
-						<ShowcaseLinks links={data.links} />
+						{data.links.length != 0 && (
+							<ShowcaseLinks links={data.links} />
+						)}
+					</div>
+					<div>
+						<ShowcaseFeatures features={data.features} />
 					</div>
 				</div>
 			</motion.div>

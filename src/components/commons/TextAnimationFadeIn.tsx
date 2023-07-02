@@ -17,7 +17,6 @@ export default function TextAnimationFadeIn({
 }) {
 	const words = letters ? children.split("") : children.split(" ");
 	const delayBy = delay === undefined ? 0.04 : delay;
-	console.log(words);
 
 	// Variants for Container of words.
 	const container = {
@@ -48,7 +47,7 @@ export default function TextAnimationFadeIn({
 		},
 		hidden: {
 			opacity: 0,
-			x: fromLeft ? -20 : 20,
+			x: fromLeft ? -50 : 20,
 			transition: {
 				type: "spring",
 				damping: 12,

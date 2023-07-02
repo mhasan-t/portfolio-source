@@ -41,6 +41,13 @@ const child = {
 	},
 };
 
+function skillLevelToColor(lvl: number) {
+	if (lvl == 3) return "bg-yellow-200";
+	if (lvl == 2) return "bg-cyan-200";
+	if (lvl == 1) return "bg-pink-200";
+	return "bg-white";
+}
+
 export default function BricksOfSkills({
 	title,
 	data,
@@ -50,7 +57,6 @@ export default function BricksOfSkills({
 }) {
 	const ref = useRef(null);
 	const isInView = useIsInViewport(ref);
-	console.log(isInView);
 
 	return (
 		<div className="flex flex-col justify-end" ref={ref}>
@@ -66,7 +72,9 @@ export default function BricksOfSkills({
 							key={index}
 							text={skill.name}
 							img_src={"/icons/" + skill.icon}
-							classNames="bg-green-100 rounded-lg"
+							classNames={
+								"rounded-lg " + skillLevelToColor(skill.level)
+							}
 						/>
 					</motion.div>
 				))}

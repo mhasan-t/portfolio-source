@@ -5,6 +5,7 @@ export interface ShowcaseProps {
 	cover: string;
 	year: string;
 	images: Array<string>;
+	imagesFolder: string;
 	links: Array<{
 		title: string;
 		url: string;
@@ -18,31 +19,20 @@ export interface ShowcaseProps {
 		title: string;
 		description: string;
 	};
+	features: Array<string>;
 }
 
 export interface SkillProps {
-	"Programming Languages": Array<{
-		name: string;
-		icon: string;
-	}>;
-	"Web Frameworks": Array<{
-		name: string;
-		icon: string;
-	}>;
-	"Backend Frameworks": Array<{
-		name: string;
-		icon: string;
-	}>;
-	Databases: Array<{
-		name: string;
-		icon: string;
-	}>;
-	"Native Mobile": Array<{
-		name: string;
-		icon: string;
-	}>;
-	Others: Array<{
-		name: string;
-		icon: string;
-	}>;
+	"Programming Languages": Array<Skill>;
+	"Web Frameworks": Array<Skill>;
+	"Backend Frameworks": Array<Skill>;
+	Databases: Array<Skill>;
+	"Native Mobile": Array<Skill>;
+	Others: Array<Skill>;
+}
+
+interface Skill {
+	name: string;
+	icon: string;
+	level: number;
 }

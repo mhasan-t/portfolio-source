@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { ShowcaseProps } from "@/types";
 
@@ -55,35 +55,39 @@ export default function ({ data }: { data: ShowcaseProps }) {
 	return (
 		<motion.div className="flex flex-col lg:flex-row justify-center gap-10">
 			{/* LEFT ONE */}
-			<motion.div
-				className="relative lg:h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-10 hover:opacity-50 transition-all "
-				onClick={goPrev}
-				key={selectedImageIndex - 1}
-			>
-				<motion.img
-					className="object-cover h-full w-64 rounded-xl hidden lg:block  "
-					src={
-						"/images/" +
-						data.images[
-							selectedImageIndex - 1 < 0
-								? data.images.length - 1
-								: selectedImageIndex - 1
-						]
-					}
-					alt={data.title + " image"}
-				/>
-				<img
-					src="prev.png"
-					alt=""
-					className="absolute hidden lg:block lg:top-[40%] lg:left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
-					// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
-				/>
-			</motion.div>
+			{data.images.length > 1 && (
+				<motion.div
+					className="relative lg:h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-30 hover:opacity-50 transition-all "
+					onClick={goPrev}
+					key={selectedImageIndex - 1}
+				>
+					<motion.img
+						className="object-cover h-full w-64 rounded-xl hidden lg:block  "
+						src={
+							"/images/" +
+							data.imagesFolder +
+							"/" +
+							data.images[
+								selectedImageIndex - 1 < 0
+									? data.images.length - 1
+									: selectedImageIndex - 1
+							]
+						}
+						alt={data.title + " image"}
+					/>
+					<img
+						src="prev.png"
+						alt=""
+						className="absolute hidden lg:block lg:top-[40%] lg:left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
+						// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
+					/>
+				</motion.div>
+			)}
 
 			{/* MIDDLE */}
 			<div className="min-w-[40%] flex justify-center items-center">
 				<motion.div
-					className="w-fit h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg relative  "
+					className="w-fit h-[48vh] mr-2 max-w-xl relative  "
 					initial={
 						fromRight == null
 							? showcaseIntoViewVariants.justAppearFromBottom
@@ -112,37 +116,46 @@ export default function ({ data }: { data: ShowcaseProps }) {
 					</div> */}
 
 					<motion.img
-						className="object-cover h-full rounded-xl"
-						src={"/images/" + data.images[selectedImageIndex]}
+						className="object-contain h-fit max-h-full border-[1px] border-gray-300 rounded-xl shadow-lg"
+						src={
+							"/images/" +
+							data.imagesFolder +
+							"/" +
+							data.images[selectedImageIndex]
+						}
 						alt={data.title + " image"}
 					/>
 				</motion.div>
 			</div>
 
 			{/* RIGHT ONE */}
-			<motion.div
-				className="relative lg:h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-10 hover:opacity-50 transition-all "
-				onClick={goNext}
-			>
-				<motion.img
-					className="object-cover h-full w-64 rounded-xl hidden lg:block "
-					src={
-						"/images/" +
-						data.images[
-							selectedImageIndex + 1 > data.images.length - 1
-								? 0
-								: selectedImageIndex + 1
-						]
-					}
-					alt={data.title + " image"}
-				/>
-				<img
-					src="next.png"
-					alt=""
-					className="absolute hidden lg:block top-[40%] left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
-					// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
-				/>
-			</motion.div>
+			{data.images.length > 1 && (
+				<motion.div
+					className="relative lg:h-[40vh] mr-2 max-w-xl border-[1px] border-gray-300 rounded-xl shadow-lg opacity-30 hover:opacity-50 transition-all "
+					onClick={goNext}
+				>
+					<motion.img
+						className="object-cover h-full w-64 rounded-xl hidden lg:block "
+						src={
+							"/images/" +
+							data.imagesFolder +
+							"/" +
+							data.images[
+								selectedImageIndex + 1 > data.images.length - 1
+									? 0
+									: selectedImageIndex + 1
+							]
+						}
+						alt={data.title + " image"}
+					/>
+					<img
+						src="next.png"
+						alt=""
+						className="absolute hidden lg:block top-[40%] left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
+						// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
+					/>
+				</motion.div>
+			)}
 		</motion.div>
 	);
 }
