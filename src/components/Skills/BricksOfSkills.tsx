@@ -59,7 +59,10 @@ export default function BricksOfSkills({
 	const isInView = useIsInViewport(ref);
 
 	return (
-		<div className="flex flex-col justify-end" ref={ref}>
+		<div
+			className="flex flex-col justify-end flex-1 basis-0 w-full"
+			ref={ref}
+		>
 			<motion.div
 				variants={container}
 				initial="hidden"
