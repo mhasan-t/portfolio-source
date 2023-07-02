@@ -22,6 +22,7 @@ export default function ShowcaseFeatures({
 					{features.map((feature) => {
 						return (
 							<li
+								key={feature}
 								className={
 									"text-[#4a5568] text-sm m-0 p-0 " +
 									secondaryFont.className

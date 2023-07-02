@@ -31,7 +31,7 @@ const showcaseIntoViewVariants = {
 	},
 };
 
-export default function ({ data }: { data: ShowcaseProps }) {
+export default function ImageCarousel({ data }: { data: ShowcaseProps }) {
 	const [selectedImageIndex, setSelectedImageIndex] = React.useState(0);
 	const [fromRight, setFromRight] = React.useState<boolean | null>(null);
 

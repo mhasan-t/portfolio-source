@@ -16,6 +16,7 @@ export default function ShowcaseLinks(props: {
 				{props.links.map((link) => {
 					return (
 						<a
+							key={link.title}
 							href={link.url}
 							onClick={(e) => {
 								e.stopPropagation();
