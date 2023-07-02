@@ -8,20 +8,20 @@ const lobsterTwo = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });
 
 export default function Header() {
 	return (
-		<div className="bg-black text-white justify-center items-center h-[100vh] pt-40 pb-28 px-16 z-[1]">
+		<div className="bg-black text-white justify-center items-center h-[100vh] pt-40 pb-28 lg:px-16 px-4 z-[1]">
 			<motion.div
 				initial={{ opacity: 0, scale: 0.5 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 0.1 }}
 			>
 				<div className="text-9xl text-center">Hi</div>
-				<div className="mt-5 text-center relative right-16">
-					<span className="text xl relative right-52 text-gray-400">
+				<div className="mt-5 text-center relative lg:right-16">
+					<span className="relative lg:right-52 text-gray-400">
 						I am
 					</span>
 					<TextAnimationFadeIn
 						parentDivClassName={
-							"text-center justify-center items-center text-7xl" +
+							"text-center justify-center items-center text-4xl lg:text-7xl" +
 							" " +
 							lobsterTwo.className
 						}
@@ -30,7 +30,7 @@ export default function Header() {
 						Muhib Al Hasan
 					</TextAnimationFadeIn>
 				</div>
-				<TextAnimationFadeIn parentDivClassName="justify-center text-3xl mb-5">
+				<TextAnimationFadeIn parentDivClassName="justify-center text-sm lg:text-3xl mb-5 ">
 					Software Engineer, Team Lead
 				</TextAnimationFadeIn>
 				<div className="xl:pr-[20vw]">

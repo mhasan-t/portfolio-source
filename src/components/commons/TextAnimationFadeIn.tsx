@@ -67,7 +67,7 @@ export default function TextAnimationFadeIn({
 			variants={container}
 			initial="hidden"
 			animate={isInView ? "visible" : ""}
-			className={parentDivClassName}
+			className={"flex flex-wrap " + parentDivClassName}
 		>
 			{words.map((word: string, index: number) => (
 				<motion.span variants={child} key={index}>
