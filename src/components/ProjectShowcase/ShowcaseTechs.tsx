@@ -13,7 +13,7 @@ export default function ShowcaseTechs(props: {
 			<motion.div className="text-[#2d3748] font-[700]">
 				Technologies Used
 			</motion.div>
-			<motion.div className="lg:flex lg:flex-row flex-wrap lg:gap-2">
+			<motion.div className="flex flex-row flex-wrap gap-2">
 				{props.tech_stack.map((tech) => {
 					return (
 						<Brick

@@ -31,11 +31,11 @@ export default function Showcase() {
 	>(null);
 
 	return (
-		<div className="justify-center items-center bg-gradient-to-b bg-cyan-200 pt-40 pb-16 px-16 relative z-10 overflow-x-clip ">
+		<div className="justify-center items-center bg-gradient-to-b bg-cyan-200 lg:pt-20 pb-16 lg:px-16 px-2 relative z-10 overflow-x-clip ">
 			<div className="curvyOnTop"></div>
 			<TitleComponent />
 
-			<div className="flex flex-col justify-center items-center gap-5 lg:grid lg:grid-cols-2 m-auto p-24 mt-10 ">
+			<div className="flex flex-row flex-wrap justify-center items-center gap-5 m-auto lg:p-24 p-2 mt-10 ">
 				{showCaseData.map((showcase: ShowcaseProps, index: number) => (
 					<ShowcaseCard
 						key={index}

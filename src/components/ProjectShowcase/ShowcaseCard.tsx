@@ -30,7 +30,7 @@ export default function ShowcaseCard({
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	return (
-		<motion.div exit={{ scale: 0 }}>
+		<motion.div exit={{ scale: 0 }} className="">
 			{!isOpen ? (
 				<ShowcaseCardClosed
 					data={data}

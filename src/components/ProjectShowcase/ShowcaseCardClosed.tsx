@@ -30,7 +30,7 @@ export default function ShowcaseCardClosed({
 				// transition: { duration: 0.001, type: "tween" },
 			}}
 			whileTap={{ scale: 0.9 }}
-			className="bg-white rounded-xl shadow-2xl w-fit h-fit p-5 max-w-2xl  "
+			className="bg-white rounded-xl shadow-2xl w-[80vw] lg:w-fit h-full p-5 max-w-2xl  "
 		>
 			{/* HEADER */}
 			<ShowcaseHeader data={data} />
@@ -38,13 +38,13 @@ export default function ShowcaseCardClosed({
 			{/* CONTENT */}
 			<motion.div
 				className={
-					"mt-5 flex flex-col lg:flex-row gap-2 justify-center w-[30vw] h-[40vh]"
+					"mt-5 flex flex-col lg:flex-row gap-2 justify-center items-center w-full lg:w-[30vw] "
 				}
 			>
 				{/* COVER */}
 				<motion.div className=" grow-0">
 					<motion.img
-						className="object-contain rounded-xl w-fit h-full border-[1px] border-gray-300 shadow-lg"
+						className="object-contain rounded-xl w-fit h-full max-h-[300px] border-[1px] border-gray-300 shadow-lg"
 						src={"/covers/" + data.cover}
 						alt={data.title + " image"}
 					/>
