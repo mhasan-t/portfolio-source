@@ -10,8 +10,9 @@
 	"Web Frameworks": [
 		{ "icon": "react.png", "name": "React", "level": 3 },
 		{ "icon": "vue.png", "name": "Vue", "level": 2 },
-		{ "icon": "nextjs.png", "name": "Next.js", "level": 2 },
-		{ "icon": "jquery.png", "name": "jQuery", "level": 2 }
+		{ "icon": "nextjs.svg", "name": "Next.js", "level": 2 },
+		{ "icon": "jquery.png", "name": "jQuery", "level": 2 },
+		{ "icon": "tailwind.png", "name": "Tailwind", "level": 3 }
 	],
 	"Backend Frameworks": [
 		{ "icon": "django.png", "name": "Django", "level": 3 },
