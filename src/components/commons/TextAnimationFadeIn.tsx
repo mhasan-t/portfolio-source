@@ -24,7 +24,7 @@ export default function TextAnimationFadeIn({
 		visible: (i = 1) => ({
 			opacity: 1,
 			transition: {
-				staggerChildren: letters ? 0.06 : 0.1,
+				staggerChildren: letters ? 0.02 : 0.1,
 				delayChildren: delayBy + 0.04 * i,
 				duration: 0.01,
 				delay: delayBy,

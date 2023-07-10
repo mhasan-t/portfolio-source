@@ -52,7 +52,7 @@ export default function Header() {
 					</TextAnimationFadeIn>
 					<TextAnimationFadeIn
 						parentDivClassName="text-sm text-right text-gray-400 justify-end"
-						delay={4}
+						delay={2}
 						letters={true}
 					>
 						Adequate problem-solving ability with 1500+ contest
