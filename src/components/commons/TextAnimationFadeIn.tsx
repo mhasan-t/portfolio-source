@@ -70,10 +70,18 @@ export default function TextAnimationFadeIn({
 			className={"flex flex-wrap " + parentDivClassName}
 		>
 			{words.map((word: string, index: number) => (
-				<motion.span variants={child} key={index}>
-					{letters ? (word === " " ? "\u00A0" : word) : word}{" "}
-					{letters ? "" : "\u00A0"}
-				</motion.span>
+				<>
+					{letters && word === " " ? (
+						<motion.span variants={child} key={index}>
+							{"\u00A0"}
+						</motion.span>
+					) : (
+						<motion.span variants={child} key={index}>
+							{word}
+						</motion.span>
+					)}
+					{letters ? <span></span> : <span>&nbsp;</span>}
+				</>
 			))}
 		</motion.div>
 	);
