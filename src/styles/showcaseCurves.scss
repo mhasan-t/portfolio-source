@@ -1,10 +1,10 @@
-.curvyOnTop::before {
+.curvyOnTop {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 150%;
-	height: 40%;
+	height: 20%;
 	border-radius: 100%;
 	background-color: rgb(207 250 254 / var(--tw-bg-opacity));
 	// border: 1px solid black;
