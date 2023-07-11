@@ -26,7 +26,7 @@
 		{ "icon": "mongodb.png", "name": "MongoDB", "level": 1 },
 		{ "icon": "redis.png", "name": "Redis", "level": 0 }
 	],
-	"Native Mobile": [
+	"Mobile Apps": [
 		{ "icon": "react.png", "name": "React Native", "level": 3 },
 		{ "icon": "android.png", "name": "Android Studio", "level": 0 }
 	],
