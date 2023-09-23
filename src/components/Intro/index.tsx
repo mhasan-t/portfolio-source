@@ -41,15 +41,15 @@ export default function Header() {
 				<TextAnimationFadeIn parentDivClassName="justify-center text-sm lg:text-3xl mb-5 ">
 					Software Engineer, Team Lead
 				</TextAnimationFadeIn>
-				<div className="w-full flex flex-col justify-end">
-					<div className="text-sm text-right text-gray-400 justify-end max-w-5xl">
+				<div className="w-full flex flex-col justify-center items-center">
+					<div className="text-sm text-right text-gray-400 justify-end md:w-[50%]">
 						A software engineer experienced in developing web
 						applications, android application and entire backend
 						infrastructure with good knowledge of data structures
 						and algorithms, OOP concepts, design patterns, and
 						writing clean and maintainable code.
 					</div>
-					<div className="text-sm text-right text-gray-400 justify-end max-w-5xl">
+					<div className="text-sm text-right text-gray-400 justify-end md:w-[50%]">
 						I possess adequate problem-solving ability with 1500+
 						contest rating on Leetcode.
 					</div>
