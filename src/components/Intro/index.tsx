@@ -42,22 +42,17 @@ export default function Header() {
 					Software Engineer, Team Lead
 				</TextAnimationFadeIn>
 				<div className="xl:pr-[20vw]">
-					<TextAnimationFadeIn
-						parentDivClassName="text-sm text-right text-gray-400 justify-end"
-						letters={true}
-					>
+					<div className="text-sm text-right text-gray-400 justify-end">
 						A software engineer experienced in developing web
 						applications, android application and entire backend
-						infrastructure.
-					</TextAnimationFadeIn>
-					<TextAnimationFadeIn
-						parentDivClassName="text-sm text-right text-gray-400 justify-end"
-						delay={2}
-						letters={true}
-					>
-						Adequate problem-solving ability with 1500+ contest
-						rating on Leetcode.
-					</TextAnimationFadeIn>
+						infrastructure with good knowledge of data structures
+						and algorithms, OOP concepts, design patterns, and
+						writing clean and maintainable code.
+					</div>
+					<div className="text-sm text-right text-gray-400 justify-end">
+						I possess adequate problem-solving ability with 1500+
+						contest rating on Leetcode.
+					</div>
 				</div>
 			</motion.div>
 		</div>
