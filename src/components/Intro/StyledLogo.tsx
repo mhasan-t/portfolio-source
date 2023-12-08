@@ -15,7 +15,7 @@ export default function StyledLogo() {
 			}}
 			whileHover={{ scale: 1.2 }}
 			whileTap={{ scale: 0.9 }}
-			className="w-10 h-10 lg:w-20 lg:h-20 absolute top-7 left-5 xl:top-16 xl:left-16 border-2 border-white rounded-md"
+			className="absolute z-10 w-14 h-14 top-4 left-4"
 			src="/logo.png"
 			alt="logo"
 		/>
