@@ -12,9 +12,10 @@ type Props = {
 		| "top-left"
 		| "top-right";
 	distance?: number;
+	delay?: number;
 } & PropsWithChildren;
 
-function FadeIn({ from, children, distance }: Props) {
+function FadeIn({ from, children, distance, delay }: Props) {
 	const dist = distance ?? 40;
 
 	let animateX = 0;
@@ -28,10 +29,10 @@ function FadeIn({ from, children, distance }: Props) {
 	}
 
 	if (from.includes("top")) {
-		animateY = dist;
+		animateY = -dist;
 	}
 	if (from.includes("bottom")) {
-		animateY = -dist;
+		animateY = dist;
 	}
 
 	const fadeIn = {
@@ -43,17 +44,13 @@ function FadeIn({ from, children, distance }: Props) {
 				type: "spring",
 				damping: 12,
 				duration: 0.4,
+				delay: delay ?? 0,
 			},
 		},
 		hidden: {
 			opacity: 0,
 			x: animateX,
 			y: animateY,
-			transition: {
-				type: "spring",
-				damping: 12,
-				duration: 0.4,
-			},
 		},
 	};
 
