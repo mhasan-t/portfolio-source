@@ -1,5 +1,4 @@
 import React from "react";
-import { Roboto, Dancing_Script } from "next/font/google";
 import { motion } from "framer-motion";
 
 import { ShowcaseProps } from "@/types";

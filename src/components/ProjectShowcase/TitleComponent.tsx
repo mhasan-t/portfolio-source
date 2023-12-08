@@ -44,11 +44,11 @@ export default function TitleComponent() {
 	return (
 		<div
 			className={
-				" text-black text-center text-5xl justify-center items-center  " +
+				" text-text_primary text-center text-5xl justify-center items-center  " +
 				fonts[sectionTitleFontIndex].className
 			}
 		>
-			Project Showcase
+			PROJECT SHOWCASE
 		</div>
 	);
 }

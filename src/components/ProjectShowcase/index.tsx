@@ -26,22 +26,15 @@ const dancingScriptFont = Dancing_Script({
 
 const showCaseData = require("../../../ShowCaseData.json");
 export default function Showcase() {
-	const [selectedShowCaseIndex, setSelectedShowCaseIndex] = useState<
-		number | null
-	>(null);
-
 	return (
-		<div className="justify-center items-center bg-gradient-to-b bg-cyan-200 lg:pt-20 pb-16 lg:px-16 px-2 relative z-10 overflow-x-clip ">
-			<div className="curvyOnTop"></div>
-			<TitleComponent />
+		<div className="justify-center items-center bg-gradient-to-b bg-primary lg:pt-20 pb-16 lg:px-16 px-2 relative z-10 overflow-x-clip ">
+			<div className="curvyOnTop flex items-center justify-center">
+				<TitleComponent />
+			</div>
 
-			<div className="flex flex-row flex-wrap justify-center items-center gap-5 m-auto lg:p-24 p-2 mt-10 ">
+			<div className="flex flex-col flex-wrap justify-center items-center gap-5 m-auto lg:p-24 p-2 mt-10 ">
 				{showCaseData.map((showcase: ShowcaseProps, index: number) => (
-					<ShowcaseCard
-						key={index}
-						data={showcase}
-						setSelectedShowCaseIndex={setSelectedShowCaseIndex}
-					/>
+					<ShowcaseCard key={index} data={showcase} />
 				))}
 			</div>
 			{/* {selectedShowCaseIndex !== null && (

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Roboto, Dancing_Script, Raleway } from "next/font/google";
 
 import { ShowcaseProps } from "@/types";
 import ShowcaseHeader from "./ShowcaseHeader";
@@ -10,15 +9,6 @@ import ShowcaseLinks from "./ShowcaseLinks";
 import ShowcaseDescription from "./ShowcaseDescription";
 import ShowcaseRole from "./ShowcaseRole";
 import ShowcaseFeatures from "./ShowcaseFeatures";
-
-const dancingFont = Dancing_Script({
-	weight: ["400", "700"],
-	subsets: ["latin"],
-});
-const secondaryFont = Roboto({
-	weight: ["100", "300", "400", "500", "700", "900"],
-	subsets: ["latin"],
-});
 
 export default function ShowcaseDetails({
 	data,

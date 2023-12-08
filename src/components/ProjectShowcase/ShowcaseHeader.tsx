@@ -14,23 +14,20 @@ const secondaryFont = Alegreya_Sans_SC({
 
 export default function ShowcaseHeader(props: { data: ShowcaseProps }) {
 	return (
-		<div>
+		<motion.div className="flex flex-col items-end">
 			<motion.div
-				className={
-					"text-center text-3xl font-bold text-black " +
-					dancingFont.className
-				}
+				className={"text-right text-3xl font-bold text-text_primary "}
 			>
 				{props.data.title}
 			</motion.div>
 			<motion.div
 				className={
-					"text-center text-[#4a5568] text-[14px] font-[500] " +
+					"text-center text-[#596477] text-[14px] font-[500] " +
 					secondaryFont.className
 				}
 			>
 				{props.data.type} - {props.data.year}
 			</motion.div>
-		</div>
+		</motion.div>
 	);
 }

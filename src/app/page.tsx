@@ -11,9 +11,9 @@ export default function Home() {
 		<div className="overflow-y-hidden">
 			<StyledLogo />
 			<Intro />
-			{/* <ProjectShowcase />
-			<Skills />
-			<Contact /> */}
+			<ProjectShowcase />
+			{/* <Skills />   */}
+			{/* <Contact /> */}
 		</div>
 	);
 }

@@ -1,49 +1,49 @@
-import React from "react";
-import { Roboto, Dancing_Script } from "next/font/google";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { memo } from "react";
+import { motion } from "framer-motion";
 
 import { ShowcaseProps } from "@/types";
-import Brick from "../commons/Brick";
-import ShowcaseCardClosed from "./ShowcaseCardClosed";
-import ShowcaseDetails from "./ShowcaseDetails";
+import ShowcaseHeader from "./ShowcaseHeader";
+import ShowcaseDescription from "./ShowcaseDescription";
+import ShowcaseRole from "./ShowcaseRole";
+import ShowcaseFeatures from "./ShowcaseFeatures";
+import ShowcaseTechs from "./ShowcaseTechs";
+import ShowcaseLinks from "./ShowcaseLinks";
 
-const dancingFont = Dancing_Script({
-	weight: ["400", "700"],
-	subsets: ["latin"],
-});
-const secondaryFont = Roboto({
-	weight: ["100", "300", "400", "500", "700", "900"],
-	subsets: ["latin"],
-});
-
-export default function ShowcaseCard({
+function ShowcaseCard({
 	data,
 	className,
-	setSelectedShowCaseIndex,
 }: {
 	data: ShowcaseProps;
 	className?: string;
-	setSelectedShowCaseIndex: React.Dispatch<
-		React.SetStateAction<number | null>
-	>;
 }) {
 	const [isOpen, setIsOpen] = React.useState(false);
 
+	console.log(data);
+
 	return (
-		<motion.div exit={{ scale: 0 }} className="">
-			{!isOpen ? (
-				<ShowcaseCardClosed
-					data={data}
-					setSelectedShowCaseIndex={setSelectedShowCaseIndex}
-					setIsOpen={setIsOpen}
+		<motion.div
+			exit={{ scale: 0 }}
+			className="border-b-2 border-secondary rounded-md w-full p-6"
+		>
+			<motion.div className="flex gap-4 flex-col justify-center items-center md:flex-row md:justify-between">
+				<motion.img
+					src="https://placekitten.com/200/300"
+					alt=""
+					className="rounded-md w-1/3"
 				/>
-			) : (
-				<ShowcaseDetails
-					data={data}
-					setSelectedShowCaseIndex={setSelectedShowCaseIndex}
-					setIsOpen={setIsOpen}
-				/>
-			)}
+				<motion.div className="flex flex-col gap-2 w-full">
+					<ShowcaseHeader data={data} />
+					<ShowcaseDescription description={data.description} />
+					<ShowcaseRole role={data.myRole} />
+					<ShowcaseFeatures features={data.features} />
+					<ShowcaseTechs tech_stack={data.tech_stack} />
+					{data.links !== undefined && data.links.length !== 0 && (
+						<ShowcaseLinks links={data.links} />
+					)}
+				</motion.div>
+			</motion.div>
 		</motion.div>
 	);
 }
+
+export default memo(ShowcaseCard);
