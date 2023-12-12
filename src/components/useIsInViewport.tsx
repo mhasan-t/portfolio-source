@@ -2,6 +2,13 @@ import { useEffect, useMemo, useState } from "react";
 
 export function useIsInViewport(ref: any) {
 	const [isIntersecting, setIsIntersecting] = useState(false);
+	const [visitedAlready, setVisitedAlready] = useState(false);
+
+	useEffect(() => {
+		if (isIntersecting) {
+			setVisitedAlready(true);
+		}
+	}, [isIntersecting]);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(([entry]) =>
@@ -14,5 +21,5 @@ export function useIsInViewport(ref: any) {
 		};
 	}, [ref]);
 
-	return isIntersecting;
+	return { isIntersecting, visitedAlready };
 }

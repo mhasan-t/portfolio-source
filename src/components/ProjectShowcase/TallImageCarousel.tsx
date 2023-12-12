@@ -4,19 +4,17 @@ import { ShowcaseProps } from "@/types";
 
 const showcaseIntoViewVariants = {
 	slideInFromRight: {
-		initial: { x: 350, width: "16rem", opacity: 10 },
+		initial: { x: 350, opacity: 10 },
 		animate: {
 			x: 0,
-			width: "max-content",
 			opacity: 100,
 			transition: { duration: 0.5, type: "spring" },
 		},
 	},
 	slideInFromLeft: {
-		initial: { x: -350, width: "16rem", opacity: 10 },
+		initial: { x: -350, opacity: 10 },
 		animate: {
 			x: 0,
-			width: "max-content",
 			opacity: 100,
 			transition: { duration: 0.5, type: "spring" },
 		},
@@ -31,7 +29,7 @@ const showcaseIntoViewVariants = {
 	},
 };
 
-export default function ImageCarousel({ data }: { data: ShowcaseProps }) {
+export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 	const [selectedImageIndex, setSelectedImageIndex] = React.useState(0);
 	const [fromRight, setFromRight] = React.useState<boolean | null>(null);
 
@@ -53,16 +51,16 @@ export default function ImageCarousel({ data }: { data: ShowcaseProps }) {
 	}
 
 	return (
-		<motion.div className="flex flex-col lg:flex-row justify-center gap-2 lg:gap-10">
+		<motion.div className=" flex flex-col lg:flex-row justify-center gap-2 lg:gap-10">
 			{/* LEFT ONE */}
 			{data.images.length > 1 && (
 				<motion.div
-					className="w-[200px] h-[100px] lg:w-auto absolute top-28 lg:top-0 lg:relative lg:h-[40vh] mr-2 max-w-xl lg:border-[1px] lg:border-gray-300 lg:rounded-xl lg:shadow-lg lg:opacity-30 lg:hover:opacity-50 transition-all "
+					className="hidden md:block lg:w-auto absolute top-28 lg:top-0 lg:relative lg:h-[40vh] mr-2 max-w-xl lg:border-[1px] lg:border-gray-300 lg:rounded-xl lg:shadow-lg lg:opacity-30 lg:hover:opacity-50 transition-all "
 					onClick={goPrev}
 					key={selectedImageIndex - 1}
 				>
 					<motion.img
-						className="object-cover h-full w-64 rounded-xl hidden lg:block  "
+						className="object-cover h-full rounded-xl hidden lg:block  "
 						src={
 							"/images/" +
 							data.imagesFolder +
@@ -78,7 +76,7 @@ export default function ImageCarousel({ data }: { data: ShowcaseProps }) {
 					<img
 						src="prev.png"
 						alt=""
-						className="absolute top-0 lg:top-[40%] lg:left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
+						className="hidden md:block absolute top-0 lg:top-[40%] lg:left-[35%] w-10 h-10 cursor-pointer hover:scale-125 transition-all duration-300"
 						// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
 					/>
 				</motion.div>
@@ -87,7 +85,7 @@ export default function ImageCarousel({ data }: { data: ShowcaseProps }) {
 			{/* MIDDLE */}
 			<div className="min-w-[40%] flex justify-center items-center pt-24 lg:pt-0">
 				<motion.div
-					className="w-fit h-[48vh] mr-2 max-w-xl relative  "
+					className="w-48 h-full mr-2 relative flex justify-center items-center "
 					initial={
 						fromRight == null
 							? showcaseIntoViewVariants.justAppearFromBottom
@@ -131,11 +129,11 @@ export default function ImageCarousel({ data }: { data: ShowcaseProps }) {
 			{/* RIGHT ONE */}
 			{data.images.length > 1 && (
 				<motion.div
-					className="w-[200px] h-[100px] lg:w-auto absolute top-28 right-10 lg:top-0 lg:right-0 lg:relative lg:h-[40vh] mr-2 max-w-xl lg:border-[1px] lg:border-gray-300 lg:rounded-xl lg:shadow-lg lg:opacity-30 lg:hover:opacity-50 transition-all "
+					className="hidden md:block lg:w-auto absolute top-28 right-10 lg:top-0 lg:right-0 lg:relative lg:h-[40vh] mr-2 max-w-xl lg:border-[1px] lg:border-gray-300 lg:rounded-xl lg:shadow-lg lg:opacity-30 lg:hover:opacity-50 transition-all "
 					onClick={goNext}
 				>
 					<motion.img
-						className="object-cover h-full w-64 rounded-xl hidden lg:block "
+						className="object-cover h-full rounded-xl hidden lg:block "
 						src={
 							"/images/" +
 							data.imagesFolder +
@@ -151,11 +149,27 @@ export default function ImageCarousel({ data }: { data: ShowcaseProps }) {
 					<img
 						src="next.png"
 						alt=""
-						className="absolute top-0 right-0 lg:top-[40%] lg:left-[35%] w-20 h-20 cursor-pointer hover:scale-125 transition-all duration-300"
+						className="hidden md:block absolute top-0 lg:top-[40%] lg:left-[35%] w-10 h-10 cursor-pointer hover:scale-125 transition-all duration-300"
 						// top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300
 					/>
 				</motion.div>
 			)}
+
+			{/* BOTTOM NAV */}
+			<div className="lg:hidden w-full flex justify-center">
+				<button
+					onClick={goPrev}
+					className="rounded-sm text-text_secondary border-2 border-secondary px-10 py-1"
+				>
+					{"<<"} prev
+				</button>
+				<button
+					onClick={goNext}
+					className="rounded-sm text-text_secondary border-2 border-secondary px-10 py-1"
+				>
+					next {">>"}
+				</button>
+			</div>
 		</motion.div>
 	);
 }

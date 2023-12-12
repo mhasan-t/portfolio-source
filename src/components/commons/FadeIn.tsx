@@ -1,5 +1,12 @@
 import { MotionConfigContext, MotionStyle, motion } from "framer-motion";
-import React, { PropsWithChildren, ReactComponentElement, memo } from "react";
+import React, {
+	PropsWithChildren,
+	ReactComponentElement,
+	memo,
+	useRef,
+	useState,
+} from "react";
+import { useIsInViewport } from "../useIsInViewport";
 
 type Props = {
 	from:
@@ -16,6 +23,7 @@ type Props = {
 } & PropsWithChildren;
 
 function FadeIn({ from, children, distance, delay }: Props) {
+	// CALC X and Y
 	const dist = distance ?? 40;
 
 	let animateX = 0;
@@ -54,8 +62,17 @@ function FadeIn({ from, children, distance, delay }: Props) {
 		},
 	};
 
+	const ref = useRef(null);
+	const { isIntersecting, visitedAlready } = useIsInViewport(ref);
+
 	return (
-		<motion.div variants={fadeIn} initial="hidden" animate="visible">
+		<motion.div
+			className="w-full h-full"
+			ref={ref}
+			variants={fadeIn}
+			initial={visitedAlready ? "" : "hidden"}
+			animate={isIntersecting == true ? "visible" : ""}
+		>
 			{children}
 		</motion.div>
 	);

@@ -17,6 +17,7 @@
 			"nodi_8.jpg"
 		],
 		"imagesFolder": "nodirokkha",
+		"imageType": "tall",
 		"links": [
 			{
 				"title": "Play Store",
@@ -62,6 +63,7 @@
 			"nodi_inv_8.jpg"
 		],
 		"imagesFolder": "nodi-inv",
+		"imageType": "tall",
 		"links": [
 			{
 				"title": "Play Store",
@@ -97,6 +99,7 @@
 		"year": "2021",
 		"images": ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg", "ss5.jpg"],
 		"imagesFolder": "ss",
+		"imageType": "tall",
 		"links": [
 			{
 				"title": "Github",
@@ -138,6 +141,7 @@
 			"admin5.png"
 		],
 		"imagesFolder": "admin",
+		"imageType": "wide",
 		"links": [],
 		"tech_stack": [
 			{
@@ -167,6 +171,7 @@
 		"year": "2023",
 		"images": ["nodi-back1.png"],
 		"imagesFolder": "nodi-back",
+		"imageType": "tall",
 		"links": [],
 		"tech_stack": [
 			{

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { ShowcaseProps } from "@/types";
 import ShowcaseHeader from "./ShowcaseHeader";
-import ImageCarousel from "./ImageCarousel";
+import ImageCarousel from "./TallImageCarousel";
 import ShowcaseTechs from "./ShowcaseTechs";
 import ShowcaseLinks from "./ShowcaseLinks";
 import ShowcaseDescription from "./ShowcaseDescription";

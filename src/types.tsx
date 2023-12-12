@@ -6,6 +6,7 @@ export interface ShowcaseProps {
 	year: string;
 	images: Array<string>;
 	imagesFolder: string;
+	imageType: "wide" | "tall";
 	links: Array<{
 		title: string;
 		url: string;
