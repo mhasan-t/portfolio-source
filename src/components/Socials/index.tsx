@@ -6,11 +6,11 @@ type Props = {};
 
 function Socials({}: Props) {
 	// const [gettingSmaller, setGettingSmaller] = useState(true);
-	const [heightOfLine, setHeightOfLine] = useState<string>("50%");
+	const [heightOfLine, setHeightOfLine] = useState<string>("50px");
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setHeightOfLine(heightOfLine === "50%" ? "40%" : "50%");
+			setHeightOfLine(heightOfLine === "50px" ? "40px" : "50px");
 		}, 500);
 
 		//Clearing the interval
