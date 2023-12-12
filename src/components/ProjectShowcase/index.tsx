@@ -32,7 +32,7 @@ export default function Showcase() {
 				<TitleComponent />
 			</div>
 
-			<div className="flex flex-col flex-wrap justify-center items-center gap-5 m-auto lg:p-24 p-2 mt-10 ">
+			<div className="flex flex-col flex-wrap justify-center items-center gap-5 m-auto lg:p-24 p-2 lg:mt-10 ">
 				{showCaseData.map((showcase: ShowcaseProps, index: number) => (
 					<ShowcaseCard key={index} data={showcase} />
 				))}

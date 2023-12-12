@@ -28,7 +28,7 @@ export default function ShowcaseLinks(props: {
 								key={link.title}
 								img_src={"/icons/" + link.icon}
 								text={link.title}
-								classNames="hover:scale-110 transition-all hover:bg-secondary px-4 py-2 border-2 border-secondary"
+								classNames="hover:scale-110 transition-all hover:bg-secondary px-4 py-2 border-2 border-text_secondary"
 							/>
 						</a>
 					);

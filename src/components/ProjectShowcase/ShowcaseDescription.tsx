@@ -7,7 +7,7 @@ export default function ShowcaseDescription(props: { description: string }) {
 			<motion.div className="text-text_secondary font-[700]">
 				Description
 			</motion.div>
-			<motion.div className="text-text_tertiary text-sm ">
+			<motion.div className="text-text_secondary text-sm ">
 				{props.description}
 			</motion.div>
 		</motion.div>

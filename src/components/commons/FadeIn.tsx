@@ -1,11 +1,5 @@
-import { MotionConfigContext, MotionStyle, motion } from "framer-motion";
-import React, {
-	PropsWithChildren,
-	ReactComponentElement,
-	memo,
-	useRef,
-	useState,
-} from "react";
+import { motion } from "framer-motion";
+import { PropsWithChildren, memo, useRef } from "react";
 import { useIsInViewport } from "../useIsInViewport";
 
 type Props = {
@@ -20,9 +14,10 @@ type Props = {
 		| "top-right";
 	distance?: number;
 	delay?: number;
+	classNames?: string;
 } & PropsWithChildren;
 
-function FadeIn({ from, children, distance, delay }: Props) {
+function FadeIn({ from, children, distance, delay, classNames }: Props) {
 	// CALC X and Y
 	const dist = distance ?? 40;
 
@@ -67,7 +62,7 @@ function FadeIn({ from, children, distance, delay }: Props) {
 
 	return (
 		<motion.div
-			className="w-full h-full"
+			className={"w-full h-full " + classNames}
 			ref={ref}
 			variants={fadeIn}
 			initial={visitedAlready ? "" : "hidden"}

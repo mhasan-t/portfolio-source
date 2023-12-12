@@ -22,7 +22,7 @@ export default function ShowcaseHeader(props: { data: ShowcaseProps }) {
 			</motion.div>
 			<motion.div
 				className={
-					"text-center text-[#596477] text-[14px] font-[500] " +
+					"text-center text-gray-400 text-[14px] font-[500] " +
 					secondaryFont.className
 				}
 			>

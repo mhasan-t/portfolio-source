@@ -1,6 +1,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ShowcaseProps } from "@/types";
+import CarouselBottomNavs from "./CarouselBottomNavs";
 
 const showcaseIntoViewVariants = {
 	slideInFromRight: {
@@ -55,7 +56,7 @@ export default function WideImageCarousel({ data }: { data: ShowcaseProps }) {
 	return (
 		<motion.div className="flex flex-col justify-center gap-2">
 			{/* MIDDLE */}
-			<div className="min-w-[40%] flex justify-center items-center pt-24 lg:pt-0">
+			<div className="min-w-[40%] flex justify-center items-center">
 				<AnimatePresence>
 					<motion.div
 						className="w-fit h-full mr-2 max-w-xl relative flex justify-center items-center "
@@ -82,7 +83,7 @@ export default function WideImageCarousel({ data }: { data: ShowcaseProps }) {
 						key={selectedImageIndex}
 					>
 						<motion.img
-							className="object-contain h-fit max-h-full border-[1px] border-gray-300 rounded-xl shadow-lg"
+							className="object-contain h-fit w-96 max-w-[90vw] border-[1px] border-gray-300 rounded-xl shadow-lg"
 							src={
 								"/images/" +
 								data.imagesFolder +
@@ -96,20 +97,7 @@ export default function WideImageCarousel({ data }: { data: ShowcaseProps }) {
 			</div>
 
 			{/* NAV */}
-			<div className="w-full flex justify-center">
-				<button
-					onClick={goPrev}
-					className="rounded-sm text-text_secondary border-2 border-secondary px-10 py-1"
-				>
-					{"<<"} prev
-				</button>
-				<button
-					onClick={goNext}
-					className="rounded-sm text-text_secondary border-2 border-secondary px-10 py-1"
-				>
-					next {">>"}
-				</button>
-			</div>
+			<CarouselBottomNavs goNext={goNext} goPrev={goPrev} />
 		</motion.div>
 	);
 }

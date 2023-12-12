@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ShowcaseProps } from "@/types";
+import CarouselBottomNavs from "./CarouselBottomNavs";
 
 const showcaseIntoViewVariants = {
 	slideInFromRight: {
@@ -83,7 +84,7 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 			)}
 
 			{/* MIDDLE */}
-			<div className="min-w-[40%] flex justify-center items-center pt-24 lg:pt-0">
+			<div className="min-w-[40%] flex justify-center items-center ">
 				<motion.div
 					className="w-48 h-full mr-2 relative flex justify-center items-center "
 					initial={
@@ -155,20 +156,8 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 				</motion.div>
 			)}
 
-			{/* BOTTOM NAV */}
-			<div className="lg:hidden w-full flex justify-center">
-				<button
-					onClick={goPrev}
-					className="rounded-sm text-text_secondary border-2 border-secondary px-10 py-1"
-				>
-					{"<<"} prev
-				</button>
-				<button
-					onClick={goNext}
-					className="rounded-sm text-text_secondary border-2 border-secondary px-10 py-1"
-				>
-					next {">>"}
-				</button>
+			<div className="lg:hidden">
+				<CarouselBottomNavs goNext={goNext} goPrev={goPrev} />
 			</div>
 		</motion.div>
 	);

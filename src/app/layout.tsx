@@ -1,10 +1,5 @@
 import "./globals.css";
-import { Roboto } from "next/font/google";
-
-const fontClass = Roboto({
-	weight: ["100", "300", "400", "500", "700", "900"],
-	subsets: ["latin"],
-});
+import fonts from "@/app/fonts";
 
 export default function RootLayout({
 	children,
@@ -13,7 +8,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={fontClass.className}>{children}</body>
+			<body className={fonts.primary.className}>{children}</body>
 		</html>
 	);
 }

@@ -25,11 +25,14 @@ function ShowcaseCard({
 		<motion.div
 			layout
 			exit={{ scale: 0 }}
-			className="border-b-2 border-secondary rounded-md w-full p-6 pt-20 md:p-6"
+			className="border-b-2 border-secondary rounded-md w-full p-6 lg:pt-20 md:p-6"
 		>
 			<motion.div className="flex flex-col lg:flex-row gap-4 items-center">
-				<div className="w-full h-full flex justify-center items-center">
-					<FadeIn from="left">
+				<div className="w-full md:w-[80%] h-full flex justify-center items-center">
+					<FadeIn
+						from="left"
+						classNames="flex justify-center items-center"
+					>
 						{data.images.length > 1 ? (
 							data.imageType === "tall" ? (
 								<TallImageCarousel data={data} />
@@ -38,7 +41,7 @@ function ShowcaseCard({
 							)
 						) : (
 							<motion.img
-								className="object-contain h-fit max-h-full border-[1px] border-gray-300 rounded-xl shadow-lg"
+								className="object-contain h-full w-96 border-[1px] border-gray-300 rounded-xl shadow-lg"
 								src={
 									"/images/" +
 									data.imagesFolder +

@@ -16,7 +16,7 @@ export default function ShowcaseFeatures({
 						return (
 							<li
 								key={feature}
-								className="text-text_tertiary text-sm m-0 p-0 "
+								className="text-text_secondary text-sm m-0 p-0 "
 							>
 								{feature}
 							</li>
