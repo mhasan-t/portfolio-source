@@ -30,10 +30,23 @@ function ShowcaseCard({
 			<motion.div className="flex flex-col lg:flex-row gap-4 items-center">
 				<div className="w-full h-full flex justify-center items-center">
 					<FadeIn from="left">
-						{data.imageType === "tall" ? (
-							<TallImageCarousel data={data} />
+						{data.images.length > 1 ? (
+							data.imageType === "tall" ? (
+								<TallImageCarousel data={data} />
+							) : (
+								<WideImageCarousel data={data} />
+							)
 						) : (
-							<WideImageCarousel data={data} />
+							<motion.img
+								className="object-contain h-fit max-h-full border-[1px] border-gray-300 rounded-xl shadow-lg"
+								src={
+									"/images/" +
+									data.imagesFolder +
+									"/" +
+									data.images[0]
+								}
+								alt={data.title + " image"}
+							/>
 						)}
 					</FadeIn>
 				</div>

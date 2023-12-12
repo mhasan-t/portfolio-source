@@ -171,7 +171,7 @@
 		"year": "2023",
 		"images": ["nodi-back1.png"],
 		"imagesFolder": "nodi-back",
-		"imageType": "tall",
+		"imageType": "wide",
 		"links": [],
 		"tech_stack": [
 			{
