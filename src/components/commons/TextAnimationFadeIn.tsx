@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { useIsInViewport } from "../useIsInViewport";
+import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 export default function TextAnimationFadeIn({
 	children,

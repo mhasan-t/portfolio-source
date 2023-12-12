@@ -3,7 +3,7 @@ import { Lobster_Two } from "next/font/google";
 
 import Brick from "../commons/Brick";
 import { useRef, useState } from "react";
-import { useIsInViewport } from "../useIsInViewport";
+import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 const lobsterFont = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });
 const container = {

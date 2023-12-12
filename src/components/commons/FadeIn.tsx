@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { PropsWithChildren, memo, useRef } from "react";
-import { useIsInViewport } from "../useIsInViewport";
+import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 type Props = {
 	from:
