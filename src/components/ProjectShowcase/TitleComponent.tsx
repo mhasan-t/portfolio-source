@@ -4,7 +4,7 @@ export default function TitleComponent() {
 	return (
 		<div
 			className={
-				" text-text_primary text-center text-2xl lg:text-5xl justify-center items-center  " +
+				" text-text_primary text-center font-bold text-4xl lg:text-5xl justify-center items-center  " +
 				fonts.header.className
 			}
 		>
