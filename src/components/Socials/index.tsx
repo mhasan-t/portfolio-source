@@ -18,7 +18,7 @@ function Socials({}: Props) {
 	}, [heightOfLine]);
 
 	return (
-		<div className="fixed h-screen right-6 top-0 z-50 text-text_primary flex flex-col justify-start items-center">
+		<div className="absolute md:fixed h-screen right-3 md:right-6 top-0 z-50 text-text_primary flex flex-col justify-start items-center">
 			<motion.div
 				layout
 				transition={{

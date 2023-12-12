@@ -45,6 +45,7 @@ function FadeIn({ from, children, distance, delay, classNames }: Props) {
 			y: 0,
 			transition: {
 				type: "spring",
+				ease: "easeIn",
 				damping: 12,
 				duration: 0.4,
 				delay: delay ?? 0,
@@ -62,7 +63,7 @@ function FadeIn({ from, children, distance, delay, classNames }: Props) {
 
 	return (
 		<motion.div
-			className={"w-full h-full " + classNames}
+			className={classNames}
 			ref={ref}
 			variants={fadeIn}
 			initial={visitedAlready ? "" : "hidden"}

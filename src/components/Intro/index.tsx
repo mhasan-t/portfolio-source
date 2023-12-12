@@ -1,14 +1,21 @@
+import { motion } from "framer-motion";
 import fonts from "@/app/fonts";
 import FadeIn from "../commons/FadeIn";
+import StyledLogo from "./StyledLogo";
 
 export default function Header() {
 	return (
-		<div className="relative bg-primary text-white flex flex-col justify-center items-center z-[1] h-screen min-h-[700px] border-b-secondary border-b-[1px] p-6 ">
+		<motion.div
+			layout
+			className="relative bg-primary text-white h-screen min-h-[700px] border-b-secondary border-b-[1px] p-6 flex flex-col md:flex-row justify-center "
+		>
+			<StyledLogo />
 			{/* BG GRAD */}
 			{/* bg-[url('/images/bg-1.jpg')] bg-cover bg-opacity-10 /// bg-gradient-to-br from-cyan-900 to-primary from-5% to-50%  */}
+			{/* <div className="absolute top-0 left-0 w-screen h-screen bg-[url('/images/bg-1.jpg')] bg-cover -z-10 opacity-20 "></div> */}
 
 			<div className="w-full flex flex-col justify-center items-center max-w-5xl ">
-				<div className="">
+				<div className="w-full h-fit">
 					<FadeIn from="top">
 						<div
 							className={`${fonts.title.className} font-bold text-6xl text-center text-text_primary`}
@@ -24,7 +31,7 @@ export default function Header() {
 						</div>
 					</FadeIn>
 					<FadeIn from="bottom" delay={0.5}>
-						<div className="text-md text-center mt-4 text-slate-200 ">
+						<div className="text-md text-center mt-6 text-slate-200 ">
 							I'm a seasoned full-stack software developer with
 							team leadership and system design expertise. I'm
 							deeply passionate about my work, excel in
@@ -34,6 +41,6 @@ export default function Header() {
 					</FadeIn>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

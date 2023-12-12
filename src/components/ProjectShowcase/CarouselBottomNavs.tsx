@@ -12,13 +12,13 @@ function CarouselBottomNavs({ goNext, goPrev }: Props) {
 				onClick={goPrev}
 				className="rounded-xl text-text_secondary border-2 border-secondary px-10 hover:bg-secondary"
 			>
-				{"<<"} prev
+				{"<<"}prev
 			</button>
 			<button
 				onClick={goNext}
 				className="rounded-xl text-text_secondary border-2 border-secondary px-10 hover:bg-secondary"
 			>
-				next {">>"}
+				next{">>"}
 			</button>
 		</div>
 	);
