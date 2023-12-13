@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { MotionStyle, motion } from "framer-motion";
 import SocialButton from "./SocialButton";
 
 type Props = {};
 
+const hangRope = {
+	initial: {
+		height: "10vh",
+	},
+	animate: {
+		height: ["15vh", "10vh", "15vh"],
+		transition: {
+			repeat: Infinity,
+			duration: 1,
+			type: "easeIn",
+		},
+	},
+};
+
 function Socials({}: Props) {
-	// const [gettingSmaller, setGettingSmaller] = useState(true);
-	const [heightOfLine, setHeightOfLine] = useState<string>("50px");
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setHeightOfLine(heightOfLine === "50px" ? "40px" : "50px");
-		}, 500);
-
-		//Clearing the interval
-		return () => clearInterval(interval);
-	}, [heightOfLine]);
-
 	return (
 		<div className="absolute md:fixed h-screen right-3 md:right-6 top-0 z-50 text-text_primary flex flex-col justify-start items-center">
 			<motion.div
 				layout
-				transition={{
-					duration: 4,
-					type: "keyframes",
-				}}
-				className={`border w-[1px] border-r-2 border-text_primary h-[${heightOfLine}]`}
+				{...hangRope}
+				className={`relative border w-[1px] border-r-2 border-text_primary`}
 			></motion.div>
 			<SocialButton
 				imgSrc="/icons/gmail-soc.png"
