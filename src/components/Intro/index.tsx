@@ -44,11 +44,22 @@ export default function Header() {
 			</div>
 
 			{/* CHECKOUT PROJECTS BELOW */}
-			<a href="#projectShowcase">
+			<motion.a
+				href="#projectShowcase"
+				initial={{ opacity: 0, y: -100 }}
+				animate={{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 0.5,
+						type: "tween",
+					},
+				}}
+			>
 				<div className="text-text_primary rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
 					checkout my projects below
 				</div>
-			</a>
+			</motion.a>
 		</motion.div>
 	);
 }
