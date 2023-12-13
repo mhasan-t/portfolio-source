@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { MotionStyle, motion } from "framer-motion";
 import SocialButton from "./SocialButton";
 
@@ -63,4 +63,4 @@ function Socials({}: Props) {
 	);
 }
 
-export default Socials;
+export default memo(Socials);

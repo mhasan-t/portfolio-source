@@ -8,7 +8,7 @@ export default function Header() {
 		<motion.div
 			layout
 			id="introSection"
-			className="z-[1] relative bg-primary text-white h-screen min-h-[700px] border-b-secondary border-b-[1px] p-6 flex flex-col justify-around items-center "
+			className="z-[1] relative bg-primary text-white h-screen min-h-[700px] p-6 flex flex-col justify-around items-center mb-4"
 		>
 			<StyledLogo />
 			{/* BG GRAD */}
