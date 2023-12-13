@@ -27,7 +27,10 @@ const dancingScriptFont = Dancing_Script({
 const showCaseData = require("../../../ShowCaseData.json");
 export default function Showcase() {
 	return (
-		<div className="justify-center items-center bg-gradient-to-b bg-primary lg:pt-20 pb-16 lg:px-16 px-2 relative z-10 overflow-x-clip ">
+		<div
+			id="projectShowcase"
+			className="justify-center items-center bg-gradient-to-b bg-primary pt-12 lg:pt-20 pb-16 lg:px-16 px-2 relative z-10 overflow-x-clip "
+		>
 			<div className="curvyOnTop flex items-center justify-center">
 				<TitleComponent />
 			</div>

@@ -7,14 +7,15 @@ export default function Header() {
 	return (
 		<motion.div
 			layout
-			className="z-[1] relative bg-primary text-white h-screen min-h-[700px] border-b-secondary border-b-[1px] p-6 flex flex-col md:flex-row justify-center "
+			id="introSection"
+			className="z-[1] relative bg-primary text-white h-screen min-h-[700px] border-b-secondary border-b-[1px] p-6 flex flex-col justify-around items-center "
 		>
 			<StyledLogo />
 			{/* BG GRAD */}
 			{/* bg-[url('/images/bg-1.jpg')] bg-cover bg-opacity-10 /// bg-gradient-to-br from-cyan-900 to-primary from-5% to-50%  */}
 			{/* <div className="absolute top-0 left-0 w-screen h-screen bg-[url('/images/bg-1.jpg')] bg-cover -z-10 opacity-20 "></div> */}
 
-			<div className="w-full flex flex-col justify-center items-center max-w-5xl ">
+			<div className="w-full flex flex-col justify-center items-center max-w-5xl md:pt-20">
 				<div className="w-full h-fit">
 					<FadeIn from="top">
 						<div
@@ -41,6 +42,13 @@ export default function Header() {
 					</FadeIn>
 				</div>
 			</div>
+
+			{/* CHECKOUT PROJECTS BELOW */}
+			<a href="#projectShowcase">
+				<div className="text-text_primary rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
+					checkout my projects below
+				</div>
+			</a>
 		</motion.div>
 	);
 }
