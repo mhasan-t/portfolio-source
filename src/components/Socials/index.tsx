@@ -6,10 +6,10 @@ type Props = {};
 
 const hangRope = {
 	initial: {
-		height: "10vh",
+		height: "13vh",
 	},
 	animate: {
-		height: ["15vh", "10vh", "15vh"],
+		height: ["15vh", "13vh", "15vh"],
 		transition: {
 			repeat: Infinity,
 			duration: 1,

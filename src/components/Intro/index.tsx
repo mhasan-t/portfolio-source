@@ -28,7 +28,7 @@ export default function Header() {
 						<div
 							className={`${fonts.header.className} font-normal text-xl text-center text-text_secondary`}
 						>
-							Full-Stack Software Developer
+							FULL STACK SOFTWARE DEVELOPER
 						</div>
 					</FadeIn>
 					<FadeIn from="bottom" delay={0.5}>
@@ -55,6 +55,8 @@ export default function Header() {
 						type: "tween",
 					},
 				}}
+				whileHover={{ scale: 1.1 }}
+				whileTap={{ scale: 0.9 }}
 			>
 				<div className="text-text_primary rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
 					checkout my projects below

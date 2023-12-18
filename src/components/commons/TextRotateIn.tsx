@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
-export default function TextDance({
+export default function TextRotateIn({
 	children,
 	parentDivClassName = "",
 }: {
@@ -31,7 +31,8 @@ export default function TextDance({
 	const child = {
 		visible: {
 			opacity: 1,
-			y: 0,
+			x: 0,
+			rotateY: 0,
 			transition: {
 				type: "spring",
 				damping: 12,
@@ -40,8 +41,9 @@ export default function TextDance({
 			},
 		},
 		hidden: {
-			opacity: 1,
-			y: 20,
+			opacity: 0,
+			x: -20,
+			rotateY: 180,
 			transition: {
 				type: "spring",
 				damping: 12,
@@ -52,7 +54,7 @@ export default function TextDance({
 	};
 
 	const ref = useRef(null);
-	const isInView = useIsInViewport(ref);
+	const { isIntersecting, visitedAlready } = useIsInViewport(ref);
 
 	return (
 		<motion.div
@@ -60,12 +62,12 @@ export default function TextDance({
 			style={{ overflow: "hidden", display: "flex" }}
 			variants={container}
 			initial="hidden"
-			animate={isInView ? "visible" : ""}
+			animate={visitedAlready === true ? "visible" : ""}
 			className={"flex flex-wrap " + parentDivClassName}
 		>
 			{letters.map((letter: string, index: number) => (
 				<motion.span variants={child} key={index}>
-					{letter}
+					{letter == " " ? "\u00A0" : letter}
 				</motion.span>
 			))}
 		</motion.div>

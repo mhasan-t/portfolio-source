@@ -5,6 +5,7 @@ import {
 	Quicksand,
 	Grandiflora_One,
 	Urbanist,
+	DM_Serif_Display,
 } from "next/font/google";
 
 const primary = Roboto({
@@ -12,7 +13,7 @@ const primary = Roboto({
 	subsets: ["latin"],
 });
 
-const title = Grandiflora_One({
+const title = DM_Serif_Display({
 	weight: ["400"],
 	subsets: ["latin"],
 });
