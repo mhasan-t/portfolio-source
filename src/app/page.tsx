@@ -3,16 +3,27 @@
 import StyledLogo from "@/components/Intro/StyledLogo";
 import Intro from "@/components/Intro";
 import ProjectShowcase from "@/components/ProjectShowcase";
-import Skills from "@/components/Skills";
+import Skills from "@/components/WorkedOn";
 import Contact from "@/components/Contact";
+import Socials from "@/components/Socials";
+import HorizontalLineWidens from "@/components/commons/HorizontalLineWidens";
+import Expertise from "@/components/Expertise";
 
 export default function Home() {
 	return (
-		<div className="overflow-y-hidden">
-			<StyledLogo />
+		<div className="overflow-y-hidden border-l-4 md:border-l-6 border-text_primary bg-primary">
+			<Socials />
+
 			<Intro />
+			{/* <HorizontalLineWidens /> */}
+
 			<ProjectShowcase />
-			<Skills />
+			{/* <HorizontalLineWidens /> */}
+
+			<Expertise />
+			{/* <HorizontalLineWidens /> */}
+
+			{/* <Skills /> */}
 			<Contact />
 		</div>
 	);

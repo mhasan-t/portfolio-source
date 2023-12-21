@@ -1,60 +1,67 @@
-import React from "react";
 import { motion } from "framer-motion";
-
-import TextAnimationFadeIn from "@/components/commons/TextAnimationFadeIn";
-import { Lobster_Two } from "next/font/google";
-
-const lobsterTwo = Lobster_Two({ weight: ["400", "700"], subsets: ["latin"] });
+import fonts from "@/app/fonts";
+import FadeIn from "../commons/FadeIn";
+import StyledLogo from "./StyledLogo";
 
 export default function Header() {
 	return (
-		<div className="relative bg-black text-white justify-center items-center min-h-[700px] pt-10 lg:pt-[10vh] pb-[max(100px,_30vh)] lg:px-16 px-4 z-[1]">
-			<motion.div
-				initial={{ opacity: 0, scale: 0.5 }}
-				animate={{ opacity: 1, scale: 1 }}
-				transition={{ duration: 0.1 }}
-			>
-				<div className="text-9xl text-center">Hi</div>
+		<motion.div
+			layout
+			id="introSection"
+			className="z-[1] relative bg-primary text-white h-screen min-h-[700px] p-6 flex flex-col justify-around items-center mb-4"
+		>
+			<StyledLogo />
+			{/* BG GRAD */}
+			{/* bg-[url('/images/bg-1.jpg')] bg-cover bg-opacity-10 /// bg-gradient-to-br from-cyan-900 to-primary from-5% to-50%  */}
+			{/* <div className="absolute top-0 left-0 w-screen h-screen bg-[url('/images/bg-1.jpg')] bg-cover -z-10 opacity-20 "></div> */}
 
-				<div className="mt-5 text-center relative lg:right-16">
-					<span className="relative lg:right-24 text-gray-400">
-						I am
-					</span>
-					<div className="flex flex-col justify-center items-center gap-5 mt-5 lg:mt-0 ">
-						<img
-							className="h-20 w-20 lg:h-40 lg:w-40 object-cover rounded-full border-4 border-slate-300 shadow-2xl"
-							src="me.jpg"
-							alt="Muhib Al Hasan"
-						/>
-						<TextAnimationFadeIn
-							parentDivClassName={
-								"text-center justify-center items-center text-4xl lg:text-7xl" +
-								" " +
-								lobsterTwo.className
-							}
-							fromLeft={true}
+			<div className="w-full flex flex-col justify-center items-center max-w-5xl md:pt-20">
+				<div className="w-full h-fit">
+					<FadeIn from="top">
+						<div
+							className={`${fonts.title.className} font-bold text-6xl text-center text-text_primary`}
 						>
-							Muhib Al Hasan
-						</TextAnimationFadeIn>
-					</div>
+							MUHIB AL HASAN
+						</div>
+					</FadeIn>
+					<FadeIn from="bottom">
+						<div
+							className={`${fonts.header.className} font-normal text-xl text-center text-text_secondary`}
+						>
+							FULL STACK SOFTWARE DEVELOPER
+						</div>
+					</FadeIn>
+					<FadeIn from="bottom" delay={0.5}>
+						<div className="text-md text-center mt-6 text-slate-200 ">
+							I'm a seasoned full-stack software developer with
+							team leadership and system design expertise. I'm
+							deeply passionate about my work, excel in
+							problem-solving with a strong LeetCode rating, and
+							stay up-to-date with evolving tech trends.
+						</div>
+					</FadeIn>
 				</div>
-				<TextAnimationFadeIn parentDivClassName="justify-center text-sm lg:text-3xl mb-5 ">
-					Software Engineer, Team Lead
-				</TextAnimationFadeIn>
-				<div className="w-full flex flex-col justify-center items-center">
-					<div className="text-sm text-right text-gray-400 justify-end md:w-[50%]">
-						A software engineer experienced in developing web
-						applications, android application and entire backend
-						infrastructure with good knowledge of data structures
-						and algorithms, OOP concepts, design patterns, and
-						writing clean and maintainable code.
-					</div>
-					<div className="text-sm text-right text-gray-400 justify-end md:w-[50%]">
-						I possess adequate problem-solving ability with 1500+
-						contest rating on Leetcode.
-					</div>
+			</div>
+
+			{/* CHECKOUT PROJECTS BELOW */}
+			<motion.a
+				href="#projectShowcase"
+				initial={{ opacity: 0, y: -100 }}
+				animate={{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 0.5,
+						type: "tween",
+					},
+				}}
+				whileHover={{ scale: 1.1 }}
+				whileTap={{ scale: 0.9 }}
+			>
+				<div className="text-text_primary rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
+					checkout my projects below
 				</div>
-			</motion.div>
-		</div>
+			</motion.a>
+		</motion.div>
 	);
 }

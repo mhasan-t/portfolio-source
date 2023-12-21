@@ -1,0 +1,23 @@
+[
+	{
+		"title": "Backend System",
+		"description": "I can create a entire backend insfrastructure based RESTful API or Microservices architecture just from client requirements. I excel at using CI/CD tools and cloud services to automate and power up my development. I can make use of lightweight frameworks like Express/Node.js to heavy ones like Spring, Laravel or Django to meet client expectations.",
+		"logo": "backend.png"
+	},
+
+	{
+		"title": "Mobile Applications",
+		"description": "I am experienced in developing mobile application for both Android and iOS using React Native, with guranteed performance and clean UI.",
+		"logo": "mobile.png"
+	},
+	{
+		"title": "Web Applications",
+		"description": "Using React, Next, Vue or Angular, I can make a performant and SEO friendly web application with amazing design using TailwindCSS and Framer Motion (like this one).",
+		"logo": "web.png"
+	},
+	{
+		"title": "Full Stack Development",
+		"description": "Front-end, back-end, database, or system design, I am a jack of all trades.",
+		"logo": "fsweb.png"
+	}
+]

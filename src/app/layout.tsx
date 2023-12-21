@@ -1,7 +1,5 @@
 import "./globals.css";
-import { Raleway } from "next/font/google";
-
-const fontClass = Raleway({ subsets: ["latin-ext"], weight: ["400"] });
+import fonts from "@/app/fonts";
 
 export default function RootLayout({
 	children,
@@ -10,7 +8,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={fontClass.className}>{children}</body>
+			<body className={fonts.primary.className}>{children}</body>
 		</html>
 	);
 }

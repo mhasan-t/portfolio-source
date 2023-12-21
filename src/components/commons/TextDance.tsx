@@ -2,12 +2,9 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
-export default function TextAnimationFadeIn({
+export default function TextDance({
 	children,
 	parentDivClassName = "",
-	fromLeft = false,
-	delay = 0,
-	letters = false,
 }: {
 	fromLeft?: boolean;
 	delay?: number;
@@ -15,8 +12,7 @@ export default function TextAnimationFadeIn({
 	children: string;
 	parentDivClassName?: string;
 }) {
-	const words = letters ? children.split("") : children.split(" ");
-	const delayBy = delay === undefined ? 0.04 : delay;
+	const letters = children.split("");
 
 	// Variants for Container of words.
 	const container = {
@@ -24,10 +20,8 @@ export default function TextAnimationFadeIn({
 		visible: (i = 1) => ({
 			opacity: 1,
 			transition: {
-				staggerChildren: letters ? 0.02 : 0.1,
-				delayChildren: delayBy + 0.04 * i,
+				staggerChildren: 0.1,
 				duration: 0.01,
-				delay: delayBy,
 			},
 		}),
 	};
@@ -37,7 +31,7 @@ export default function TextAnimationFadeIn({
 	const child = {
 		visible: {
 			opacity: 1,
-			x: 0,
+			y: 0,
 			transition: {
 				type: "spring",
 				damping: 12,
@@ -46,8 +40,8 @@ export default function TextAnimationFadeIn({
 			},
 		},
 		hidden: {
-			opacity: 0,
-			x: fromLeft ? -50 : 20,
+			opacity: 1,
+			y: 20,
 			transition: {
 				type: "spring",
 				damping: 12,
@@ -69,19 +63,10 @@ export default function TextAnimationFadeIn({
 			animate={isInView ? "visible" : ""}
 			className={"flex flex-wrap " + parentDivClassName}
 		>
-			{words.map((word: string, index: number) => (
-				<>
-					{letters && word === " " ? (
-						<motion.span variants={child} key={index}>
-							{"\u00A0"}
-						</motion.span>
-					) : (
-						<motion.span variants={child} key={index}>
-							{word}
-						</motion.span>
-					)}
-					{letters ? <span></span> : <span>&nbsp;</span>}
-				</>
+			{letters.map((letter: string, index: number) => (
+				<motion.span variants={child} key={index}>
+					{letter}
+				</motion.span>
 			))}
 		</motion.div>
 	);

@@ -10,7 +10,7 @@ export default function ShowcaseTechs(props: {
 }) {
 	return (
 		<motion.div>
-			<motion.div className="text-[#2d3748] font-[700]">
+			<motion.div className="text-text_secondary font-[700]">
 				Technologies Used
 			</motion.div>
 			<motion.div className="flex flex-row flex-wrap gap-2">
@@ -20,7 +20,7 @@ export default function ShowcaseTechs(props: {
 							key={tech.title}
 							img_src={"/icons/" + tech.icon}
 							text={tech.title}
-							classNames=" border-2 border-[#2d3748] p-1"
+							classNames=" border-2 border-secondary p-1 border-text_secondary"
 						/>
 					);
 				})}

@@ -11,7 +11,9 @@ export default function ShowcaseLinks(props: {
 }) {
 	return (
 		<motion.div>
-			<motion.div className="text-[#2d3748] font-[700]">Links</motion.div>
+			<motion.div className="text-text_secondary font-[700]">
+				Links
+			</motion.div>
 			<motion.div className="flex flex-row flex-wrap gap-2">
 				{props.links.map((link) => {
 					return (
@@ -26,7 +28,7 @@ export default function ShowcaseLinks(props: {
 								key={link.title}
 								img_src={"/icons/" + link.icon}
 								text={link.title}
-								classNames="hover:scale-110 transition-all bg-cyan-100 hover:bg-cyan-200"
+								classNames="hover:scale-110 transition-all hover:bg-secondary px-4 py-2 border-2 border-text_secondary"
 							/>
 						</a>
 					);
