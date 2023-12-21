@@ -5,7 +5,7 @@ import CarouselBottomNavs from "./CarouselBottomNavs";
 
 const showcaseIntoViewVariants = {
 	slideInFromRight: {
-		initial: { x: 350, opacity: 10 },
+		initial: { x: 250, opacity: 10 },
 		animate: {
 			x: 0,
 			opacity: 100,
@@ -13,7 +13,7 @@ const showcaseIntoViewVariants = {
 		},
 	},
 	slideInFromLeft: {
-		initial: { x: -350, opacity: 10 },
+		initial: { x: -250, opacity: 10 },
 		animate: {
 			x: 0,
 			opacity: 100,
@@ -21,7 +21,7 @@ const showcaseIntoViewVariants = {
 		},
 	},
 	justAppearFromBottom: {
-		initial: { opacity: 0, y: 300 },
+		initial: { opacity: 0, y: 250 },
 		animate: {
 			y: 0,
 			opacity: 100,
@@ -139,7 +139,7 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 							"/images/" +
 							data.imagesFolder +
 							"/" +
-							(selectedImageIndex > data.numberOfImages
+							(selectedImageIndex >= data.numberOfImages
 								? 1
 								: selectedImageIndex + 1) +
 							".jpg"

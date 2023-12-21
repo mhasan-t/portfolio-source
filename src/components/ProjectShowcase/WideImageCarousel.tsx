@@ -23,7 +23,7 @@ const showcaseIntoViewVariants = {
 		},
 	},
 	justAppearFromBottom: {
-		initial: { opacity: 0, y: 300 },
+		initial: { opacity: 0, y: 250 },
 		animate: {
 			y: 0,
 			opacity: 100,
