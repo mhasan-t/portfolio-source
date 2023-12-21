@@ -11,20 +11,20 @@ import Expertise from "@/components/Expertise";
 
 export default function Home() {
 	return (
-		<div className="overflow-y-hidden border-l-4 md:border-l-6 border-text_primary bg-primary">
-			<Socials />
+		<div>
+			<title>Muhib Al Hasan 🗿 Software Engineer</title>
 
-			<Intro />
-			{/* <HorizontalLineWidens /> */}
-
-			<ProjectShowcase />
-			{/* <HorizontalLineWidens /> */}
-
-			<Expertise />
-			{/* <HorizontalLineWidens /> */}
-
-			{/* <Skills /> */}
-			<Contact />
+			<div className="overflow-y-hidden border-l-4 md:border-l-6 border-text_primary bg-primary">
+				<Socials />
+				<Intro />
+				{/* <HorizontalLineWidens /> */}
+				<ProjectShowcase />
+				{/* <HorizontalLineWidens /> */}
+				<Expertise />
+				{/* <HorizontalLineWidens /> */}
+				{/* <Skills /> */}
+				<Contact />
+			</div>
 		</div>
 	);
 }
