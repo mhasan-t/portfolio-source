@@ -33,9 +33,9 @@ export default function Header() {
 					</FadeIn>
 					<FadeIn from="bottom" delay={0.5}>
 						<div className="text-md text-center mt-6 text-slate-200 ">
-							I'm a seasoned full-stack software developer with
-							team leadership and system design expertise. I'm
-							deeply passionate about my work, excel in
+							I&apos;m a seasoned full-stack software developer
+							with team leadership and system design expertise.
+							I&apos;m deeply passionate about my work, excel in
 							problem-solving with a strong LeetCode rating, and
 							stay up-to-date with evolving tech trends.
 						</div>

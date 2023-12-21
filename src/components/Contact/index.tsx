@@ -8,7 +8,11 @@ export default function index() {
 			<TitleComponent titleText="CONTACT ME" />
 			<div className="mt-10 flex flex-col justify-center items-center gap-10">
 				<div className="flex flex-row justify-center items-center gap-3">
-					<img src="/icons/gmail-soc.png" className="w-6 h-6" />
+					<img
+						src="/icons/gmail-soc.png"
+						className="w-6 h-6"
+						alt="email logo"
+					/>
 					<TextAnimationFadeIn letters={true}>
 						muhibalhasan1@gmail.com
 					</TextAnimationFadeIn>
@@ -27,6 +31,7 @@ export default function index() {
 					<div className="flex flex-row justify-center items-center gap-3">
 						<img
 							src="/icons/linkedin-soc.png"
+							alt="linkedin logo"
 							className="w-6 h-6"
 						/>
 						<TextAnimationFadeIn letters={true}>
