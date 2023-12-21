@@ -14,7 +14,7 @@ export default function TitleComponent({ titleText }: Props) {
 			<motion.div
 				layout
 				className={
-					" text-text_primary text-center font-bold text-4xl lg:text-5xl justify-center items-center" +
+					" text-text_primary text-center font-bold text-2xl sm:text-4xl lg:text-5xl justify-center items-center" +
 					fonts.header.className
 				}
 			>

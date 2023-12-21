@@ -37,16 +37,16 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 	function goPrev() {
 		setFromRight(false);
 		setSelectedImageIndex(
-			selectedImageIndex - 1 < 0
-				? data.numberOfImages - 1
+			selectedImageIndex < 2
+				? data.numberOfImages
 				: selectedImageIndex - 1
 		);
 	}
 	function goNext() {
 		setFromRight(true);
 		setSelectedImageIndex(
-			selectedImageIndex + 1 > data.numberOfImages - 1
-				? 0
+			selectedImageIndex + 1 > data.numberOfImages
+				? 1
 				: selectedImageIndex + 1
 		);
 	}

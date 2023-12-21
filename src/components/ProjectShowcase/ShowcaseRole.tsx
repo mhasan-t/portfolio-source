@@ -6,13 +6,13 @@ export default function ShowcaseRole(props: {
 }) {
 	return (
 		<motion.div>
-			<motion.div className="text-text_secondary font-[700]">
+			<motion.div className=" font-[700]">
 				My Role -{" "}
 				<span className="text-slate-300 font-normal text-sm">
 					{props.role.title}
 				</span>
 			</motion.div>
-			<motion.div className="text-text_secondary text-sm ">
+			<motion.div className=" text-sm ">
 				{props.role.description}
 			</motion.div>
 		</motion.div>

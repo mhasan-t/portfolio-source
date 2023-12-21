@@ -11,9 +11,7 @@ export default function ShowcaseLinks(props: {
 }) {
 	return (
 		<motion.div>
-			<motion.div className="text-text_secondary font-[700]">
-				Links
-			</motion.div>
+			<motion.div className=" font-[700]">Links</motion.div>
 			<motion.div className="flex flex-row flex-wrap gap-2">
 				{props.links.map((link) => {
 					return (

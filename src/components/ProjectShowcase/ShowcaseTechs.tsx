@@ -10,9 +10,7 @@ export default function ShowcaseTechs(props: {
 }) {
 	return (
 		<motion.div>
-			<motion.div className="text-text_secondary font-[700]">
-				Technologies Used
-			</motion.div>
+			<motion.div className=" font-[700]">Technologies Used</motion.div>
 			<motion.div className="flex flex-row flex-wrap gap-2">
 				{props.tech_stack.map((tech) => {
 					return (
