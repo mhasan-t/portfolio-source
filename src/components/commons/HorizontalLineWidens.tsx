@@ -28,11 +28,18 @@ function HorizontalLineWidens({ widthTo, height, classNames }: Props) {
 	return (
 		<motion.div
 			ref={ref}
-			className={"bg-text_primary " + classNames}
+			className={"w-screen flex justify-end " + classNames}
 			initial="initial"
 			animate={isIntersecting ? "animate" : ""}
 			variants={animateVar}
-		></motion.div>
+		>
+			<motion.div
+				className="bg-text_primary"
+				initial="initial"
+				animate={isIntersecting ? "animate" : ""}
+				variants={animateVar}
+			></motion.div>
+		</motion.div>
 	);
 }
 

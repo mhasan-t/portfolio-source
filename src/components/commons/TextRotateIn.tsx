@@ -4,9 +4,10 @@ import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 export default function TextRotateIn({
 	children,
+	vertical,
 	parentDivClassName = "",
 }: {
-	fromLeft?: boolean;
+	vertical?: boolean;
 	delay?: number;
 	letters?: boolean;
 	children: string;
@@ -32,7 +33,9 @@ export default function TextRotateIn({
 		visible: {
 			opacity: 1,
 			x: 0,
+			y: 0,
 			rotateY: 0,
+			rotateX: 0,
 			transition: {
 				type: "spring",
 				damping: 12,
@@ -43,7 +46,7 @@ export default function TextRotateIn({
 		hidden: {
 			opacity: 0,
 			x: -20,
-			rotateY: 180,
+			...(vertical ? { rotateX: 180 } : { rotateY: 180 }),
 			transition: {
 				type: "spring",
 				damping: 12,

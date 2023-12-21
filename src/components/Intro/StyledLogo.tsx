@@ -21,7 +21,7 @@ export default function StyledLogo() {
 				<motion.img className="w-14 h-14" src="/logo.png" alt="logo" />
 			</motion.div>
 			<div className={`${fonts.header.className} text-text_primary`}>
-				<TextDance> muhibalhasan1@gmail.com</TextDance>
+				<TextDance>muhibalhasan1@gmail.com</TextDance>
 			</div>
 		</div>
 	);
