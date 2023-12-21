@@ -5,7 +5,7 @@ import TextDance from "../commons/TextDance";
 
 export default function StyledLogo() {
 	return (
-		<div className="static pt-8 bg-primary md:absolute z-10 md:left-8 md:top-0 flex flex-col md:flex-row gap-10 justify-center items-center">
+		<div className="static pt-0 md:pt-8 bg-primary md:absolute z-10 md:left-8 md:top-0 flex flex-col md:flex-row gap-10 justify-center items-center">
 			<motion.div
 				animate={{
 					rotate: [0, 360],
