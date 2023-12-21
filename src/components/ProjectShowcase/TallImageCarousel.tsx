@@ -31,21 +31,21 @@ const showcaseIntoViewVariants = {
 };
 
 export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
-	const [selectedImageIndex, setSelectedImageIndex] = React.useState(0);
+	const [selectedImageIndex, setSelectedImageIndex] = React.useState(1);
 	const [fromRight, setFromRight] = React.useState<boolean | null>(null);
 
 	function goPrev() {
 		setFromRight(false);
 		setSelectedImageIndex(
 			selectedImageIndex - 1 < 0
-				? data.images.length - 1
+				? data.numberOfImages - 1
 				: selectedImageIndex - 1
 		);
 	}
 	function goNext() {
 		setFromRight(true);
 		setSelectedImageIndex(
-			selectedImageIndex + 1 > data.images.length - 1
+			selectedImageIndex + 1 > data.numberOfImages - 1
 				? 0
 				: selectedImageIndex + 1
 		);
@@ -54,7 +54,7 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 	return (
 		<motion.div className=" flex flex-col lg:flex-row justify-center gap-2 lg:gap-10">
 			{/* LEFT ONE */}
-			{data.images.length > 1 && (
+			{data.numberOfImages > 1 && (
 				<motion.div
 					className="hidden md:block lg:w-auto absolute top-28 lg:top-0 lg:relative lg:h-[40vh] mr-2 max-w-xl lg:border-[1px] lg:border-gray-300 lg:rounded-xl lg:shadow-lg lg:opacity-30 lg:hover:opacity-50 transition-all "
 					onClick={goPrev}
@@ -66,11 +66,10 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 							"/images/" +
 							data.imagesFolder +
 							"/" +
-							data.images[
-								selectedImageIndex - 1 < 0
-									? data.images.length - 1
-									: selectedImageIndex - 1
-							]
+							(selectedImageIndex < 2
+								? data.numberOfImages
+								: selectedImageIndex - 1) +
+							".jpg"
 						}
 						alt={data.title + " image"}
 					/>
@@ -120,7 +119,8 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 							"/images/" +
 							data.imagesFolder +
 							"/" +
-							data.images[selectedImageIndex]
+							selectedImageIndex +
+							".jpg"
 						}
 						alt={data.title + " image"}
 					/>
@@ -128,7 +128,7 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 			</div>
 
 			{/* RIGHT ONE */}
-			{data.images.length > 1 && (
+			{data.numberOfImages > 1 && (
 				<motion.div
 					className="hidden md:block lg:w-auto absolute top-28 right-10 lg:top-0 lg:right-0 lg:relative lg:h-[40vh] mr-2 max-w-xl lg:border-[1px] lg:border-gray-300 lg:rounded-xl lg:shadow-lg lg:opacity-30 lg:hover:opacity-50 transition-all "
 					onClick={goNext}
@@ -139,11 +139,10 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 							"/images/" +
 							data.imagesFolder +
 							"/" +
-							data.images[
-								selectedImageIndex + 1 > data.images.length - 1
-									? 0
-									: selectedImageIndex + 1
-							]
+							(selectedImageIndex > data.numberOfImages
+								? 1
+								: selectedImageIndex + 1) +
+							".jpg"
 						}
 						alt={data.title + " image"}
 					/>

@@ -33,22 +33,22 @@ const showcaseIntoViewVariants = {
 };
 
 export default function WideImageCarousel({ data }: { data: ShowcaseProps }) {
-	const [selectedImageIndex, setSelectedImageIndex] = React.useState(0);
+	const [selectedImageIndex, setSelectedImageIndex] = React.useState(1);
 	const [fromRight, setFromRight] = React.useState<boolean | null>(null);
 
 	function goPrev() {
 		setFromRight(false);
 		setSelectedImageIndex(
-			selectedImageIndex - 1 < 0
-				? data.images.length - 1
+			selectedImageIndex < 2
+				? data.numberOfImages
 				: selectedImageIndex - 1
 		);
 	}
 	function goNext() {
 		setFromRight(true);
 		setSelectedImageIndex(
-			selectedImageIndex + 1 > data.images.length - 1
-				? 0
+			selectedImageIndex + 1 > data.numberOfImages
+				? 1
 				: selectedImageIndex + 1
 		);
 	}
@@ -88,7 +88,8 @@ export default function WideImageCarousel({ data }: { data: ShowcaseProps }) {
 								"/images/" +
 								data.imagesFolder +
 								"/" +
-								data.images[selectedImageIndex]
+								selectedImageIndex +
+								".jpg"
 							}
 							alt={data.title + " image"}
 						/>

@@ -4,7 +4,7 @@ export interface ShowcaseProps {
 	description: string;
 	cover: string;
 	year: string;
-	images: Array<string>;
+	numberOfImages: number;
 	imagesFolder: string;
 	imageType: "wide" | "tall";
 	links: Array<{

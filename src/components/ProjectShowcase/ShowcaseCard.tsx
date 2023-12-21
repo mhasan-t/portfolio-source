@@ -33,7 +33,7 @@ function ShowcaseCard({
 						from="left"
 						classNames="flex justify-center items-center"
 					>
-						{data.images.length > 1 ? (
+						{data.numberOfImages > 1 ? (
 							data.imageType === "tall" ? (
 								<TallImageCarousel data={data} />
 							) : (
@@ -42,12 +42,7 @@ function ShowcaseCard({
 						) : (
 							<motion.img
 								className="object-contain h-full w-96 border-[1px] border-gray-300 rounded-xl shadow-lg"
-								src={
-									"/images/" +
-									data.imagesFolder +
-									"/" +
-									data.images[0]
-								}
+								src={"/images/" + data.imagesFolder + "/1.jpg"}
 								alt={data.title + " image"}
 							/>
 						)}
