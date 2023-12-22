@@ -3,10 +3,8 @@
 		"title": "Amar Nodi",
 		"type": "Android Apps and Web Application",
 		"description": "A system of two mobile apps and a web admin panel for the people of Bangladesh to report issues related to the country's water resource. It was funded by the government.",
-		"cover": "nodirokkha.jpg",
+		"cover": "nodi.png",
 		"year": "2023",
-		"numberOfImages": 6,
-		"imagesFolder": "nodi",
 		"imageType": "tall",
 		"links": [
 			{
@@ -43,10 +41,8 @@
 		"title": "Section Selector UIU",
 		"type": "Android App",
 		"description": "In university, I found it really irritating to select class timings before each trimester started as I had to look through all the section times of the courses that I want to take and figure out a routine that suits my need manually. So, I tried to make it a bit more fun by creating this helper app.",
-		"cover": "ss.jpg",
+		"cover": "ss.png",
 		"year": "2021",
-		"numberOfImages": 5,
-		"imagesFolder": "ss",
 		"imageType": "tall",
 		"links": [
 			{
@@ -81,8 +77,6 @@
 		"description": "This is an admin portal I made for a client from Upwork.",
 		"cover": "admin.png",
 		"year": "2020",
-		"numberOfImages": 4,
-		"imagesFolder": "admin",
 		"imageType": "wide",
 		"links": [],
 		"tech_stack": [
