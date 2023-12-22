@@ -25,7 +25,7 @@ function ShowcaseCard({
 		<motion.div
 			layout
 			exit={{ scale: 0 }}
-			className="border-b-2 border-secondary rounded-md w-full p-6 lg:pt-20 md:p-6"
+			className="border-b-2 border-secondary rounded-md w-full p-2 md:p-6 lg:pt-20 md:p-6"
 		>
 			<motion.div className="flex flex-col lg:flex-row gap-4 items-center">
 				<div className="w-full md:w-[80%] h-full flex justify-center items-center">
@@ -42,7 +42,7 @@ function ShowcaseCard({
 				</div>
 
 				{/* SHOWCASE DATA */}
-				<motion.div className="flex flex-col gap-2 w-full rounded-lg border-[1px] border-secondary bg-secondary p-6 text-text_secondary">
+				<motion.div className="flex flex-col gap-2 w-full rounded-lg border-[1px] border-secondary p-4 text-text_secondary">
 					<FadeIn from="top-right">
 						<ShowcaseHeader data={data} />
 					</FadeIn>
