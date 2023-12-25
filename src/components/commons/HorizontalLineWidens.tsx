@@ -28,7 +28,7 @@ function HorizontalLineWidens({ widthTo, height, classNames }: Props) {
 	return (
 		<motion.div
 			ref={ref}
-			className={"w-screen flex justify-end " + classNames}
+			className={"w-full flex justify-end " + classNames}
 			initial="initial"
 			animate={isIntersecting ? "animate" : ""}
 			variants={animateVar}

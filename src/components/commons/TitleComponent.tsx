@@ -9,7 +9,7 @@ type Props = {
 
 export default function TitleComponent({ titleText }: Props) {
 	return (
-		<div className="w-screen flex flex-col justify-center items-center gap-4">
+		<div className="w-full flex flex-col justify-center items-center gap-4">
 			<HorizontalLineWidens />
 			<motion.div
 				layout

@@ -49,7 +49,7 @@ export default function Home() {
 				<link rel="canonical" href="https://lighter.com/" />
 			</Head>
 
-			<div className="overflow-y-hidden border-l-4 md:border-l-6 border-text_primary bg-primary">
+			<div className="overflow-y-hidden border-l-4 md:border-l-6 border-text_primary bg-primary p-0">
 				<Socials />
 				<Intro />
 				{/* <HorizontalLineWidens /> */}

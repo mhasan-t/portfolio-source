@@ -11,9 +11,6 @@ export default function Header() {
 			className="z-[1] relative bg-primary text-white h-screen min-h-[600px] flex flex-col justify-around items-center mb-4 overflow-y-hidden"
 		>
 			<StyledLogo />
-			{/* BG GRAD */}
-			{/* bg-[url('/images/bg-1.jpg')] bg-cover bg-opacity-10 /// bg-gradient-to-br from-cyan-900 to-primary from-5% to-50%  */}
-			{/* <div className="absolute top-0 left-0 w-screen h-screen bg-[url('/images/bg-1.jpg')] bg-cover -z-10 opacity-20 "></div> */}
 
 			<div className="w-full flex flex-col justify-center items-center max-w-5xl ">
 				<div className="w-full h-fit">

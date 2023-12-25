@@ -21,7 +21,7 @@ type Props = {};
 
 function index({}: Props) {
 	return (
-		<div className="w-screen flex flex-col justify-center items-center gap-4">
+		<div className="w-full flex flex-col justify-center items-center gap-4 p-2 lg:px-16">
 			<TitleComponent titleText="I CREATE..." />
 			<motion.div
 				// initial="hidden"

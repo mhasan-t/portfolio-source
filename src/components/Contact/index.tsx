@@ -4,7 +4,7 @@ import TitleComponent from "../commons/TitleComponent";
 
 export default function index() {
 	return (
-		<div className="bg-primary pt-10 pb-20 overflow-x-hidden text-white flex flex-col justify-center items-center ">
+		<div className="bg-primary pt-10 pb-20 p-2 lg:px-16 overflow-x-hidden text-white flex flex-col justify-center items-center ">
 			<TitleComponent titleText="CONTACT ME" />
 			<div className="mt-10 flex flex-col justify-center items-center gap-10">
 				<div className="flex flex-row justify-center items-center gap-3">
