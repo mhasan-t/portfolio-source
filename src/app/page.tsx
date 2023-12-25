@@ -19,6 +19,11 @@ export default function Home() {
 			<title>Muhib Al Hasan 🗿 Software Engineer</title>
 			<Head>
 				<meta
+					key="image"
+					name="og:image"
+					content="https://muhibalhasan.com/logo.png"
+				/>
+				<meta
 					key="description"
 					name="description"
 					content={description}
