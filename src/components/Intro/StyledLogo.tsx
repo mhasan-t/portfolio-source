@@ -7,15 +7,15 @@ export default function StyledLogo() {
 	return (
 		<div className="static bg-primary md:absolute z-10 md:left-8 md:top-4 flex flex-col md:flex-row gap-10 justify-center items-center">
 			<motion.div
-				animate={{
-					rotate: [0, 360],
-				}}
-				transition={{
-					duration: 2,
-					repeat: Infinity,
-					repeatDelay: 0,
-					repeatType: "loop",
-				}}
+				// animate={{
+				// 	rotate: [0, 360],
+				// }}
+				// transition={{
+				// 	duration: 2,
+				// 	repeat: Infinity,
+				// 	repeatDelay: 0,
+				// 	repeatType: "loop",
+				// }}
 				className="w-14 h-14"
 			>
 				<motion.img className="w-14 h-14" src="/logo.png" alt="logo" />
