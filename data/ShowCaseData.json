@@ -9,7 +9,12 @@
 		"links": [
 			{
 				"title": "Play Store",
-				"url": "",
+				"url": "https://play.google.com/store/apps/details?id=com.trigem.amarnodi",
+				"icon": "playstore.png"
+			},
+			{
+				"title": "Play Store",
+				"url": "https://play.google.com/store/apps/details?id=com.trigem.amarnodiinvestigatorapp",
 				"icon": "playstore.png"
 			}
 		],
