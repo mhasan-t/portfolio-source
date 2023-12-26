@@ -5,6 +5,7 @@ import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 export default function TextDance({
 	children,
 	parentDivClassName = "",
+	delay,
 }: {
 	fromLeft?: boolean;
 	delay?: number;
@@ -22,6 +23,7 @@ export default function TextDance({
 			transition: {
 				staggerChildren: 0.1,
 				duration: 0.01,
+				delay: delay ?? 0,
 			},
 		}),
 	};
@@ -35,19 +37,12 @@ export default function TextDance({
 			transition: {
 				type: "spring",
 				damping: 12,
-				// stiffness: 100,,
 				duration: 0.01,
 			},
 		},
 		hidden: {
 			opacity: 1,
 			y: 20,
-			transition: {
-				type: "spring",
-				damping: 12,
-				// stiffness: 100,,
-				duration: 0.01,
-			},
 		},
 	};
 

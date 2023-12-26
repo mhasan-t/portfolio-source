@@ -10,19 +10,18 @@ import HorizontalLineWidens from "@/components/commons/HorizontalLineWidens";
 import Expertise from "@/components/Expertise";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import LoadingComponent from "@/components/commons/LoadingComponent";
 
 export default function Home() {
 	const [loading, setLoading] = useState(true);
 
-	function loadHandler() {
-		setLoading(false);
-	}
-
 	useEffect(() => {
-		window.addEventListener("load", loadHandler);
+		const timeoutId = setTimeout(() => {
+			setLoading(false);
+		}, 1000);
 
 		return () => {
-			window.removeEventListener("load", loadHandler);
+			clearTimeout(timeoutId);
 		};
 	}, []);
 
@@ -31,6 +30,7 @@ export default function Home() {
 			<title>Muhib Al Hasan 🗿 Software Engineer</title>
 
 			<div className="overflow-y-hidden border-l-4 md:border-l-6 border-text_primary bg-primary p-0">
+				{loading && <LoadingComponent />}
 				<Socials />
 				<Intro />
 				{/* <HorizontalLineWidens /> */}

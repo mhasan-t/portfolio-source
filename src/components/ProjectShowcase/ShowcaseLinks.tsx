@@ -13,17 +13,16 @@ export default function ShowcaseLinks(props: {
 		<motion.div>
 			<motion.div className=" font-[700]">Links</motion.div>
 			<motion.div className="flex flex-row flex-wrap gap-2">
-				{props.links.map((link) => {
+				{props.links.map((link, index) => {
 					return (
 						<a
-							key={link.title}
+							key={index}
 							href={link.url}
 							onClick={(e) => {
 								e.stopPropagation();
 							}}
 						>
 							<Brick
-								key={link.title}
 								img_src={"/icons/" + link.icon}
 								text={link.title}
 								classNames="hover:scale-110 transition-all hover:bg-secondary px-4 py-2 border-2 border-text_secondary"

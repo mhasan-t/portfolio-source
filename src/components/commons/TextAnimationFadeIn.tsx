@@ -80,7 +80,11 @@ export default function TextAnimationFadeIn({
 							{word}
 						</motion.span>
 					)}
-					{letters ? <span></span> : <span>&nbsp;</span>}
+					{letters ? (
+						<span key={index + "space"}></span>
+					) : (
+						<span key={index + "space"}>&nbsp;</span>
+					)}
 				</>
 			))}
 		</motion.div>
