@@ -8,7 +8,7 @@ export default function Header() {
 		<motion.div
 			layout
 			id="introSection"
-			className="z-[1] relative bg-primary text-white h-screen min-h-[600px] flex flex-col justify-around items-center mb-4 overflow-y-hidden"
+			className="z-[1] relative bg-primary text-white h-screen min-h-[600px] flex flex-col justify-around items-center mb-4 overflow-y-hidden p-2"
 		>
 			<StyledLogo />
 
@@ -16,7 +16,7 @@ export default function Header() {
 				<div className="w-full h-fit">
 					<FadeIn from="top">
 						<div
-							className={`${fonts.title.className} font-bold text-4xl md:text-6xl text-center text-text_primary`}
+							className={`${fonts.title.className} font-bold text-4xl md:text-6xl text-center text-text_primary md:mt-24`}
 						>
 							MUHIB AL HASAN
 						</div>
@@ -29,7 +29,7 @@ export default function Header() {
 						</div>
 					</FadeIn>
 					<FadeIn from="bottom" delay={0.5}>
-						<div className="text-sm md:text-lg text-center mt-6 text-slate-200 ">
+						<div className="text-md md:text-lg text-center mt-6 text-slate-200 ">
 							I&apos;m a seasoned full-stack software developer
 							with team leadership and system design expertise.
 							I&apos;m deeply passionate about my work, excel in
