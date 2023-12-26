@@ -55,7 +55,7 @@ export default function Header() {
 				whileHover={{ scale: 1.1 }}
 				whileTap={{ scale: 0.9 }}
 			>
-				<div className="text-text_primary text-center rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
+				<div className="text-text_primary text-center rounded-full border-text_primary border-2 px-6 pt-1 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
 					checkout my projects below
 				</div>
 			</motion.a>

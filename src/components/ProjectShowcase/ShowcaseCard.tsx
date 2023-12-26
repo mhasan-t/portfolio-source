@@ -42,7 +42,7 @@ function ShowcaseCard({
 				</div>
 
 				{/* SHOWCASE DATA */}
-				<motion.div className="flex flex-col gap-2 w-full rounded-lg border-[1px] border-secondary p-4 text-text_secondary">
+				<motion.div className="flex flex-col gap-2 w-full rounded-lg border-[1px] border-secondary p-4 bg-secondary text-text_secondary">
 					<FadeIn from="top-right">
 						<ShowcaseHeader data={data} />
 					</FadeIn>

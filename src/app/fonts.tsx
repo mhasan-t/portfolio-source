@@ -1,14 +1,12 @@
 import {
 	Roboto,
-	Playfair_Display,
-	DM_Sans,
 	Quicksand,
-	Grandiflora_One,
 	Urbanist,
 	DM_Serif_Display,
+	Overpass,
 } from "next/font/google";
 
-const primary = Roboto({
+const primary = Overpass({
 	weight: ["100", "300", "400", "500", "700", "900"],
 	subsets: ["latin"],
 });
