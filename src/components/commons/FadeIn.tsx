@@ -48,7 +48,7 @@ function FadeIn({ from, children, distance, delay, classNames }: Props) {
 				ease: "easeIn",
 				damping: 12,
 				duration: 0.4,
-				delay: delay ?? 0.5,
+				delay: delay ?? 0.3,
 			},
 		},
 		hidden: {
