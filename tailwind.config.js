@@ -18,16 +18,15 @@ module.exports = {
 				text_primary: "#DFEC57",
 				text_secondary: "#FAFAFA",
 			},
-			// colors: {
-			// 	primary: "#040530",
-			// 	secondary: "#070852",
-			// 	// secondary: "#6184d8",
-			// 	ternary: "#872949",
-			// 	text_primary: "#d0f1f5",
-			// 	text_secondary: "#42516a",
-			// 	text_tertiary: "#4a5568",
-			// 	text_quaternary: "#ebc7d2",
-			// },
+			keyframes: {
+				beat: {
+					"0%, 100%": { transform: "scale(1)" },
+					"50%": { transform: "scale(1.1)" },
+				},
+			},
+			animation: {
+				beat: "beat 0.5s ease-in-out infinite",
+			},
 		},
 	},
 	plugins: [],

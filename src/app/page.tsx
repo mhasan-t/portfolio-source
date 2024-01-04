@@ -16,13 +16,7 @@ export default function Home() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		const timeoutId = setTimeout(() => {
-			setLoading(false);
-		}, 1000);
-
-		return () => {
-			clearTimeout(timeoutId);
-		};
+		setLoading(false);
 	}, []);
 
 	return (
