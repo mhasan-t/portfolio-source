@@ -1,17 +1,11 @@
-import {
-	Roboto,
-	Quicksand,
-	Urbanist,
-	DM_Serif_Display,
-	Overpass,
-} from "next/font/google";
+import { Urbanist, Koulen, Heebo } from "next/font/google";
 
-const primary = Overpass({
+const primary = Heebo({
 	weight: ["100", "300", "400", "500", "700", "900"],
 	subsets: ["latin"],
 });
 
-const title = DM_Serif_Display({
+const title = Koulen({
 	weight: ["400"],
 	subsets: ["latin"],
 });
@@ -21,9 +15,4 @@ const header = Urbanist({
 	subsets: ["latin"],
 });
 
-const quicksand = Quicksand({
-	weight: ["300", "400", "500", "700", "600"],
-	subsets: ["latin"],
-});
-
-export default { primary, title, header, quicksand };
+export default { primary, title, header };

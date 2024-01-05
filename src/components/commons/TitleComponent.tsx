@@ -10,7 +10,7 @@ type Props = {
 export default function TitleComponent({ titleText }: Props) {
 	return (
 		<div className="w-full flex flex-col justify-center items-center gap-4">
-			<HorizontalLineWidens />
+			{/* <HorizontalLineWidens /> */}
 			<motion.div
 				layout
 				className={
@@ -20,7 +20,7 @@ export default function TitleComponent({ titleText }: Props) {
 			>
 				<TextRotateIn>{titleText}</TextRotateIn>
 			</motion.div>
-			<HorizontalLineWidens />
+			{/* <HorizontalLineWidens /> */}
 		</div>
 	);
 }
