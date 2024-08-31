@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+
 import Brick from "@/components/commons/Brick";
 
 export default function ShowcaseTechs(props: {
@@ -9,9 +9,9 @@ export default function ShowcaseTechs(props: {
 	}>;
 }) {
 	return (
-		<motion.div>
-			<motion.div className=" font-[700]">Technologies Used</motion.div>
-			<motion.div className="flex flex-row flex-wrap gap-2">
+		<div>
+			<div>Technologies Used</div>
+			<div>
 				{props.tech_stack.map((tech) => {
 					return (
 						<Brick
@@ -22,7 +22,7 @@ export default function ShowcaseTechs(props: {
 						/>
 					);
 				})}
-			</motion.div>
-		</motion.div>
+			</div>
+		</div>
 	);
 }

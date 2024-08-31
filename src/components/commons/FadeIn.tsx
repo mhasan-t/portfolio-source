@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { PropsWithChildren, memo, useRef } from "react";
 import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
@@ -61,17 +60,7 @@ function FadeIn({ from, children, distance, delay, classNames }: Props) {
 	const ref = useRef(null);
 	const { isIntersecting, visitedAlready } = useIsInViewport(ref);
 
-	return (
-		<motion.div
-			className={classNames}
-			ref={ref}
-			variants={fadeIn}
-			initial={visitedAlready ? "" : "hidden"}
-			animate={isIntersecting == true ? "visible" : ""}
-		>
-			{children}
-		</motion.div>
-	);
+	return <div>{children}</div>;
 }
 
 export default memo(FadeIn);

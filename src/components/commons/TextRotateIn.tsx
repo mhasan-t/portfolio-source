@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
+
 import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 export default function TextRotateIn({
@@ -60,19 +60,10 @@ export default function TextRotateIn({
 	const { isIntersecting, visitedAlready } = useIsInViewport(ref);
 
 	return (
-		<motion.div
-			ref={ref}
-			style={{ overflow: "hidden", display: "flex" }}
-			variants={container}
-			initial="hidden"
-			animate={visitedAlready === true ? "visible" : ""}
-			className={"flex flex-wrap " + parentDivClassName}
-		>
+		<div>
 			{letters.map((letter: string, index: number) => (
-				<motion.span variants={child} key={index}>
-					{letter == " " ? "\u00A0" : letter}
-				</motion.span>
+				<span>{letter == " " ? "\u00A0" : letter}</span>
 			))}
-		</motion.div>
+		</div>
 	);
 }

@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { motion } from "framer-motion";
+
 
 import { ShowcaseProps } from "@/types";
 import ShowcaseHeader from "./ShowcaseHeader";
@@ -22,27 +22,19 @@ function ShowcaseCard({
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	return (
-		<motion.div
-			layout
-			exit={{ scale: 0 }}
-			className="border-b-2 border-secondary rounded-md w-full p-2 md:p-6 lg:pt-20 md:p-6"
-		>
-			<motion.div className="flex flex-col lg:flex-row gap-4 items-center">
+		<div>
+			<div>
 				<div className="w-full md:w-[80%] h-full flex justify-center items-center">
 					<FadeIn
 						from="left"
 						classNames="flex justify-center items-center"
 					>
-						<motion.img
-							className="object-contain h-full "
-							src={"/covers/" + data.cover}
-							alt={data.title + " image"}
-						/>
+						<img>
 					</FadeIn>
 				</div>
 
 				{/* SHOWCASE DATA */}
-				<motion.div className="flex flex-col gap-2 w-full rounded-lg border-[1px] border-secondary p-4 bg-secondary text-text_secondary">
+				<div>
 					<FadeIn from="top-right">
 						<ShowcaseHeader data={data} />
 					</FadeIn>
@@ -57,9 +49,9 @@ function ShowcaseCard({
 								<ShowcaseLinks links={data.links} />
 							)}
 					</FadeIn>
-				</motion.div>
-			</motion.div>
-		</motion.div>
+				</div>
+			</div>
+		</div>
 	);
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+
 import Brick from "@/components/commons/Brick";
 
 export default function ShowcaseLinks(props: {
@@ -10,9 +10,9 @@ export default function ShowcaseLinks(props: {
 	}>;
 }) {
 	return (
-		<motion.div>
-			<motion.div className=" font-[700]">Links</motion.div>
-			<motion.div className="flex flex-row flex-wrap gap-2">
+		<div>
+			<div>Links</div>
+			<div>
 				{props.links.map((link, index) => {
 					return (
 						<a
@@ -30,7 +30,7 @@ export default function ShowcaseLinks(props: {
 						</a>
 					);
 				})}
-			</motion.div>
-		</motion.div>
+			</div>
+		</div>
 	);
 }

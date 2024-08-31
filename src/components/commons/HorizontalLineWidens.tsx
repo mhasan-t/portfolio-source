@@ -1,5 +1,5 @@
 import React, { memo, useRef } from "react";
-import { motion } from "framer-motion";
+
 import { useIsInViewport } from "@/app/hooks/useIsInViewport";
 
 type Props = {
@@ -26,20 +26,9 @@ function HorizontalLineWidens({ widthTo, height, classNames }: Props) {
 	};
 
 	return (
-		<motion.div
-			ref={ref}
-			className={"w-full flex justify-end " + classNames}
-			initial="initial"
-			animate={isIntersecting ? "animate" : ""}
-			variants={animateVar}
-		>
-			<motion.div
-				className="bg-text_primary"
-				initial="initial"
-				animate={isIntersecting ? "animate" : ""}
-				variants={animateVar}
-			></motion.div>
-		</motion.div>
+		<div>
+			<div></div>
+		</div>
 	);
 }
 

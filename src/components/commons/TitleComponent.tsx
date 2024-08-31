@@ -1,5 +1,5 @@
 import fonts from "@/app/fonts";
-import { motion } from "framer-motion";
+
 import TextRotateIn from "../commons/TextRotateIn";
 import HorizontalLineWidens from "./HorizontalLineWidens";
 
@@ -11,15 +11,9 @@ export default function TitleComponent({ titleText }: Props) {
 	return (
 		<div className="w-full flex flex-col justify-center items-center gap-4">
 			{/* <HorizontalLineWidens /> */}
-			<motion.div
-				layout
-				className={
-					" text-text_primary text-center font-bold text-2xl sm:text-4xl lg:text-5xl justify-center items-center" +
-					fonts.header.className
-				}
-			>
+			<div>
 				<TextRotateIn>{titleText}</TextRotateIn>
-			</motion.div>
+			</div>
 			{/* <HorizontalLineWidens /> */}
 		</div>
 	);

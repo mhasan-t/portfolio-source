@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
+
 import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 export default function TextDance({
@@ -50,19 +50,10 @@ export default function TextDance({
 	const isInView = useIsInViewport(ref);
 
 	return (
-		<motion.div
-			ref={ref}
-			style={{ overflow: "hidden", display: "flex" }}
-			variants={container}
-			initial="hidden"
-			animate={isInView ? "visible" : ""}
-			className={"flex flex-wrap " + parentDivClassName}
-		>
+		<div>
 			{letters.map((letter: string, index: number) => (
-				<motion.span variants={child} key={index}>
-					{letter}
-				</motion.span>
+				<span>{letter}</span>
 			))}
-		</motion.div>
+		</div>
 	);
 }

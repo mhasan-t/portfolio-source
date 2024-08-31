@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
+
 import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 export default function TextAnimationFadeIn({
@@ -61,24 +61,13 @@ export default function TextAnimationFadeIn({
 	const isInView = useIsInViewport(ref);
 
 	return (
-		<motion.div
-			ref={ref}
-			style={{ overflow: "hidden", display: "flex" }}
-			variants={container}
-			initial="hidden"
-			animate={isInView ? "visible" : ""}
-			className={"flex flex-wrap " + parentDivClassName}
-		>
+		<div>
 			{words.map((word: string, index: number) => (
 				<>
 					{letters && word === " " ? (
-						<motion.span variants={child} key={index}>
-							{"\u00A0"}
-						</motion.span>
+						<span>{"\u00A0"}</span>
 					) : (
-						<motion.span variants={child} key={index}>
-							{word}
-						</motion.span>
+						<span>{word}</span>
 					)}
 					{letters ? (
 						<span key={index + "space"}></span>
@@ -87,6 +76,6 @@ export default function TextAnimationFadeIn({
 					)}
 				</>
 			))}
-		</motion.div>
+		</div>
 	);
 }

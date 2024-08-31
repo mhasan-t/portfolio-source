@@ -54,51 +54,18 @@ export default function WideImageCarousel({ data }: { data: ShowcaseProps }) {
 	}
 
 	return (
-		<motion.div className="flex flex-col justify-center gap-2">
+		<div>
 			{/* MIDDLE */}
 			<div className="min-w-[40%] flex justify-center items-center">
 				<AnimatePresence>
-					<motion.div
-						className="w-fit h-full mr-2 max-w-xl relative flex justify-center items-center "
-						initial={
-							fromRight == null
-								? showcaseIntoViewVariants.justAppearFromBottom
-										.initial
-								: fromRight
-								? showcaseIntoViewVariants.slideInFromRight
-										.initial
-								: showcaseIntoViewVariants.slideInFromLeft
-										.initial
-						}
-						animate={
-							fromRight == null
-								? showcaseIntoViewVariants.justAppearFromBottom
-										.animate
-								: fromRight
-								? showcaseIntoViewVariants.slideInFromRight
-										.animate
-								: showcaseIntoViewVariants.slideInFromLeft
-										.animate
-						}
-						key={selectedImageIndex}
-					>
-						<motion.img
-							className="object-contain h-fit w-96 max-w-[90vw] border-[1px] border-gray-300 rounded-xl shadow-lg"
-							src={
-								"/images/" +
-								data.imagesFolder +
-								"/" +
-								selectedImageIndex +
-								".jpg"
-							}
-							alt={data.title + " image"}
-						/>
-					</motion.div>
+					<div>
+						<img>
+					</div>
 				</AnimatePresence>
 			</div>
 
 			{/* NAV */}
 			<CarouselBottomNavs goNext={goNext} goPrev={goPrev} />
-		</motion.div>
+		</div>
 	);
 }

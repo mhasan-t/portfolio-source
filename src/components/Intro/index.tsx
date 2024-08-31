@@ -1,15 +1,10 @@
-import { motion } from "framer-motion";
 import fonts from "@/app/fonts";
 import FadeIn from "../commons/FadeIn";
 import StyledLogo from "./StyledLogo";
 
 export default function Header() {
 	return (
-		<motion.div
-			layout
-			id="introSection"
-			className="z-[1] relative bg-primary text-white h-screen min-h-[600px] flex flex-col justify-around items-center mb-4 overflow-y-hidden p-2"
-		>
+		<div>
 			<StyledLogo />
 
 			<div className="w-full flex flex-col justify-center items-center max-w-5xl ">
@@ -41,24 +36,11 @@ export default function Header() {
 			</div>
 
 			{/* CHECKOUT PROJECTS BELOW */}
-			<motion.a
-				href="#projectShowcase"
-				initial={{ opacity: 0, y: -100 }}
-				animate={{
-					opacity: 1,
-					y: 0,
-					transition: {
-						duration: 0.5,
-						type: "tween",
-					},
-				}}
-				whileHover={{ scale: 1.1 }}
-				whileTap={{ scale: 0.9 }}
-			>
+			<a>
 				<div className="text-text_primary text-center rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
 					checkout my projects below
 				</div>
-			</motion.a>
-		</motion.div>
+			</a>
+		</div>
 	);
 }
