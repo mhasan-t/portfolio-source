@@ -1,77 +1,46 @@
-import { motion } from "framer-motion";
 import { PropsWithChildren, memo, useRef } from "react";
 import { useIsInViewport } from "../../app/hooks/useIsInViewport";
 
 type Props = {
-	from:
-		| "top"
-		| "bottom"
-		| "left"
-		| "right"
-		| "bottom-left"
-		| "bottom-right"
-		| "top-left"
-		| "top-right";
-	distance?: number;
-	delay?: number;
-	classNames?: string;
+  from:
+  | "top"
+  | "bottom"
+  | "left"
+  | "right"
+  | "bottom-left"
+  | "bottom-right"
+  | "top-left"
+  | "top-right";
+  distance?: number;
+  delay?: number;
+  classNames?: string;
 } & PropsWithChildren;
 
 function FadeIn({ from, children, distance, delay, classNames }: Props) {
-	// CALC X and Y
-	const dist = distance ?? 40;
+  const ref = useRef(null);
+  const { isIntersecting, visitedAlready } = useIsInViewport(ref);
 
-	let animateX = 0;
-	let animateY = 0;
+  let animateClass = "animate-fade-in";
+  if (from === "left") animateClass = "animate-fade-in-left";
+  else if (from === "right") animateClass = "animate-fade-in-right";
+  else if (from === "top") animateClass = "animate-fade-in-top";
+  else if (from === "bottom") animateClass = "animate-fade-in-bottom";
+  else if (from === "top-left") animateClass = "animate-fade-in-top-left";
+  else if (from === "top-right") animateClass = "animate-fade-in-top-right";
+  else if (from === "bottom-left") animateClass = "animate-fade-in-bottom-left";
+  else if (from === "bottom-right") animateClass = "animate-fade-in-bottom-right";
 
-	if (from.includes("left")) {
-		animateX = -dist;
-	}
-	if (from.includes("right")) {
-		animateX = dist;
-	}
+  const style = delay ? { animationDelay: `${delay}s` } : {};
 
-	if (from.includes("top")) {
-		animateY = -dist;
-	}
-	if (from.includes("bottom")) {
-		animateY = dist;
-	}
-
-	const fadeIn = {
-		visible: {
-			opacity: 1,
-			x: 0,
-			y: 0,
-			transition: {
-				type: "spring",
-				ease: "easeIn",
-				damping: 12,
-				duration: 0.4,
-				delay: delay ?? 0.3,
-			},
-		},
-		hidden: {
-			opacity: 0,
-			x: animateX,
-			y: animateY,
-		},
-	};
-
-	const ref = useRef(null);
-	const { isIntersecting, visitedAlready } = useIsInViewport(ref);
-
-	return (
-		<motion.div
-			className={classNames}
-			ref={ref}
-			variants={fadeIn}
-			initial={visitedAlready ? "" : "hidden"}
-			animate={isIntersecting == true ? "visible" : ""}
-		>
-			{children}
-		</motion.div>
-	);
+  return (
+    <div
+      className={`${classNames} ${isIntersecting ? animateClass : ""}`}
+      ref={ref}
+      style={style}
+    >
+      {children}
+    </div>
+  );
 }
 
 export default memo(FadeIn);
