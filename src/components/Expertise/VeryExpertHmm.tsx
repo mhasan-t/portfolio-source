@@ -12,7 +12,7 @@ function VeryExpertHmm({ title, description, logo, index }: Props) {
   return (
     <FadeIn
       from={index % 2 == 0 ? "right" : "left"}
-      classNames="w-80 text-center flex flex-col justify-start items-center bg-secondary p-6 rounded-md shadow-lg gap-6 text-text_secondary"
+      classNames="w-full max-w-xs sm:max-w-sm md:max-w-md text-center flex flex-col justify-start items-center bg-secondary p-4 md:p-6 rounded-md shadow-lg gap-4 md:gap-6 text-text_secondary"
     >
       <div className="">
         <img

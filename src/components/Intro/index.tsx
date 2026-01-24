@@ -27,7 +27,7 @@ export default function Header() {
             </div>
           </FadeIn>
           <FadeIn from="bottom" delay={0.5}>
-            <div className="text-md md:text-lg text-center mt-6 text-slate-200 ">
+            <div className="text-sm md:text-lg text-center mt-6 text-slate-200 px-4">
               I&apos;m a seasoned full-stack software developer
               with team leadership and system design expertise.
               I&apos;m deeply passionate about my work, excel in
@@ -41,7 +41,7 @@ export default function Header() {
       {/* CHECKOUT PROJECTS BELOW */}
       <a
         href="#projectShowcase"
-        className="text-text_primary text-center rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 hover:scale-110 active:scale-90 animate-fade-in-top"
+        className="text-text_primary text-center rounded-full border-text_primary border-2 px-4 md:px-6 py-2 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 hover:scale-110 active:scale-90 animate-fade-in-top text-sm md:text-base"
       >
         checkout my projects below
       </a>

@@ -55,9 +55,9 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
       )}
 
       {/* MIDDLE */}
-      <div className="min-w-[40%] flex justify-center items-center ">
+      <div className="w-full md:min-w-[40%] flex justify-center items-center ">
         <div
-          className="w-48 h-full mr-2 relative flex justify-center items-center "
+          className="w-full max-w-xs md:max-w-sm lg:max-w-md h-full mr-2 relative flex justify-center items-center "
           key={selectedImageIndex}
         >
           {/* <div className="scale-100 lg:scale-0 transition-all absolute top-[5%] left-5 h-[90%] bg-slate-300 opacity-50 rounded-md flex justify-center items-center p-10 ">
@@ -70,7 +70,7 @@ export default function TallImageCarousel({ data }: { data: ShowcaseProps }) {
 					</div> */}
 
           <img
-            className="object-contain h-fit max-h-full border-[1px] border-gray-300 rounded-xl shadow-lg"
+            className="object-contain h-auto max-h-64 md:max-h-80 lg:max-h-96 w-full border-[1px] border-gray-300 rounded-xl shadow-lg"
             src={
               "/images/" +
               data.imagesFolder +
