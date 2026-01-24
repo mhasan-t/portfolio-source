@@ -22,7 +22,7 @@ function ShowcaseCard({
 
   return (
     <div
-      className="border-b-2 border-secondary rounded-md w-full p-2 md:p-6 lg:pt-20 md:p-6"
+      className="border-b-2 border-secondary rounded-md w-full p-2 md:p-6 lg:pt-20 md:p-6 hover:border-text_primary/50 transition-colors duration-500 animate-slide-in-up"
     >
       <div className="flex flex-col lg:flex-row gap-4 items-center">
         <div className="w-full lg:w-2/3 xl:w-3/5 h-full flex justify-center items-center">
@@ -31,7 +31,7 @@ function ShowcaseCard({
             classNames="flex justify-center items-center w-full"
           >
             <img
-              className="object-contain h-auto max-h-64 md:max-h-80 lg:max-h-96 w-full"
+              className="object-contain h-auto max-h-64 md:max-h-80 lg:max-h-96 w-full rounded-lg shadow-lg hover:shadow-2xl hover:shadow-text_primary/30 transition-all duration-500 hover:scale-105 animate-scale-in border border-text_primary/20"
               src={"/covers/" + data.cover}
               alt={data.title + " image"}
             />
@@ -39,7 +39,7 @@ function ShowcaseCard({
         </div>
 
         {/* SHOWCASE DATA */}
-        <div className="flex flex-col gap-2 w-full lg:w-1/3 xl:w-2/5 rounded-lg border-[1px] border-secondary p-3 md:p-4 bg-secondary text-text_secondary">
+        <div className="flex flex-col gap-2 w-full lg:w-1/3 xl:w-2/5 rounded-lg border-[1px] border-secondary p-3 md:p-4 bg-gradient-to-br from-secondary to-primary text-text_secondary shadow-lg animate-fade-in">
           <FadeIn from="top-right">
             <ShowcaseHeader data={data} />
           </FadeIn>

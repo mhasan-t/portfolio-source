@@ -5,7 +5,7 @@ type Props = {};
 
 function Socials({ }: Props) {
   return (
-    <div className="absolute md:fixed h-screen right-3 md:right-6 top-0 z-30 text-text_primary flex flex-col justify-start items-center">
+    <div className="absolute md:fixed h-screen right-3 md:right-6 top-0 z-30 text-text_primary flex flex-col justify-start items-center animate-slide-in-right">
       <div
         className={`relative border w-[1px] border-r-2 border-text_primary animate-hang`}
       ></div>

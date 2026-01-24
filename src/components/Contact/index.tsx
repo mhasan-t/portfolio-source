@@ -13,9 +13,9 @@ export default function index() {
             className="w-6 h-6"
             alt="email logo"
           />
-          <TextAnimationFadeIn letters={true}>
+          <a href="mailto:muhibalhasan1@gmail.com">
             muhibalhasan1@gmail.com
-          </TextAnimationFadeIn>
+          </a>
         </div>
 
         {/* <a href="https://github.com/mhasan-t">
