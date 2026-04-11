@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
-import { Dancing_Script, Alegreya_Sans_SC } from "next/font/google";
-
 import { ShowcaseProps } from "@/types";
 
 export default function ShowcaseHeader(props: { data: ShowcaseProps }) {
   return (
-    <motion.div className="flex flex-col items-end gap-3">
-      <motion.div className="text-right text-2xl sm:text-3xl lg:text-4xl text-text_primary font-bold">
+    <motion.div className="space-y-4">
+      <div className="flex flex-wrap items-center gap-3">
+        <span className="inline-flex rounded-full border border-text_secondary/20 bg-text_secondary/10 px-3 py-1 text-xs uppercase tracking-[0.28em] text-text_secondary">
+          {props.data.year}
+        </span>
+        <span className="text-sm font-medium text-text_secondary">
+          {props.data.type}
+        </span>
+      </div>
+
+      <motion.div className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text_primary">
         {props.data.title}
-      </motion.div>
-      <motion.div className="text-center text-slate-200 text-base sm:text-lg font-[500]">
-        {props.data.type} - {props.data.year}
       </motion.div>
     </motion.div>
   );
