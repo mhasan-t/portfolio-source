@@ -19,7 +19,7 @@ export default function ShowcaseTechs(props: {
             key={tech.title}
             img_src={"/icons/" + tech.icon}
             text={tech.title}
-            classNames="border border-secondary/20 bg-slate-950/70 px-3 py-2"
+            classNames="border border-secondary/20 bg-secondary/20 px-3 py-2"
           />
         ))}
       </motion.div>

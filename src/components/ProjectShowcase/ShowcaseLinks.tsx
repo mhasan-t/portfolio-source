@@ -26,7 +26,7 @@ export default function ShowcaseLinks(props: {
             <Brick
               img_src={"/icons/" + link.icon}
               text={link.title}
-              classNames="border border-secondary/20 bg-slate-950/70 px-4 py-2"
+              classNames="border border-secondary/20 bg-secondary/20 px-4 py-2"
             />
           </a>
         ))}

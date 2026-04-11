@@ -4,7 +4,7 @@ import expData from "@/../data/ExperienceData.json";
 
 export default function Experience() {
   return (
-    <section className="w-full bg-secondary/10 py-16 px-4 text-white lg:px-20">
+    <section className="w-full bg-secondary/10 py-16 px-4 text-white lg:px-20" id="experienceSection">
       <div className="mx-auto max-w-6xl">
         <TitleComponent titleText="PROFESSIONAL EXPERIENCE" />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

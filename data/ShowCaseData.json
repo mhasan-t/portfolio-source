@@ -30,7 +30,7 @@
     ],
     "myRole": {
       "title": "Full Stack Developer and Team Lead",
-      "description": "I managed other developers, assigned tasks, reviewed and managed codebase using git, coded most of the features in the mobile apps and deployed the app on Play Store."
+      "description": "I managed other developers, assigned tasks, reviewed and managed codebase using git, wrote the entire backend and many of the features in the mobile apps."
     },
     "features": [
       "User authenticaton using OTP.",
@@ -45,7 +45,7 @@
   {
     "title": "Section Selector UIU",
     "type": "Android App",
-    "description": "In university, I found it really irritating to select class timings before each trimester started as I had to look through all the section times of the courses that I want to take and figure out a routine that suits my need manually. So, I tried to make it a bit more fun by creating this helper app.",
+    "description": "In university, I found it really irritating to select class timings before each trimester started as I had to look through all the section times of the courses that I want to take and figure out a routine that suits my need manually. So, I tried to make it a bit easier by creating this helper app.",
     "cover": "ss.png",
     "year": "2021",
     "imageType": "tall",
