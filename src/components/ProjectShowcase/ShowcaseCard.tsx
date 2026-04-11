@@ -30,16 +30,15 @@ function ShowcaseCard({
         className
       }
     >
-      <div
-        className={`grid gap-6 lg:gap-8 ${index % 2 === 0 ? "lg:grid-cols-[0.95fr_1.05fr]" : "lg:grid-cols-[1.05fr_0.95fr]"
-          } items-center`}
-      >
-        <div className="relative overflow-hidden rounded-[28px] border border-secondary/30 bg-slate-950/80">
-          <img
-            className="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
-            src={"/covers/" + data.cover}
-            alt={data.title + " image"}
-          />
+      <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_1fr] items-start">
+        <div className="relative overflow-hidden rounded-[28px] border border-secondary/30 bg-slate-950/80 shadow-inner">
+          <div className="aspect-[16/9] w-full overflow-hidden">
+            <img
+              className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
+              src={"/covers/" + data.cover}
+              alt={data.title + " image"}
+            />
+          </div>
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 to-transparent px-5 py-6">
             <div className="text-xs uppercase tracking-[0.32em] text-text_secondary/60">
               {data.type}
