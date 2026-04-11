@@ -13,7 +13,10 @@ export default function index() {
             </p>
             <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
               <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">Email</div>
-              <div className="mt-3 text-base sm:text-lg font-semibold text-text_secondary">muhibalhasan1@gmail.com</div>
+              <a href="mailto:muhibalhasan1@gmail.com" className="mt-3 inline-block text-base sm:text-lg font-semibold text-text_secondary hover:text-text_primary">
+                muhibalhasan1@gmail.com
+              </a>
+
             </div>
             <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
               <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">Phone</div>
@@ -41,7 +44,7 @@ export default function index() {
               linkedin.com/in/muhibalhasan
             </a>
             <div className="mt-8 text-base sm:text-lg leading-8 sm:leading-9">
-              I&apos;m available for senior software roles, product-led teams, and collaborative projects with a clear focus on sustainable development and maintainable systems.
+              I&apos;m available for software engineering roles and collaborative projects with a clear focus on sustainable development and maintainable systems.
             </div>
           </div>
         </div>
