@@ -1,31 +1,30 @@
 import React from "react";
-import { motion } from "framer-motion";
 import FadeIn from "../commons/FadeIn";
 
 type Props = {
-	title: string;
-	description: string;
-	logo: string;
-	index: number;
+  title: string;
+  description: string;
+  logo: string;
+  index: number;
 };
 
 function VeryExpertHmm({ title, description, logo, index }: Props) {
-	return (
-		<FadeIn
-			from={index % 2 == 0 ? "right" : "left"}
-			classNames="w-80 text-center flex flex-col justify-start items-center bg-secondary p-6 rounded-md shadow-lg gap-6 text-text_secondary"
-		>
-			<div className="">
-				<img
-					src={`/images/exp/${logo}`}
-					alt={title}
-					className="w-14 h-14"
-				/>
-			</div>
-			<div className="w-full font-bold text-lg uppercase">{title}</div>
-			<div className="text-sm ">{description}</div>
-		</FadeIn>
-	);
+  return (
+    <FadeIn
+      from={index % 2 === 0 ? "right" : "left"}
+      classNames="w-full rounded-[28px] border border-text_primary/10 bg-secondary/95 p-8 text-center shadow-[0_30px_70px_-50px_rgba(0,0,0,0.75)] transition-transform duration-300 hover:-translate-y-1"
+    >
+      <div className="flex justify-center">
+        <img
+          src={`/images/exp/${logo}`}
+          alt={title}
+          className="h-16 w-16"
+        />
+      </div>
+      <div className="mt-6 text-lg font-semibold uppercase tracking-[0.08em] text-text_primary">{title}</div>
+      <div className="mt-4 text-sm leading-7 text-slate-200">{description}</div>
+    </FadeIn>
+  );
 }
 
 export default VeryExpertHmm;

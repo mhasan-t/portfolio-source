@@ -1,0 +1,24 @@
+[
+  {
+    "company": "Trigem Technologies",
+    "role": "Full Stack Developer & Team Lead",
+    "duration": "2022 — Present",
+    "summary": "Led the development of high-impact mobile and web systems for government and enterprise clients, focusing on maintainable architecture and reliable delivery.",
+    "highlights": [
+      "Built and maintained Amar Nodi, a large-scale Android and web platform for water resource reporting.",
+      "Mentored team members, guided release planning, and supported deployment workflows in AWS.",
+      "Delivered secure login flows with OTP, JWT authentication, and production-ready APIs."
+    ]
+  },
+  {
+    "company": "Freelance Software Engineer",
+    "role": "Product-focused Web & Mobile Developer",
+    "duration": "2020 — 2022",
+    "summary": "Delivered custom web and mobile applications for clients across Upwork and private engagements, emphasizing user-first design and stable systems.",
+    "highlights": [
+      "Designed and shipped data-driven admin portals using React and Flask.",
+      "Provided full-stack implementation, testing, and deployment support for small business applications.",
+      "Created intuitive user interfaces while preserving scalability and security."
+    ]
+  }
+]
