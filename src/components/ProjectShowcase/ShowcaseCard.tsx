@@ -30,11 +30,11 @@ function ShowcaseCard({
         className
       }
     >
-      <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_1fr] items-start">
-        <div className="relative overflow-hidden rounded-[28px] border border-secondary/30 bg-slate-950/80 shadow-inner">
-          <div className="aspect-[16/9] w-full overflow-hidden">
+      <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_1fr] items-stretch">
+        <div className="relative overflow-hidden rounded-[28px] border border-secondary/30 shadow-inner h-full">
+          <div className="h-full min-h-[420px] w-full overflow-hidden">
             <img
-              className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
+              className="h-full w-full object-contain object-center transition duration-500 group-hover:scale-105"
               src={"/covers/" + data.cover}
               alt={data.title + " image"}
             />
