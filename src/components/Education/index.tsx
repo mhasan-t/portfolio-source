@@ -18,11 +18,11 @@ export default function Education() {
               className="rounded-[32px] border border-text_primary/15 bg-secondary/90 p-8 shadow-[0_30px_70px_-45px_rgba(0,0,0,0.75)]"
             >
               <div className="flex flex-col gap-3">
-                <div className="text-sm uppercase tracking-[0.3em] text-text_primary">{item.duration}</div>
-                <h3 className="text-2xl font-semibold text-text_secondary">{item.degree}</h3>
-                <p className="text-sm text-slate-300">{item.institution}</p>
+                <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">{item.duration}</div>
+                <h3 className="text-2xl sm:text-3xl font-semibold text-text_secondary">{item.degree}</h3>
+                <p className="text-sm sm:text-base text-slate-300">{item.institution}</p>
               </div>
-              <p className="mt-6 text-base leading-7 text-slate-200">{item.details}</p>
+              <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-slate-200">{item.details}</p>
             </motion.article>
           ))}
         </div>

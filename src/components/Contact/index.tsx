@@ -8,39 +8,39 @@ export default function index() {
         <TitleComponent titleText="CONTACT ME" />
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
-            <p className="text-lg leading-8 text-slate-200">
+            <p className="text-lg sm:text-xl leading-8 sm:leading-9 text-slate-200">
               If you are looking for a thoughtful engineer who can elevate your product with elegant architecture and polished delivery, let&apos;s connect.
             </p>
             <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
-              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">Email</div>
-              <div className="mt-3 text-base font-semibold text-text_secondary">muhibalhasan1@gmail.com</div>
+              <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">Email</div>
+              <div className="mt-3 text-base sm:text-lg font-semibold text-text_secondary">muhibalhasan1@gmail.com</div>
             </div>
             <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
-              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">Phone</div>
-              <div className="mt-3 text-base font-semibold text-text_secondary">+880 1736 480320</div>
+              <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">Phone</div>
+              <div className="mt-3 text-base sm:text-lg font-semibold text-text_secondary">+880 1736 480320</div>
             </div>
             <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
-              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">Website</div>
-              <a href="https://muhib.site" className="mt-3 inline-block text-base font-semibold text-text_secondary hover:text-text_primary">
+              <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">Website</div>
+              <a href="https://muhib.site" className="mt-3 inline-block text-base sm:text-lg font-semibold text-text_secondary hover:text-text_primary">
                 muhib.site
               </a>
             </div>
             <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
-              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">GitHub</div>
-              <a href="https://github.com/mhasan-t" className="mt-3 inline-block text-base font-semibold text-text_secondary hover:text-text_primary">
+              <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">GitHub</div>
+              <a href="https://github.com/mhasan-t" className="mt-3 inline-block text-base sm:text-lg font-semibold text-text_secondary hover:text-text_primary">
                 github.com/mhasan-t
               </a>
             </div>
           </div>
           <div className="flex flex-col justify-center gap-5 rounded-[32px] bg-primary/80 p-8 text-slate-200 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.8)]">
-            <div className="text-text_primary uppercase tracking-[0.3em] text-sm">LinkedIn</div>
+            <div className="text-text_primary uppercase tracking-[0.3em] text-sm sm:text-base">LinkedIn</div>
             <a
               href="https://www.linkedin.com/in/muhibalhasan"
-              className="mt-3 inline-block text-base font-semibold text-text_secondary hover:text-text_primary"
+              className="mt-3 inline-block text-base sm:text-lg font-semibold text-text_secondary hover:text-text_primary"
             >
               linkedin.com/in/muhibalhasan
             </a>
-            <div className="mt-8 text-base leading-8">
+            <div className="mt-8 text-base sm:text-lg leading-8 sm:leading-9">
               I&apos;m available for senior software roles, product-led teams, and collaborative projects with a clear focus on sustainable development and maintainable systems.
             </div>
           </div>

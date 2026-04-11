@@ -18,12 +18,12 @@ export default function Experience() {
               className="group rounded-[32px] border border-text_primary/15 bg-primary/90 p-8 shadow-[0_30px_70px_-45px_rgba(0,0,0,0.75)] transition-transform duration-300 hover:-translate-y-1"
             >
               <div className="flex flex-col gap-3">
-                <div className="text-sm uppercase tracking-[0.3em] text-text_primary">{item.duration}</div>
-                <h3 className="text-2xl font-semibold text-text_secondary">{item.role}</h3>
-                <p className="text-sm text-slate-300">{item.company}</p>
+                <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">{item.duration}</div>
+                <h3 className="text-2xl sm:text-3xl font-semibold text-text_secondary">{item.role}</h3>
+                <p className="text-sm sm:text-base text-slate-300">{item.company}</p>
               </div>
-              <p className="mt-6 text-base leading-7 text-slate-200">{item.summary}</p>
-              <ul className="mt-6 space-y-3 text-sm text-slate-300">
+              <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-slate-200">{item.summary}</p>
+              <ul className="mt-6 space-y-3 text-sm sm:text-base text-slate-300">
                 {item.highlights.map((point, idx) => (
                   <li key={idx} className="flex gap-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-text_primary" />

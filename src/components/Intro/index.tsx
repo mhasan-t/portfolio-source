@@ -16,20 +16,20 @@ export default function Header() {
               <div className="max-w-3xl">
                 <div className={`${fonts.title.className} text-4xl font-black leading-tight text-text_primary sm:text-5xl lg:text-6xl`}>Muhib Al Hasan</div>
                 <div className={`${fonts.header.className} mt-4 text-xl font-medium text-text_secondary sm:text-2xl`}>Software Engineer</div>
-                <p className="mt-8 max-w-xl text-base leading-8 text-slate-200 sm:text-lg">
+                <p className="mt-8 max-w-xl text-base leading-8 text-slate-200 sm:text-lg lg:text-xl">
                   I&apos;m a software engineer with expertise in team leadership, machine learning, and system design. I&apos;m deeply passionate about my work, excel at problem-solving, and stay up to date with evolving tech trends.
                 </p>
                 <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:items-start">
-                  <a href="#projectShowcase" className="inline-flex items-center justify-center rounded-full bg-text_primary px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-30px_rgba(223,236,87,0.9)]">
+                  <a href="#projectShowcase" className="inline-flex items-center justify-center rounded-full bg-text_primary px-7 py-4 text-base font-semibold uppercase tracking-[0.12em] text-primary transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-30px_rgba(223,236,87,0.9)]">
                     View Projects
                   </a>
-                  <a href="#contactSection" className="inline-flex items-center justify-center rounded-full border border-text_primary/40 bg-white/5 px-7 py-3 text-sm font-medium text-text_secondary transition-all duration-300 hover:border-text_primary hover:text-text_primary">
+                  <a href="#contactSection" className="inline-flex items-center justify-center rounded-full border border-text_primary/40 bg-white/5 px-7 py-4 text-base font-medium text-text_secondary transition-all duration-300 hover:border-text_primary hover:text-text_primary">
                     Let&apos;s Talk
                   </a>
                 </div>
                 <div className="mt-10 grid gap-4 rounded-[30px] border border-text_primary/15 bg-secondary/90 p-6 text-slate-200 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.65)]">
-                  <div className="text-sm uppercase tracking-[0.3em] text-text_primary">Skills Highlights</div>
-                  <ul className="grid gap-3 text-sm leading-7 sm:grid-cols-2">
+                  <div className="text-sm sm:text-base uppercase tracking-[0.3em] text-text_primary">Skills Highlights</div>
+                  <ul className="grid gap-3 text-sm sm:text-base leading-7 sm:grid-cols-2">
                     <li>Strong understanding of Data Structures and Algorithms.</li>
                     <li>System design, project management, and leadership capabilities.</li>
                     <li>Software architectures and design patterns (n-Tier, Microservice, Clean, MVT, MVC).</li>
@@ -50,11 +50,11 @@ export default function Header() {
           <div className="flex-1">
             <FadeIn from="right">
               <div className="rounded-[32px] border border-text_primary/15 bg-secondary/95 p-8 shadow-[0_35px_100px_-60px_rgba(0,0,0,0.7)] backdrop-blur-xl">
-                <div className="text-text_primary uppercase tracking-[0.25em] text-sm font-semibold">Professional Summary</div>
-                <div className="mt-6 space-y-4 text-sm leading-7 text-slate-100">
+                <div className="text-text_primary uppercase tracking-[0.25em] text-sm sm:text-base font-semibold">Professional Summary</div>
+                <div className="mt-6 space-y-4 text-sm sm:text-base leading-7 sm:leading-8 text-slate-100">
                   <p>5+ years building scalable web and mobile platforms. Skilled in React, Next.js, React Native, Node.js, Python and AWS.</p>
                   <p>Focused on delivering strong architecture, cross-team collaboration, and polished user experiences.</p>
-                  <p className="inline-flex items-center gap-2 text-text_primary">
+                  <p className="inline-flex items-center gap-2 text-text_primary text-sm sm:text-base">
                     <span className="inline-flex h-2.5 w-2.5 rounded-full bg-text_primary" />
                     Modern products • Agile delivery • Technical leadership
                   </p>

@@ -21,8 +21,8 @@ function VeryExpertHmm({ title, description, logo, index }: Props) {
           className="h-16 w-16"
         />
       </div>
-      <div className="mt-6 text-lg font-semibold uppercase tracking-[0.08em] text-text_primary">{title}</div>
-      <div className="mt-4 text-sm leading-7 text-slate-200">{description}</div>
+      <div className="mt-6 text-lg sm:text-xl font-semibold uppercase tracking-[0.08em] text-text_primary">{title}</div>
+      <div className="mt-4 text-base sm:text-lg leading-7 text-slate-200">{description}</div>
     </FadeIn>
   );
 }
