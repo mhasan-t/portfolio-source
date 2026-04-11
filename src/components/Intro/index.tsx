@@ -15,17 +15,33 @@ export default function Header() {
             <FadeIn from="left">
               <div className="max-w-3xl">
                 <div className={`${fonts.title.className} text-4xl font-black leading-tight text-text_primary sm:text-5xl lg:text-6xl`}>Muhib Al Hasan</div>
-                <div className={`${fonts.header.className} mt-4 text-xl font-medium text-text_secondary sm:text-2xl`}>Full Stack Software Engineer</div>
+                <div className={`${fonts.header.className} mt-4 text-xl font-medium text-text_secondary sm:text-2xl`}>Software Engineer</div>
                 <p className="mt-8 max-w-xl text-base leading-8 text-slate-200 sm:text-lg">
-                  I design resilient digital experiences with modern web and mobile systems. My work blends clean architecture, efficient delivery, and polished user interfaces for clients who need reliability at scale.
+                  I&apos;m a software engineer with expertise in team leadership, machine learning, and system design. I&apos;m deeply passionate about my work, excel at problem-solving, and stay up to date with evolving tech trends.
                 </p>
-                <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:items-start">
                   <a href="#projectShowcase" className="inline-flex items-center justify-center rounded-full bg-text_primary px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-30px_rgba(223,236,87,0.9)]">
                     View Projects
                   </a>
                   <a href="#contactSection" className="inline-flex items-center justify-center rounded-full border border-text_primary/40 bg-white/5 px-7 py-3 text-sm font-medium text-text_secondary transition-all duration-300 hover:border-text_primary hover:text-text_primary">
                     Let&apos;s Talk
                   </a>
+                </div>
+                <div className="mt-10 grid gap-4 rounded-[30px] border border-text_primary/15 bg-secondary/90 p-6 text-slate-200 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.65)]">
+                  <div className="text-sm uppercase tracking-[0.3em] text-text_primary">Skills Highlights</div>
+                  <ul className="grid gap-3 text-sm leading-7 sm:grid-cols-2">
+                    <li>Strong understanding of Data Structures and Algorithms.</li>
+                    <li>System design, project management, and leadership capabilities.</li>
+                    <li>Software architectures and design patterns (n-Tier, Microservice, Clean, MVT, MVC).</li>
+                    <li>Version control using Git.</li>
+                    <li>Front-end and backend framework experience.</li>
+                    <li>Mobile app development with React Native.</li>
+                    <li>Database management skills with SQL & NoSQL.</li>
+                    <li>Cloud experience with AWS and GCP.</li>
+                    <li>Proficient in Linux environments.</li>
+                    <li>CI/CD automation using GitHub Actions.</li>
+                    <li>Familiarity with Docker and Kubernetes.</li>
+                  </ul>
                 </div>
               </div>
             </FadeIn>

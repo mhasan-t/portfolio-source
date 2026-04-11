@@ -1,4 +1,3 @@
-import TextAnimationFadeIn from "../commons/TextAnimationFadeIn";
 import TitleComponent from "../commons/TitleComponent";
 
 export default function index() {
@@ -17,33 +16,32 @@ export default function index() {
               <div className="mt-3 text-base font-semibold text-text_secondary">muhibalhasan1@gmail.com</div>
             </div>
             <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
-              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">LinkedIn</div>
-              <a
-                href="https://www.linkedin.com/in/muhib-al-hasan-121001160/"
-                className="mt-3 inline-block text-base font-semibold text-text_secondary hover:text-text_primary"
-              >
-                Muhib Al Hasan
+              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">Phone</div>
+              <div className="mt-3 text-base font-semibold text-text_secondary">+880 1736 480320</div>
+            </div>
+            <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
+              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">Website</div>
+              <a href="https://muhib.site" className="mt-3 inline-block text-base font-semibold text-text_secondary hover:text-text_primary">
+                muhib.site
+              </a>
+            </div>
+            <div className="rounded-3xl border border-text_primary/20 bg-primary/90 p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.75)]">
+              <div className="text-sm uppercase tracking-[0.3em] text-text_primary">GitHub</div>
+              <a href="https://github.com/mhasan-t" className="mt-3 inline-block text-base font-semibold text-text_secondary hover:text-text_primary">
+                github.com/mhasan-t
               </a>
             </div>
           </div>
           <div className="flex flex-col justify-center gap-5 rounded-[32px] bg-primary/80 p-8 text-slate-200 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.8)]">
-            <div className="text-text_primary uppercase tracking-[0.3em] text-sm">Next step</div>
-            <p className="text-base leading-8">
+            <div className="text-text_primary uppercase tracking-[0.3em] text-sm">LinkedIn</div>
+            <a
+              href="https://www.linkedin.com/in/muhibalhasan"
+              className="mt-3 inline-block text-base font-semibold text-text_secondary hover:text-text_primary"
+            >
+              linkedin.com/in/muhibalhasan
+            </a>
+            <div className="mt-8 text-base leading-8">
               I&apos;m available for senior software roles, product-led teams, and collaborative projects with a clear focus on sustainable development and maintainable systems.
-            </p>
-            <div className="mt-6 flex flex-col gap-3 text-sm text-slate-300">
-              <div className="inline-flex items-center gap-3">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-text_primary" />
-                Delivery-focused engineering
-              </div>
-              <div className="inline-flex items-center gap-3">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-text_primary" />
-                Strong cross-functional collaboration
-              </div>
-              <div className="inline-flex items-center gap-3">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-text_primary" />
-                Modern, maintainable architecture
-              </div>
             </div>
           </div>
         </div>
