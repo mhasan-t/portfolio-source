@@ -1,24 +1,20 @@
 import { motion } from "framer-motion";
 
 export default function ShowcaseFeatures({
-	features,
+  features,
 }: {
-	features: Array<string>;
+  features: Array<string>;
 }) {
-	return (
-		<motion.div>
-			<motion.div className=" font-[700]">Features</motion.div>
-			<motion.div className="lg:flex lg:flex-col lg:gap-2">
-				<div className=" list-disc list-inside ">
-					{features.map((feature) => {
-						return (
-							<li key={feature} className=" text-sm m-0 p-0 ">
-								{feature}
-							</li>
-						);
-					})}
-				</div>
-			</motion.div>
-		</motion.div>
-	);
+  return (
+    <motion.div className="space-y-4">
+      <motion.div className="text-lg sm:text-xl font-semibold text-text_primary">Key highlights</motion.div>
+      <ul className="grid gap-3 sm:grid-cols-1 list-disc list-inside pl-5">
+        {features.map((feature) => (
+          <li key={feature} className="text-base sm:text-lg leading-7 text-slate-200">
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
 }

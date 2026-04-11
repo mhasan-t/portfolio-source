@@ -1,20 +1,15 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 export default function ShowcaseRole(props: {
-	role: { title: string; description: string };
+  role: { title: string; description: string };
 }) {
-	return (
-		<motion.div>
-			<motion.div className=" font-[700]">
-				My Role -{" "}
-				<span className="text-slate-300 font-normal text-sm">
-					{props.role.title}
-				</span>
-			</motion.div>
-			<motion.div className=" text-sm ">
-				{props.role.description}
-			</motion.div>
-		</motion.div>
-	);
+  return (
+    <motion.div className="space-y-3">
+      {/* <motion.div className="text-lg sm:text-xl font-semibold text-text_primary">Role</motion.div> */}
+      <div className="rounded-3xl border border-secondary/20 p-4 text-base sm:text-lg leading-7 text-slate-200">
+        <div className="font-semibold text-text_primary text-lg sm:text-xl">My Role : {props.role.title}</div>
+        <div className="mt-2 text-slate-200">{props.role.description}</div>
+      </div>
+    </motion.div>
+  );
 }

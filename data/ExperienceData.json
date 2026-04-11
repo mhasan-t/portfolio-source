@@ -1,0 +1,101 @@
+[
+  {
+    "company": "UJET",
+    "location": "San Francisco, CA, USA",
+    "workMode": "Remote",
+    "employment": "Full-time",
+    "summary": "Collaborated with engineers from 4+ countries under guidance from Google’s engineering team to support a robust Customer Center platform.",
+    "roles": [
+      {
+        "title": "Software Engineer II",
+        "duration": "Aug 2025 - Jan 2026",
+        "highlights": [
+          "Developed and maintained Ruby on Rails and Node.js services across monolithic and microservice architectures.",
+          "Deployed systems on GCP using Kubernetes and maintained CI pipelines with GitHub Actions.",
+          "Applied SOLID principles, authored technical design documents, and participated in rigorous code review processes."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "duration": "May 2024 - Aug 2025",
+        "highlights": [
+          "Worked within a distributed team following GitLab Flow and trunk-based branching.",
+          "Built and maintained resilient APIs and front-end integrations for contact center products.",
+          "Helped improve platform quality through design reviews and careful test coverage."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "ITD Security",
+    "location": "Dubai, United Arab Emirates",
+    "workMode": "On-site",
+    "employment": "Full-time",
+    "summary": "Contributed to the Donzon ad-posting platform and managed websites and server infrastructure for sister companies.",
+    "roles": [
+      {
+        "title": "Full-stack Developer",
+        "duration": "Aug 2023 - Jan 2024",
+        "highlights": [
+          "Built new features and maintained application stability across web and admin interfaces.",
+          "Supported deployment and server operations for multiple company platforms.",
+          "Collaborated with cross-functional partners to deliver production-ready results."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "National River Conservation Commission",
+    "location": "Dhaka, Bangladesh",
+    "workMode": "Hybrid",
+    "employment": "Contractual",
+    "summary": "Led a 5-member team to deliver a government software system with backend, mobile, and AWS-hosted infrastructure.",
+    "roles": [
+      {
+        "title": "Lead Developer",
+        "duration": "Apr 2023 - Dec 2023",
+        "highlights": [
+          "Built the full backend system and mobile apps for the government project.",
+          "Hosted services on AWS and managed deployment stability.",
+          "Maintained code quality and version control through Git reviews and process discipline."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "United International University",
+    "location": "Dhaka, Bangladesh",
+    "workMode": "On-site",
+    "employment": "Seasonal",
+    "summary": "Assisted with undergraduate coursework, lab sessions, assignments, and academic record management.",
+    "roles": [
+      {
+        "title": "Undergraduate Teaching Assistant",
+        "duration": "Aug 2022 - Jan 2023",
+        "highlights": [
+          "Supported student learning through structured lab assistance and grading.",
+          "Maintained academic documentation and helped students understand core concepts.",
+          "Worked closely with faculty to improve classroom outcomes."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "CleInsight",
+    "location": "Singapore",
+    "workMode": "Remote",
+    "employment": "Internship",
+    "summary": "Developed web applications using Vue.js, Angular, and AWS within a SCRUM process.",
+    "roles": [
+      {
+        "title": "Software Developer Intern",
+        "duration": "Nov 2021 - Feb 2022",
+        "highlights": [
+          "Built user-centric front-end components for client-facing solutions.",
+          "Collaborated with remote teams in a Scrum-driven development process.",
+          "Gained practical experience with cloud and frontend application delivery."
+        ]
+      }
+    ]
+  }
+]

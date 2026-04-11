@@ -1,64 +1,67 @@
 import { motion } from "framer-motion";
 import fonts from "@/app/fonts";
 import FadeIn from "../commons/FadeIn";
-import StyledLogo from "./StyledLogo";
 
 export default function Header() {
-	return (
-		<motion.div
-			layout
-			id="introSection"
-			className="z-[1] relative bg-primary text-white h-screen min-h-[600px] flex flex-col justify-around items-center mb-4 overflow-y-hidden p-2"
-		>
-			<StyledLogo />
+  return (
+    <section
+      id="introSection"
+      className="relative overflow-hidden bg-primary text-white min-h-screen"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(223,236,87,0.17),_transparent_18%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.08),_transparent_30%)]" />
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-between px-4 py-10 lg:px-8 lg:py-16">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="flex-1">
+            <FadeIn from="left">
+              <div className="max-w-3xl">
+                <div className={`${fonts.title.className} text-5xl font-black leading-tight text-text_primary sm:text-6xl lg:text-7xl`}>Muhib Al Hasan</div>
+                <div className={`${fonts.header.className} mt-4 text-2xl font-medium text-text_secondary sm:text-3xl lg:text-4xl`}>Software Engineer</div>
+                <p className="mt-8 max-w-xl text-base leading-8 text-slate-200 sm:text-xl lg:text-2xl">
+                  I&apos;m a software engineer with expertise in team leadership, machine learning, and system design. I&apos;m deeply passionate about my work, excel at problem-solving, and stay up to date with evolving tech trends.
+                </p>
+                <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:items-start">
+                  <a href="#experienceSection" className="inline-flex items-center justify-center rounded-full bg-text_primary px-8 py-4 text-base sm:text-lg font-semibold uppercase tracking-[0.12em] text-primary transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-30px_rgba(223,236,87,0.9)]">
+                    View Experience
+                  </a>
+                  <a href="#contactSection" className="inline-flex items-center justify-center rounded-full border border-text_primary/40 bg-white/5 px-8 py-4 text-base sm:text-lg font-medium text-text_secondary transition-all duration-300 hover:border-text_primary hover:text-text_primary">
+                    Let&apos;s Talk
+                  </a>
+                </div>
 
-			<div className="w-full flex flex-col justify-center items-center max-w-5xl ">
-				<div className="w-full h-fit">
-					<FadeIn from="top">
-						<div
-							className={`${fonts.title.className} font-bold text-4xl md:text-6xl text-center text-text_primary md:mt-24`}
-						>
-							MUHIB AL HASAN
-						</div>
-					</FadeIn>
-					<FadeIn from="bottom">
-						<div
-							className={`${fonts.header.className} font-normal text-xl text-center text-text_secondary`}
-						>
-							FULL STACK SOFTWARE DEVELOPER
-						</div>
-					</FadeIn>
-					<FadeIn from="bottom" delay={0.5}>
-						<div className="text-md md:text-lg text-center mt-6 text-slate-200 ">
-							I&apos;m a seasoned full-stack software developer
-							with team leadership and system design expertise.
-							I&apos;m deeply passionate about my work, excel in
-							problem-solving with a strong LeetCode rating, and
-							stay up-to-date with evolving tech trends.
-						</div>
-					</FadeIn>
-				</div>
-			</div>
+              </div>
+            </FadeIn>
+          </div>
 
-			{/* CHECKOUT PROJECTS BELOW */}
-			<motion.a
-				href="#projectShowcase"
-				initial={{ opacity: 0, y: -100 }}
-				animate={{
-					opacity: 1,
-					y: 0,
-					transition: {
-						duration: 0.5,
-						type: "tween",
-					},
-				}}
-				whileHover={{ scale: 1.1 }}
-				whileTap={{ scale: 0.9 }}
-			>
-				<div className="text-text_primary text-center rounded-full border-text_primary border-2 px-6 hover:bg-text_primary hover:text-primary transition-colors ease-in-out duration-500 animate-bounce">
-					checkout my projects below
-				</div>
-			</motion.a>
-		</motion.div>
-	);
+          <div className="flex-1">
+            <FadeIn from="right">
+              {/* <div className="rounded-[32px] border border-text_primary/15 bg-secondary/95 p-8 shadow-[0_35px_100px_-60px_rgba(0,0,0,0.7)] backdrop-blur-xl">
+                <div className="text-text_primary uppercase tracking-[0.25em] text-base sm:text-lg font-semibold">Professional Summary</div>
+                <div className="mt-6 space-y-4 text-base sm:text-lg leading-8 text-slate-100">
+                  <p>3+ years building scalable web and mobile platforms. Skilled in Ruby on Rails, Node.js, React, Docker and AWS.</p>
+                  <p>Focused on delivering strong architecture, cross-team collaboration, and polished user experiences.</p>
+                </div>
+              </div> */}
+
+              <div className="mt-10 grid gap-4 rounded-[30px] border border-text_primary/15 bg-secondary/90 p-6 text-slate-200 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.65)]">
+                <div className="text-base sm:text-lg uppercase tracking-[0.3em] text-text_primary">Skills Highlights</div>
+                <ul className="grid gap-2 text-base sm:text-lg leading-8 sm:grid-cols-1 list-disc list-inside pl-5">
+                  <li>Strong understanding of Data Structures and Algorithms.</li>
+                  <li>System design, project management, and leadership capabilities.</li>
+                  <li>Software architectures and design patterns (n-Tier, Microservice, Clean, MVT, MVC).</li>
+                  <li>Version control using Git.</li>
+                  <li>Front-end and backend framework experience.</li>
+                  <li>Mobile app development with React Native.</li>
+                  <li>Database management skills with SQL & NoSQL.</li>
+                  <li>Cloud experience with AWS and GCP.</li>
+                  <li>Proficient in Linux environments.</li>
+                  <li>CI/CD automation using GitHub Actions.</li>
+                  <li>Familiarity with Docker and Kubernetes.</li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

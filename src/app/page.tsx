@@ -1,40 +1,36 @@
 "use client";
 
-import StyledLogo from "@/components/Intro/StyledLogo";
 import Intro from "@/components/Intro";
 import ProjectShowcase from "@/components/ProjectShowcase";
-import Skills from "@/components/WorkedOn";
 import Contact from "@/components/Contact";
 import Socials from "@/components/Socials";
-import HorizontalLineWidens from "@/components/commons/HorizontalLineWidens";
 import Expertise from "@/components/Expertise";
-import Head from "next/head";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 import { useEffect, useState } from "react";
 import LoadingComponent from "@/components/commons/LoadingComponent";
 
 export default function Home() {
-	const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		setLoading(false);
-	}, []);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
-	return (
-		<div>
-			<title>Muhib Al Hasan 🗿 Software Engineer</title>
+  return (
+    <div>
+      <title>Muhib Al Hasan 🗿 Software Engineer</title>
 
-			<div className="overflow-y-hidden border-l-4 md:border-l-6 border-text_primary bg-primary p-0">
-				{loading && <LoadingComponent />}
-				<Socials />
-				<Intro />
-				{/* <HorizontalLineWidens /> */}
-				<ProjectShowcase />
-				{/* <HorizontalLineWidens /> */}
-				<Expertise />
-				{/* <HorizontalLineWidens /> */}
-				{/* <Skills /> */}
-				<Contact />
-			</div>
-		</div>
-	);
+      <div className="overflow-x-hidden overflow-y-hidden bg-primary text-text_secondary">
+        {loading && <LoadingComponent />}
+        <Socials />
+        <Intro />
+        <Experience />
+        <Education />
+        <ProjectShowcase />
+        <Expertise />
+        <Contact />
+      </div>
+    </div>
+  );
 }
