@@ -25,10 +25,10 @@ export default function Home() {
         {loading && <LoadingComponent />}
         <Socials />
         <Intro />
-        <ProjectShowcase />
-        <Expertise />
         <Experience />
         <Education />
+        <ProjectShowcase />
+        <Expertise />
         <Contact />
       </div>
     </div>
