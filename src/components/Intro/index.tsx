@@ -10,7 +10,7 @@ export default function Header() {
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(223,236,87,0.17),_transparent_18%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.08),_transparent_30%)]" />
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-between px-4 py-10 lg:px-8 lg:py-16">
-        <div className="flex flex-col-reverse gap-10 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="flex-1">
             <FadeIn from="left">
               <div className="max-w-3xl">
