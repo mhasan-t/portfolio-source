@@ -11,7 +11,7 @@ function index({ }: Props) {
     <section className="w-full bg-secondary/5 py-16 px-4 text-white lg:px-20">
       <div className="mx-auto max-w-6xl">
         <TitleComponent titleText="I CREATE..." />
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {expData.map((data, index) => (
             <VeryExpertHmm
               title={data.title}
