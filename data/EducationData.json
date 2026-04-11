@@ -3,12 +3,17 @@
     "institution": "United International University",
     "degree": "Bachelor of Science in Computer Science and Engineering",
     "duration": "Jan 2019 - Jan 2023",
-    "details": "Dhaka, Bangladesh. CGPA: 3.85 (out of 4.00). Major: Data Science. Thesis: Improvement of Scene Understanding using Scene Graphs."
+    "location": "Dhaka, Bangladesh",
+    "details": [
+      "CGPA: 3.85 (out of 4.00).",
+      "Major: Computer Science and Engineering.",
+      "Thesis: Improvement of Scene Understanding using Scene Graphs."
+    ]
   },
   {
     "institution": "Feni Computer Institute",
     "degree": "Diploma-In-Engineering",
     "duration": "Aug 2014 - Jul 2018",
-    "details": "Feni, Bangladesh. Associate diploma in Data Telecommunications and Networking Technology."
+    "location": "Feni, Bangladesh"
   }
 ]
