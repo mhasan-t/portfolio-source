@@ -21,7 +21,7 @@ export default function Header() {
                 </p>
                 <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:items-start">
                   <a href="/resume.pdf" className="inline-flex items-center justify-center rounded-full bg-text_primary px-8 py-4 text-base sm:text-lg font-semibold uppercase tracking-[0.12em] text-primary transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-30px_rgba(223,236,87,0.9)]">
-                    Download Résumé (PDF)
+                    Download Résumé
                   </a>
                   <a href="#contactSection" className="inline-flex items-center justify-center rounded-full border border-text_primary/40 bg-white/5 px-8 py-4 text-base sm:text-lg font-medium text-text_secondary transition-all duration-300 hover:border-text_primary hover:text-text_primary">
                     Let&apos;s Talk
