@@ -2,7 +2,7 @@
   {
     "title": "Amar Nodi",
     "type": "Android Apps and Web Application",
-    "description": "A system of two mobile apps and a web admin panel for the people of Bangladesh to report issues related to the country's water resource. It was funded by the government.",
+    "description": "A system of two mobile apps and a web admin panel for people in Bangladesh to report issues with the country's water resources. It was funded by the government.",
     "cover": "nodi.png",
     "year": "2023",
     "imageType": "tall",
@@ -30,22 +30,21 @@
     ],
     "myRole": {
       "title": "Full Stack Developer and Team Lead",
-      "description": "I managed other developers, assigned tasks, reviewed and managed codebase using git, wrote the entire backend and many of the features in the mobile apps."
+      "description": "I managed the team, assigned tasks, reviewed and managed the codebase with git, wrote the entire backend, and built many mobile app features."
     },
     "features": [
-      "User authenticaton using OTP.",
-      "Creating reports with location, images and audio.",
-      "Viewing reports based on status.",
-      "Authentication using JWT",
-      "OTP for user authentication",
-      "Proper validation schema.",
+      "User authentication with JWT and phone OTP.",
+      "Google Maps integration for reporting location.",
+      "Creating reports with location, images, and audio.",
+      "Viewing reports based on search filters.",
+      "Built with a layered Express API architecture.",
       "60+ API endpoints."
     ]
   },
   {
     "title": "Section Selector UIU",
     "type": "Android App",
-    "description": "In university, I found it really irritating to select class timings before each trimester started as I had to look through all the section times of the courses that I want to take and figure out a routine that suits my need manually. So, I tried to make it a bit easier by creating this helper app.",
+    "description": "At university, I found it really annoying to choose class timings before each trimester. I had to look through all the section times for the courses I wanted and manually figure out a routine that worked for me, so I made this helper app.",
     "cover": "ss.png",
     "year": "2021",
     "imageType": "tall",
@@ -72,14 +71,14 @@
       "description": "I made it."
     },
     "features": [
-      "UIU students can enter their sections and it's repective time.",
+      "UIU students can enter their sections and their respective times.",
       "Generates all possible routines."
     ]
   },
   {
     "title": "Attache Admin Portal",
     "type": "Web Application",
-    "description": "This is an admin portal I made for a client from Upwork.",
+    "description": "This is an admin portal I built for a client on Upwork.",
     "cover": "admin.png",
     "year": "2020",
     "imageType": "wide",
@@ -99,7 +98,7 @@
       "description": "I made it."
     },
     "features": [
-      "Admin authentication and management users, videos and servers."
+      "Admin authentication and management of users, videos and servers."
     ]
   }
 ]
