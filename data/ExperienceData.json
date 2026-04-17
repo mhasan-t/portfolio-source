@@ -8,22 +8,21 @@
     "roles": [
       {
         "title": "Software Engineer II",
-        "duration": "Aug 2025 - Jan 2026",
-        "highlights": [
-          "Developed and maintained Ruby on Rails and Node.js services across monolithic and microservice architectures.",
-          "Deployed systems on GCP using Kubernetes and maintained CI pipelines with GitHub Actions.",
-          "Applied SOLID principles, authored technical design documents, and participated in rigorous code review processes."
-        ]
+        "duration": "Aug 2025 - Jan 2026"
       },
       {
         "title": "Software Engineer",
-        "duration": "May 2024 - Aug 2025",
-        "highlights": [
-          "Worked within a distributed team following GitLab Flow and trunk-based branching.",
-          "Built and maintained resilient APIs and front-end integrations for contact center products.",
-          "Helped improve platform quality through design reviews and careful test coverage."
-        ]
+        "duration": "May 2024 - Aug 2025"
       }
+    ],
+    "highlights": [
+      "Played a key role in resolving critical production issues that pulled the platform out of a Google Code Red state, helping retain two major enterprise clients and safeguarding a multi-million dollar deal.",
+      "Diagnosed and mitigated high-impact production issues across monolithic and microservices architectures on GKE, collaborating with engineering teams in the US, Korea, and Philippines.",
+      "Designed and implemented two new features in a 13+ year-old legacy codebase with event-driven architecture, integrating with multiple microservices while maintaining system stability.",
+      "Improved system reliability through targeted bug fixes, rigorous code reviews, and technical design documentation aligned with Google’s SDLC practices.",
+      "Streamlined development workflows using GitLab Flow and trunk-based development, and built CI pipelines with GitHub Actions.",
+      "Built and maintained resilient APIs and front-end integrations for contact center products.",
+      "Helped improve platform quality through design reviews and careful test coverage."
     ]
   },
   {
@@ -35,13 +34,12 @@
     "roles": [
       {
         "title": "Full-stack Developer",
-        "duration": "Aug 2023 - Jan 2024",
-        "highlights": [
-          "Built new features and maintained application stability across web and admin interfaces.",
-          "Supported deployment and server operations for multiple company platforms.",
-          "Collaborated with cross-functional partners to deliver production-ready results."
-        ]
+        "duration": "Aug 2023 - Jan 2024"
       }
+    ],
+    "highlights": [
+      "Developed features for the Donzon ad platform using Laravel.",
+      "Managed multiple websites and email servers of the sister companies in GoDaddy."
     ]
   },
   {
@@ -53,13 +51,14 @@
     "roles": [
       {
         "title": "Lead Developer",
-        "duration": "Apr 2023 - Dec 2023",
-        "highlights": [
-          "Built the full backend system and mobile apps for the government project.",
-          "Hosted services on AWS and managed deployment stability.",
-          "Maintained code quality and version control through Git reviews and process discipline."
-        ]
+        "duration": "Apr 2023 - Dec 2023"
       }
+    ],
+    "highlights": [
+      "Led a 5-member team to design and deliver a government platform enabling citizens to report river-related issues directly to authorities.",
+      "Architected and developed the backend system powering a multi-application ecosystem, including a public reporting app, an investigator app, and an administrative dashboard using React Native and Next.js.",
+      "Deployed and managed the system on AWS (EC2, MySQL), ensuring reliability and scalability for real-world government operations.",
+      "Acted as the primary technical liaison for stakeholders, conducting client meetings, gathering requirements, and driving end-to-end project delivery."
     ]
   },
   {
@@ -71,13 +70,13 @@
     "roles": [
       {
         "title": "Undergraduate Teaching Assistant",
-        "duration": "Aug 2022 - Jan 2023",
-        "highlights": [
-          "Supported student learning through structured lab assistance and grading.",
-          "Maintained academic documentation and helped students understand core concepts.",
-          "Worked closely with faculty to improve classroom outcomes."
-        ]
+        "duration": "Aug 2022 - Jan 2023"
       }
+    ],
+    "highlights": [
+      "Supported student learning through structured lab assistance and grading.",
+      "Maintained academic documentation and helped students understand core concepts.",
+      "Worked closely with faculty to improve classroom outcomes."
     ]
   },
   {
@@ -89,13 +88,13 @@
     "roles": [
       {
         "title": "Software Developer Intern",
-        "duration": "Nov 2021 - Feb 2022",
-        "highlights": [
-          "Built user-centric front-end components for client-facing solutions.",
-          "Collaborated with remote teams in a Scrum-driven development process.",
-          "Gained practical experience with cloud and frontend application delivery."
-        ]
+        "duration": "Nov 2021 - Feb 2022"
       }
+    ],
+    "highlights": [
+      "Built user-centric front-end components for client-facing solutions using Vue.js and Angular on AWS.",
+      "Collaborated with remote teams in a Scrum-driven development process.",
+      "Gained practical experience with cloud and frontend application delivery."
     ]
   }
 ]

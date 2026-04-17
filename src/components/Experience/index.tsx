@@ -54,7 +54,7 @@ export default function Experience() {
                 <div className="rounded-3xl border border-text_primary/10 bg-secondary/90 p-5">
                   <div className="text-base uppercase tracking-[0.25em] text-text_primary">Achievements</div>
                   <ul className="mt-4 space-y-3 text-sm sm:text-base text-slate-300">
-                    {item.roles.flatMap((role) => role.highlights).map((point, idx) => (
+                    {item.highlights.map((point, idx) => (
                       <li key={idx} className="flex gap-3">
                         <span className="mt-1 h-2 w-2 rounded-full bg-text_primary" />
                         <span>{point}</span>
