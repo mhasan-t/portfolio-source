@@ -5,7 +5,7 @@ type Props = {};
 
 function Socials({ }: Props) {
   return (
-    <div className="fixed right-4 top-12 z-30 hidden flex-col items-center gap-3 md:flex">
+    <div className="fixed right-4 top-12 z-30 hidden flex-col items-center gap-3 lg:flex">
       <div className="h-[1px] w-10 bg-text_primary/30" />
       <SocialButton
         imgSrc="/icons/gmail-soc.png"
@@ -22,7 +22,7 @@ function Socials({ }: Props) {
         alt="Github Link"
         link="https://github.com/mhasan-t/"
       />
-      <motion.div className="h-[1px] w-10 bg-text_primary/30" />
+      <div className="h-[1px] w-10 bg-text_primary/30" />
     </div>
   );
 }
