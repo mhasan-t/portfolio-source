@@ -1,6 +1,6 @@
 import { Urbanist, Koulen, Heebo } from "next/font/google";
 
-  const primary = Urbanist({
+const primary = Urbanist({
   weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"],
 });
