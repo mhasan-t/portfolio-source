@@ -15,4 +15,6 @@ const header = Urbanist({
   subsets: ["latin"],
 });
 
-export default { primary, title, header };
+const fonts = { primary, title, header };
+
+export default fonts;
