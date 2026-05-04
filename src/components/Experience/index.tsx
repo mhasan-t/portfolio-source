@@ -20,14 +20,12 @@ export default function Experience() {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-wrap gap-3 text-sm sm:text-base">
                   <span className="rounded-full border border-text_primary/20 bg-text_primary/10 px-3 py-1 text-text_primary">
+                    {/*add location icon before location text*/}
+                    <span className="mr-1">📍</span>
                     {item.location}
                   </span>
-                  <span className="rounded-full border border-text_primary/20 bg-text_primary/10 px-3 py-1 text-text_primary">
-                    {item.workMode}
-                  </span>
-                  <span className="rounded-full border border-text_primary/20 bg-text_primary/10 px-3 py-1 text-text_primary">
-                    {item.employment}
-                  </span>
+                  <span className="rounded-full border border-text_primary/20 bg-text_primary/10 px-3 py-1 text-text_primary">{item.workMode}</span>
+                  <span className="rounded-full border border-text_primary/20 bg-text_primary/10 px-3 py-1 text-text_primary">{item.employment}</span>
                 </div>
 
                 <div className="space-y-2">
