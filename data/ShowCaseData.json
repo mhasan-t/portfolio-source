@@ -1,5 +1,43 @@
 [
   {
+    "title": "Chic Le Frique",
+    "type": "Android App",
+    "description": "Android and iOS app built for a Shopify store.",
+    "cover": "clf.png",
+    "year": "2025",
+    "imageType": "tall",
+    "links": [
+      {
+        "title": "Play Store",
+        "url": "https://play.google.com/store/apps/details?id=com.chiclefrique.reactapp",
+        "icon": "playstore.png"
+      }
+    ],
+    "tech_stack": [
+      {
+        "title": "React Native",
+        "icon": "react.png"
+      },
+      {
+        "title": "Shopify",
+        "icon": "shopify.png"
+      }
+    ],
+    "myRole": {
+      "title": "Developer",
+      "description": "Built the app architecture, implemented core features, and integrated with Shopify API."
+    },
+    "features": [
+      "Integrated with Shopify API for seamless e-commerce operations",
+      "Responsive design for both Android and iOS devices",
+      "User authentication and authorization system",
+      "Product catalog management",
+      "Shopping cart functionality",
+      "Order processing and payment integration",
+      "Customer account management"
+    ]
+  },
+  {
     "title": "Amar Nodi",
     "type": "Android Apps and Web Application",
     "description": "A system of two mobile apps and a web admin panel for people in Bangladesh to report issues with the country's water resources. It was funded by the government.",
@@ -70,10 +108,7 @@
       "title": "Developer",
       "description": "I made it."
     },
-    "features": [
-      "UIU students can enter their sections and their respective times.",
-      "Generates all possible routines."
-    ]
+    "features": ["UIU students can enter their sections and their respective times.", "Generates all possible routines."]
   },
   {
     "title": "Attache Admin Portal",
@@ -97,8 +132,6 @@
       "title": "Developer",
       "description": "I made it."
     },
-    "features": [
-      "Admin authentication and management of users, videos and servers."
-    ]
+    "features": ["Admin authentication and management of users, videos and servers."]
   }
 ]
